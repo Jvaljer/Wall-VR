@@ -168,6 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd50514976d4e3700a049192b94086e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setup: {fileID: 0}
+  ope_prefab: {fileID: 0}
+  part_prefab: {fileID: 0}
+  vr_prefab: {fileID: 0}
+  cur_participant: {fileID: 0}
 --- !u!114 &16572248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544564e9c2e1e4545982447a9b19c7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  args: []
 --- !u!114 &16572249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +195,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 16572245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa366027ceb265a683d6f8a2d5d3a60, type: 3}
+  m_Script: {fileID: 11500000, guid: aad3b43233b83f647ac184e876b40f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &534329154

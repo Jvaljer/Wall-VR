@@ -60,11 +60,11 @@ public class Gateway : MonoBehaviour {
         if(vr_scene){
             Debug.LogError("Loading VR Scene");
             //WriteLog("Loading VR Scene");
-            SceneManager.Load("VR");
+            SceneManager.LoadScene("VR");
         } else {
             Debug.LogError("Loading Wall Scene");
             //WriteLog("Loading Wall Scene");
-            SceneManager.Load("Wall");
+            SceneManager.LoadScene("Wall");
         }
   #elif UNITY_STANDALONE_LIN 
         Debug.LogError("Linux Standalone -> must parse argument, VR prohibited");

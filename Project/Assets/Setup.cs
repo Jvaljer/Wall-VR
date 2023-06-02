@@ -36,14 +36,15 @@ public class Setup : MonoBehaviourPun {
     public float zoom_ratio { get; private set; } = 1f;
 
     public void Start(){
-        Debug.LogError("Setup Starting");
-        Debug.LogError("actual scene -> "+SceneManager.GetActiveScene().name);
+        Debug.LogError("Setup Starting on scene : "+SceneManager.GetActiveScene().name);
+        Debug.Log("args are : "+Gateway.arguments);
         args = Gateway.arguments;
-        Debug.LogError("args from Gateway : "+args+" of len "+args.Length);
+        Debug.Log("got args : "+args);
         for(int i=0; i<args.Length; i++){
-            Debug.LogError(args[i]);
+            Debug.Log(args[i]);
             switch (args[i]){
                 case "-wall":
+                    Debug.Log("getting arg -wall");
                     wall_str = args[i+1];
                     break;
                 case "-sh":
@@ -86,7 +87,7 @@ public class Setup : MonoBehaviourPun {
                     break;
             }
         }
-        Debug.LogError("actual scene -> "+SceneManager.GetActiveScene().name);
+        Debug.Log("ended parsing");
 
         switch (wall_str){
             case "WILDER":
@@ -101,7 +102,7 @@ public class Setup : MonoBehaviourPun {
         wall_height = wall.Height();
         wall_width = wall.Width();
         
-        Debug.LogError("actual scene -> "+SceneManager.GetActiveScene().name);
+        Debug.Log("Wall well set");
         //now connecting to the server
         ConnectToServer();
     }

@@ -14,9 +14,9 @@ public class Gateway : MonoBehaviour {
 
 #if UNITY_EDITOR
   #if UNITY_EDITOR_WIN
-        Debug.LogError("Windows Editor -> VR Part by default");
+        Debug.Log("Windows Editor -> VR Part by default");
         //must initialize all args
-        arguments = new string[8];
+        arguments = new string[10];
         arguments[0] = "-vr";
         arguments[1] = "1";
         arguments[2] = "-r";
@@ -25,12 +25,15 @@ public class Gateway : MonoBehaviour {
         arguments[5] = "1980"; 
         arguments[6] = "-sh"; 
         arguments[7] = "1080"; 
+        arguments[8] = "-wall";
+        arguments[9] = "DESKTOP";
+        Debug.Log("arguments are : "+arguments);
         SceneManager.LoadScene("VR");
 
   #elif UNITY_EDITOR_LIN
         Debug.LogError("Linux Editor -> Operator by default");
         //must initialize all args
-        arguments = new string[8];
+        arguments = new string[10];
         arguments[0] = "-vr";
         arguments[1] = "0";
         arguments[2] = "-r";
@@ -39,6 +42,9 @@ public class Gateway : MonoBehaviour {
         arguments[5] = "1024"; 
         arguments[6] = "-sh"; 
         arguments[7] = "512"; 
+        arguments[8] = "-wall";
+        arguments[9] = "DESKTOP";
+        Debug.Log("arguments are : "+arguments);
         SceneManager.LoadScene("Wall");
 
   #endif

@@ -15,9 +15,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     public bool ope_joined { get; private set; } = false;
 
     //prefabs
-    public GameObject ope_prefab;
-    public GameObject part_prefab;
-    public GameObject vr_prefab;
+    public GameObject ope_prefab { get; private set; }
+    public GameObject part_prefab { get; private set; }
+    public GameObject vr_prefab { get; private set; }
 
     //local participant prefab
     public GameObject cur_participant;

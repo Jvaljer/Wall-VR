@@ -152,7 +152,7 @@ public class InputHandler : MonoBehaviourPun {
             if(setup.is_vr){
                 //I am a VR participant so initialize the cursor on the wall 
                 // + register my right controller as a device
-                RegisterDevice("RightCtrl", network.cur_participant.transform.GetChild(0));
+                RegisterDevice("RightCtrl", network.cur_participant.GetComponent<Participant>().GetRightCtrl());
             } else {
                 //set the cursors invisible & scale em
                 Cursor.visible = false;

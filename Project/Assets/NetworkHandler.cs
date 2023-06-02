@@ -74,6 +74,12 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
         cur_participant.GetComponent<PhotonView>().RPC("SomeoneLeft", RpcTarget.AllBuffered, otherPlayer.ActorNumber);
     }
 
+    public void SendOpeToParticipants(){
+        if(!PhotonNetwork.IsMasterClient){
+            cur_participant.GetComponent<PhotonView>().RPC("FetchOperatorRPC", RpcTarget.AllBuffered);
+        }
+    }
+
     public void Connect(){
         PhotonNetwork.NickName = System.DateTime.Now.Ticks.ToString();
         PhotonNetwork.ConnectUsingSettings();

@@ -95,4 +95,24 @@ public class Render : MonoBehaviourPun {
             }
         }
     }
+
+    public void NewShape(string name, Vector3 pos, int id, string cat){
+        Debug.LogError("Render -> NewShape");
+        //shape already created so just need to get it
+        GameObject new_shape = GameObject.Find(name);
+        if(new_shape!=null){
+            Shape shape_ctrl = new_shape.GetComponent<Shape>();
+            shape_ctrl.Categorize(cat);
+            shape_ctrl.SetSize(new_shape.transform.localScale.x);
+            shape_ctrl.PositionOn(pos);
+            shape_ctrl.AddOwner(id);
+            shapes.Add(name, new_shape);
+            if(!PhotonNetwork.IsMasterClient){
+                Debug.LogError("not MC, sizing shape up");
+                new_shape.transform.localScale *= setup.zoom_ratio;
+            }
+        } else {
+            Debug.LogError("can't get the shape bro");
+        }
+    }
 }

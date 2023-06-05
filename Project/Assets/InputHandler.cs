@@ -170,6 +170,7 @@ public class InputHandler : MonoBehaviourPun {
                 cursor_HW = 16*4;
             }
         }
+        GameObject.Find("Circle(Clone)").GetComponent<Shape>().AddOwner(0);
     }
 
     public void ParticipantIsReady(){
@@ -188,10 +189,12 @@ public class InputHandler : MonoBehaviourPun {
         } else if(photonView.IsMine){
             if(setup.is_vr){
                 //first we wanna get the coordinates as they are in the ope section
-                input = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
-                input.y *= -1f;
+                Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 4.99f));
+                screen_to_world.y *= -1f;
                 //now we wanna make it appear on the WallGO
-                Debug.LogError("input : "+str+" on "+"("+x_+","+y_+")->"+input);
+                Debug.LogError("input : "+str+" on "+"("+x_+","+y_+")");
+                //here we wanna modify the coordinates to be the good ones in VR scene 
+                input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y), screen_to_world.z);
                 render.Input(str, input, id_);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
@@ -437,5 +440,36 @@ public class InputHandler : MonoBehaviourPun {
             return;
         }
         m_devices.Add(obj, new MDevice(str));
+    }
+
+    /******************************************************************************/
+    /*                          SHAPES HANDLING METHODS                           */
+    /******************************************************************************/
+    [PunRPC]
+    public void NewShapeRPC(Vector3 pos, int id){
+        Vector3 src;
+        if(PhotonNetwork.IsMasterClient){
+            Debug.LogError("Creating the new shape (master)");
+            pos.x *= Screen.width;
+            pos.y *= Screen.height;
+            src = Camera.main.ScreenToWorldPoint(pos);
+            src.y *= -1f;
+            src.z = 0f;
+            GameObject obj = PhotonNetwork.InstantiateRoomObject("Square", src, Quaternion.identity);
+            render.NewShape(obj.name, src, id, "square"); //turns it into an input ?? //only creating squares yet
+        } else if(photonView.IsMine){
+            if(setup.is_vr){
+                Debug.LogError("Creating the new shape (VR part)");
+                //must implement
+            } else {
+                Debug.LogError("Creating the new shape (Wall part)");
+                Vector3 screen_src = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + pos.x * setup.wall_width, -setup.y_pos + pos.y * setup.wall_height, pos.z));
+                src = Camera.main.ScreenToWorldPoint(screen_src);
+                src.y *= -1f;
+                src.z = 0f;
+                GameObject obj = PhotonNetwork.InstantiateRoomObject("Square", src, Quaternion.identity);
+                render.NewShape(obj.name, src, id, "square"); //only creating squares yet
+            }
+        }
     }
 }

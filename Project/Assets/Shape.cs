@@ -85,13 +85,8 @@ public class Shape : MonoBehaviourPun {
 
     [PunRPC]
     public void MoveRPC(Vector3 pos, float zoom, bool vr){
-        if(!PhotonNetwork.IsMasterClient){
-            if(vr){
-                //must implement
-                //here we wanna find a way to move the shape in the VR scene
-            } else {
-                pos *= zoom;
-            }
+        if(!PhotonNetwork.IsMasterClient && !vr){
+            pos *= zoom;
         }
         gameObject.transform.GetChild(0).position = pos;
         position = pos;

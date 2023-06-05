@@ -36,4 +36,18 @@ public class Operator : MonoBehaviourPun {
             network.SendOpeToParticipants();
         }
     }
+
+    [PunRPC]
+    public void InstantiateShape(string category, Vector3 pos){
+        switch (category){
+            case "circle":
+                break;
+            case "square":
+                square_prefab = PhotonNetwork.InstantiateRoomObject("Square", pos, Quaternion.identity);
+                square_prefab.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, pos);
+                break;
+            default:
+                break;
+        }
+    }
 }

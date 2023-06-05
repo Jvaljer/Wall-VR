@@ -22,6 +22,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     //local participant prefab
     public GameObject cur_participant;
 
+    //overall based shapes prefab
+    public GameObject shape1_prefab;
+
     public override void OnConnectedToMaster(){
         Debug.LogError("OnConnectedToMaster : "+PhotonNetwork.LocalPlayer.ActorNumber);
         base.OnConnectedToMaster();
@@ -40,6 +43,12 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             Debug.Log("OnJoinedRoom as Operator : "+PhotonNetwork.LocalPlayer.ActorNumber);
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
+
+            shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
+            Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
+            sh1_ctrl.Categorize("circle");
+            sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
+            sh1_ctrl.PositionOn(Vector3.zero);
         } else {
             if(setup.is_vr){
                 Debug.Log("OnJoinedRoom as VR Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);

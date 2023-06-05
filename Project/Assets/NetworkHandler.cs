@@ -44,6 +44,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
+            Debug.LogError("instantiating shape");
             shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
             Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
             sh1_ctrl.Categorize("circle");

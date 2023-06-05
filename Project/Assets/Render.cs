@@ -40,7 +40,7 @@ public class Render : MonoBehaviourPun {
             Debug.Log("for shape : "+obj.name);
             Shape obj_ctrl = obj.GetComponent<Shape>();
             if(obj_ctrl.IsOwnedBy(id)){ //later on we'll like to add more scripts + abstract class
-            Debug.Log("we have the owner : "+id);
+                Debug.Log("we have the owner : "+id);
                 switch (name){
                     case "Down":
                         if(obj_ctrl.CoordsInside(coord)){
@@ -79,7 +79,9 @@ public class Render : MonoBehaviourPun {
             ih_scale = ih_scale*abs;
         } else {
             if(setup.is_vr){
-                //must implement
+                //simply replacing the shape on the wall ?
+                shapes["Circle(Clone)"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                shapes["Circle(Clone)"].transform.position = new Vector3(0f, 2.5f, 4.99f);
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;

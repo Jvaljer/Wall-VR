@@ -59,6 +59,7 @@ public class InputHandler : MonoBehaviourPun {
             //handling operator's mouse
             if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
+                Debug.LogError("Input Down");
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Down", mouse_x, mouse_y, 0);
             } else if(Mouse.current.leftButton.wasReleasedThisFrame){
                 StopMoveMCursor(this, 0, mouse_x, mouse_y);

@@ -15,11 +15,11 @@ C:/cygwin64/home/abel/Wall-VR/Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60259
+60316
 Successfully changed project path to: C:/cygwin64/home/abel/Wall-VR/Project
 C:/cygwin64/home/abel/Wall-VR/Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 46.62 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 47.74 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,118 +35,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002357 seconds.
+Registered in 0.002011 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.50 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 38.61 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.626 seconds
+- Completed reload, in  1.635 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006111 seconds.
+Registered in 0.006092 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 37.50 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 37.61 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.959 seconds
+- Completed reload, in  0.958 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.72 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2501 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 114.8 MB.
 System memory in use after: 114.8 MB.
 
 Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2941.
-Total: 2.836800 ms (FindLiveObjects: 0.366500 ms CreateObjectMapping: 0.130500 ms MarkObjects: 2.253300 ms  DeleteObjects: 0.085600 ms)
+Total: 2.762800 ms (FindLiveObjects: 0.382800 ms CreateObjectMapping: 0.164700 ms MarkObjects: 2.137000 ms  DeleteObjects: 0.077100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Resources/New Prefab.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/New Prefab.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cc2cb2df24d10aa6861ac9b1ccce326') in 0.042373 seconds
-  Import took 0.046879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.243785 seconds.
   path: Assets/Resources/Circle.prefab
   artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be2ddebcf3bfefe72d11eb2969d67dd') in 0.010662 seconds
-  Import took 0.015469 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.364214 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3484c6fc38f77d03ea089614ce1113ad') in 0.009402 seconds
-  Import took 0.013737 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004070 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3484c6fc38f77d03ea089614ce1113ad') in 0.008788 seconds
-  Import took 0.012932 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 80.429344 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd223c50b8a80e26565262b56d387857e') in 0.010103 seconds
-  Import took 0.014508 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.513198 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a724f88b5f9a05272b875e5f8f1a92c9') in 0.046727 seconds
-  Import took 0.051100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.366895 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed71dc2634081ca42935c02df38caf83') in 0.015678 seconds
-  Import took 0.019861 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.879161 seconds.
-  path: Assets/Resources/Circle.prefab
-  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed164623493f5e8cb141a58b30fed86a') in 0.015803 seconds
-  Import took 0.020612 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.100009 seconds.
-  path: Assets/Materials/M_DarkGreen.mat
-  artifactKey: Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_DarkGreen.mat using Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b63270e9c16e9f23f626f9271eb4513') in 0.032108 seconds
-  Import took 0.036705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.686777 seconds.
-  path: Assets/Materials/M_DarkGreen.mat
-  artifactKey: Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_DarkGreen.mat using Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0acc107765cf5719a5b87511543883fc') in 0.016642 seconds
-  Import took 0.020847 seconds .
+Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fe877ef2f089ce3ce4a9dc7cfd02afc') in 0.084934 seconds
+  Import took 0.089445 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

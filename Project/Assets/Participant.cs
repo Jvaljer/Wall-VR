@@ -14,6 +14,7 @@ public class Participant : MonoBehaviourPun {
     private GameObject headset;
 
     public void InitializeFromNetwork(Setup S_){
+        Debug.Log("InitializeFromNetwork with Setup : "+(S_==null));
         setup = S_;
         if(photonView.IsMine){
             InitializeMyself();
@@ -22,12 +23,14 @@ public class Participant : MonoBehaviourPun {
 
     public void InitializeMyself(){
         if(setup.is_vr){
+            Debug.Log("InitializeMyself :: VR");
             //wanna fetch all of my VR components
             headset = GameObject.Find("XR Origin");
             right_hand = headset.transform.GetChild(0).GetChild(1).gameObject;
             ray = right_hand.transform.GetChild(0).gameObject;
             left_hand = headset.transform.GetChild(0).GetChild(2).gameObject;
         } else {
+            Debug.Log("InitializeMyself :: Wall");
             Screen.fullScreen = setup.full_screen;
             if(Screen.fullScreen){
                 setup.screen_width = Screen.width;
@@ -48,6 +51,7 @@ public class Participant : MonoBehaviourPun {
     }
 
     public GameObject GetRightCtrl(){
+        Debug.Log("GetRightCtrl with Setup : "+(setup==null));
         if(setup.is_vr){
             return right_hand;
         } else {

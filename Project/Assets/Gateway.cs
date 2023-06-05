@@ -27,7 +27,12 @@ public class Gateway : MonoBehaviour {
         arguments[7] = "1080"; 
         arguments[8] = "-wall";
         arguments[9] = "DESKTOP";
-        Debug.Log("arguments are : "+arguments);
+        string args = "";
+        for(int i=0; i<10; i++){
+            args += arguments[i];
+            args += " ";
+        }
+        Debug.Log("arguments : "+args);
         SceneManager.LoadScene("VR");
 
   #elif UNITY_EDITOR_LINUX
@@ -65,6 +70,25 @@ public class Gateway : MonoBehaviour {
             }
         }
         if(vr_scene){
+            if(arguments.Count == 0){
+                arguments = new string[10];
+                arguments[0] = "-vr";
+                arguments[1] = "1";
+                arguments[2] = "-r";
+                arguments[3] = "p";
+                arguments[4] = "-sw"; 
+                arguments[5] = "1980"; 
+                arguments[6] = "-sh"; 
+                arguments[7] = "1080"; 
+                arguments[8] = "-wall";
+                arguments[9] = "DESKTOP";
+                string args = "";
+                for(int i=0; i<10; i++){
+                    args += arguments[i];
+                    args += " ";
+                }
+                Debug.Log("arguments : "+args);
+            }
             Debug.LogError("Loading VR Scene");
             //WriteLog("Loading VR Scene");
             SceneManager.LoadScene("VR");

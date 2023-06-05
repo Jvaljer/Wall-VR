@@ -44,12 +44,12 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             if(setup.is_vr){
                 Debug.Log("OnJoinedRoom as VR Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
                 vr_prefab = PhotonNetwork.Instantiate("VR Participant", transform.position, transform.rotation);
-                //vr_prefab.GetComponent<Participant>().NetworkStart(setup);
+                vr_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = vr_prefab;
             } else {
                 Debug.Log("OnJoinedRoom as Wall Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
                 part_prefab = PhotonNetwork.Instantiate("Wall Participant", transform.position, transform.rotation);
-                //part_prefab.GetComponent<Participant>().NetworkStart(setup);
+                part_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = part_prefab;
             }
  

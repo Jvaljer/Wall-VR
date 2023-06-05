@@ -3,6 +3,7 @@ using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -51,14 +52,15 @@ public class InputHandler : MonoBehaviourPun {
     private void Update(){
         if(photonView.IsMine && initialized){
             //Debug.Log("we do be running");
-            float mouse_x = Input.mousePosition.x/Screen.width;
-            float mouse_y = (Screen.height - Input.mousePosition.y)/Screen.height;
+            Vector2 mouse_pos = Mouse.current.position.ReadValue();
+            float mouse_x = mouse_pos.x/Screen.width;
+            float mouse_y = (Screen.height - mouse_pos.y)/Screen.height;
 
             //handling operator's mouse
-            if(Input.GetMouseButtonDown(0)){
+            if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Down", mouse_x, mouse_y, 0);
-            } else if(Input.GetMouseButtonUp(0)){
+            } else if(Mouse.current.leftButton.wasReleasedThisFrame){
                 StopMoveMCursor(this, 0, mouse_x, mouse_y);
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Up", mouse_x, mouse_y, 0);
             } else {
@@ -69,7 +71,7 @@ public class InputHandler : MonoBehaviourPun {
             }
 
             //handling shape creation ? 
-            if(Input.GetMouseButtonDown(1)){
+            if(Mouse.current.rightButton.wasPressedThisFrame){
                 Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
                 photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
             }

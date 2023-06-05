@@ -49,6 +49,7 @@ MonoBehaviour:
   - PickRPC
   - RemovePCursorRPC
   - SomeoneLeft
+  - FetchForOperatorRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 0

@@ -30,7 +30,7 @@ public class Gateway : MonoBehaviour {
         Debug.Log("arguments are : "+arguments);
         SceneManager.LoadScene("VR");
 
-  #elif UNITY_EDITOR_LIN
+  #elif UNITY_EDITOR_LINUX
         Debug.LogError("Linux Editor -> Operator by default");
         //must initialize all args
         arguments = new string[10];
@@ -46,7 +46,8 @@ public class Gateway : MonoBehaviour {
         arguments[9] = "DESKTOP";
         Debug.Log("arguments are : "+arguments);
         SceneManager.LoadScene("Wall");
-
+  #else 
+        Debug.LogError("Editor is not Windows nor Linux");
   #endif
 #elif UNITY_STANDALONE
         arguments = System.Environment.GetCommandLineArgs();
@@ -72,9 +73,11 @@ public class Gateway : MonoBehaviour {
             //WriteLog("Loading Wall Scene");
             SceneManager.LoadScene("Wall");
         }
-  #elif UNITY_STANDALONE_LIN 
+  #elif UNITY_STANDALONE_LINUX
         Debug.LogError("Linux Standalone -> must parse argument, VR prohibited");
-        SceneManager.LoadScene("Wall"):
+        SceneManager.LoadScene("Wall");
+  #else 
+        Debug.LogError("Standalone is not Windows nor linux");
   #endif
 #else
         Debug.Log("ELSE -=> NOTHING");

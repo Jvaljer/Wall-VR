@@ -77,7 +77,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
 
     public void SendOpeToParticipants(){
         if(!PhotonNetwork.IsMasterClient){
-            cur_participant.GetComponent<PhotonView>().RPC("FetchOperatorRPC", RpcTarget.AllBuffered);
+            cur_participant.GetComponent<PhotonView>().RPC("FetchForOperatorRPC", RpcTarget.AllBuffered);
         }
     }
 

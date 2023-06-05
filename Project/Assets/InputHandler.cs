@@ -350,6 +350,9 @@ public class InputHandler : MonoBehaviourPun {
             //first creating a new cursor from the prefab and put it on center of wall
             GameObject WallGo = GameObject.Find("Room").transform.GetChild(1).gameObject;
             GameObject pc_go = Instantiate<GameObject>(cursor_prefab, WallGo.transform.position, WallGo.transform.rotation);
+            string pc_name = "cursor"+uid;
+            pc_go.name = pc_name;
+            Debug.Log("instantiated vr cursor '"+pc_go.name+"'");
             //translate the coordinates to the wall ones.
             pc_go.transform.position = new Vector3(0f, 0f, -0.5f);
             pc_go.transform.localScale = new Vector3(0.025f, 0.05f, 0.5f);
@@ -362,7 +365,9 @@ public class InputHandler : MonoBehaviourPun {
     //RPC to remove a PCursor
     [PunRPC]
     public void RemovePCursorRPC(int uid){
+        vr_cursors.Remove(p_cursors[uid]);
         p_cursors.Remove(uid);
+        Destroy(GameObject.Find("cursor"+uid)); //is the Find() absolute or relative ?
     }
 
     //RPC to move a PCursor

@@ -483,9 +483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setup: {fileID: 0}
-  ope_prefab: {fileID: 0}
-  part_prefab: {fileID: 0}
-  vr_prefab: {fileID: 0}
   cur_participant: {fileID: 0}
 --- !u!114 &785745251
 MonoBehaviour:

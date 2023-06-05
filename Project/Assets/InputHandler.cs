@@ -7,8 +7,9 @@ using Photon.Pun;
 using Photon.Realtime;
 
 public class InputHandler : MonoBehaviourPun {
-    //operator
+    //operator & cursors prefab
     private Operator ope;
+    public GameObject cursor_prefab;
 
     //referenced setup, render & network
     private Setup setup;
@@ -26,6 +27,7 @@ public class InputHandler : MonoBehaviourPun {
     //Cursors's dictionnary
     public Dictionary<int, PCursor> p_cursors { get; set; }
     public Dictionary<int, MCursor> m_cursors { get; set; }
+    public Dictionary<PCursor, GameObject> vr_cursors { get; set; } //specific to the VR users
 
     //Devices's dictionnary
     public Dictionary<object, MDevice> m_devices { get; set; }
@@ -43,6 +45,7 @@ public class InputHandler : MonoBehaviourPun {
         m_devices = new Dictionary<object, MDevice>();
         p_cursors = new Dictionary<int, PCursor>();
         to_delete_ids = new List<int>();
+        vr_cursors = new Dictionary<PCursor, GameObject>();
     }
 
     private void Update(){
@@ -167,9 +170,28 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void InputRPC(){
-        //must implement
-        return;
+    public void InputRPC(string str, float x_, float y_, int id_){
+        Vector3 input; 
+        if(PhotonNetwork.IsMasterClient){
+            input = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
+            input.y *= -1f;
+            input.z = 0f;
+            render.Input(str, input, id_);
+        } else if(photonView.IsMine){
+            if(setup.is_vr){
+                //first we wanna get the coordinates as they are in the ope section
+                input = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
+                input.y *= -1f;
+                //now we wanna make it appear on the WallGO
+
+            } else {
+                Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
+                input = Camera.main.ScreenToWorldPoint(screen_input);
+                input.y *= -1f;
+                input.z = 0f;
+                render.Input(str, input, id_);
+            }
+        }
     }
 
     /******************************************************************************/
@@ -323,6 +345,18 @@ public class InputHandler : MonoBehaviourPun {
         Color color;
         ColorUtility.TryParseHtmlString(str, out color);
         p_cursors.Add(uid, new PCursor(x_, y_, color));
+        //now we wanna add a GO to the VR scene in order to keep a visual trace of the pcursor
+        if(setup.is_vr){
+            //first creating a new cursor from the prefab and put it on center of wall
+            GameObject WallGo = GameObject.Find("Room").transform.GetChild(1).gameObject;
+            GameObject pc_go = Instantiate<GameObject>(cursor_prefab, WallGo.transform.position, WallGo.transform.rotation);
+            //translate the coordinates to the wall ones.
+            pc_go.transform.position = new Vector3(0f, 0f, -0.5f);
+            pc_go.transform.localScale = new Vector3(0.025f, 0.05f, 0.5f);
+            //now positionning correctly the cursor
+            Debug.Log("here are the given coordinates : ("+x_+","+y_+")");
+            vr_cursors.Add(p_cursors[uid], pc_go);
+        }
     }
 
     //RPC to remove a PCursor

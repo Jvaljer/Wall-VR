@@ -66,6 +66,7 @@ public class InputHandler : MonoBehaviourPun {
             } else {
                 MoveMCursor(this, 0, mouse_x, mouse_y);
                 if(GetMCursor(this,0).drag){
+                    Debug.Log("mouse : ("+mouse_x+","+mouse_y+")");
                     photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Move", mouse_x, mouse_y, 0);
                 }
             }
@@ -124,15 +125,20 @@ public class InputHandler : MonoBehaviourPun {
                     y = pc.y*Screen.height;
                 } else {
                     if(setup.is_vr){
-                        //must implement
-                        x = 0f;
-                        y = 0f;
+                        x = 10f*pc.x- 5f;
+                        y = 5f*(1f-pc.y);
                     } else {
                         x = -setup.x_pos + pc.x * setup.wall_width;
                         y = -setup.y_pos + pc.y * setup.wall_height;
                     }
                 }
-                GUI.DrawTexture(new Rect(x - cursor_HW, y - cursor_HW, 2*cursor_HW, 2*cursor_HW), pc.tex);
+                if(setup.is_vr){
+                    //here we wanna move the related GO in the VR scene 
+                    float z = vr_cursors[pc].transform.position.z;
+                    vr_cursors[pc].transform.position = new Vector3(x, y, z);
+                } else {
+                    GUI.DrawTexture(new Rect(x - cursor_HW, y - cursor_HW, 2*cursor_HW, 2*cursor_HW), pc.tex);
+                }
             }
         }
     }
@@ -185,7 +191,8 @@ public class InputHandler : MonoBehaviourPun {
                 input = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
                 input.y *= -1f;
                 //now we wanna make it appear on the WallGO
-
+                Debug.LogError("input : "+str+" on "+"("+x_+","+y_+")->"+input);
+                render.Input(str, input, id_);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
                 input = Camera.main.ScreenToWorldPoint(screen_input);

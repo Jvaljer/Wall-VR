@@ -1,20 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
 using Photon.Pun;
 
 public class Participant : MonoBehaviourPun {
-    //referenced setup
+    //referenced setup & operator
     public Setup setup { get; set; }
+    public Operator ope { get; set; }
 
     //VR Components
     private GameObject right_hand;
-    private GameObject ray;
     private GameObject left_hand;
     private GameObject headset;
 
+    //ray attributes
+    private GameObject ray_go;
+    private RaycastHit hit;
+
+    //devices & shape manipulation ids
+    private int id;
+
+    //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
+    private void Update(){
+        Ray ray = new Ray(ray_go.transform.position, ray_go.transform.forward);
+        if(Physics.Raycast(ray, out hit)){
+            if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
+                //we wanna move the cursor to the hit position
+                ope.GetComponent<PhotonView>().RPC("MoveRayCursor", RpcTarget.AllBuffered, hit.point, right_hand);
+            }
+        }
+    }
+
     public void InitializeFromNetwork(Setup S_){
-        Debug.Log("InitializeFromNetwork with Setup : "+(S_==null));
+        Debug.Log("InitializeFromNetwork with Setup : "+(S_==null)+" with potential id : "+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = S_;
         if(photonView.IsMine){
             InitializeMyself();
@@ -22,12 +42,14 @@ public class Participant : MonoBehaviourPun {
     }
 
     public void InitializeMyself(){
+        id = PhotonNetwork.LocalPlayer.ActorNumber;
+        Debug.Log("assigned id : "+id);
         if(setup.is_vr){
             Debug.Log("InitializeMyself :: VR");
             //wanna fetch all of my VR components
             headset = GameObject.Find("XR Origin");
             right_hand = headset.transform.GetChild(0).GetChild(1).gameObject;
-            ray = right_hand.transform.GetChild(0).gameObject;
+            ray_go = right_hand.transform.GetChild(0).gameObject;
             left_hand = headset.transform.GetChild(0).GetChild(2).gameObject;
         } else {
             Debug.Log("InitializeMyself :: Wall");

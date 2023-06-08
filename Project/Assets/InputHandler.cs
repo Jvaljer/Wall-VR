@@ -71,14 +71,17 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
-            //handling shape creation ? 
+            //handling shape creation ? (not yet)
+            /*
             if(Mouse.current.rightButton.wasPressedThisFrame){
                 Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
                 photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
             }
+            */
 
             //handling cursors
             to_delete_ids.Clear();
+            Debug.Log("amount of Devices : "+m_devices.Count);
             foreach(MDevice dev in m_devices.Values){
                 foreach(MCursor mc in dev.cursors.Values){
                     //if not related PCursor then create it
@@ -166,7 +169,7 @@ public class InputHandler : MonoBehaviourPun {
                 Debug.Log("adding RightCtrl to the Devices");
                 //must check how to access this properly ...
                 RegisterDevice("RightCtrl", network.cur_participant.GetComponent<Participant>().GetRightCtrl());
-                Debug.Log("setting the shape as VR (IH)");
+                CreateMCursor(network.cur_participant.GetComponent<Participant>().GetRightCtrl(), PhotonNetwork.LocalPlayer.ActorNumber, 0.5f, 0.5f, Color.green);
                 GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em
@@ -447,7 +450,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     /******************************************************************************/
-    /*                          SHAPES HANDLING METHODS                           */
+    /*                        SHAPES & VR HANDLING METHODS                        */
     /******************************************************************************/
     [PunRPC]
     public void NewShapeRPC(Vector3 pos, int id){
@@ -476,4 +479,12 @@ public class InputHandler : MonoBehaviourPun {
             }
         }
     }
+
+    [PunRPC]
+    public void  MoveRayCursor(Vector3 hit_point, int id_, object obj){
+        Debug.Log("MoveRayCursor from "+id_+" on point "+hit_point);
+        //must implement
+        return;
+    }
+    
 }

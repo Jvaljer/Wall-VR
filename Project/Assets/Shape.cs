@@ -96,8 +96,8 @@ public class Shape : MonoBehaviourPun {
                 pos *= zoom;
             } else {
                 //now must scale on the wall's coordinates
-                Vector3 tmp = new Vector3.zero;
-
+                Vector3 tmp = Vector3.zero;
+                //shall use more absolute values (such as cameras & screens size)
                 tmp.x = pos.x/2f;
                 tmp.y = (pos.y/2f) + 2.5f;
                 tmp.z = 4.99f;
@@ -107,7 +107,6 @@ public class Shape : MonoBehaviourPun {
         }
         Debug.Log("Moving shape on : "+pos);
         gameObject.transform.position = pos;
-        //gameObject.transform.GetChild(0).position = pos;
         position = pos;
     }
 }

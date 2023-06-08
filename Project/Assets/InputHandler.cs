@@ -166,6 +166,7 @@ public class InputHandler : MonoBehaviourPun {
                 Debug.Log("adding RightCtrl to the Devices");
                 //must check how to access this properly ...
                 RegisterDevice("RightCtrl", network.cur_participant.GetComponent<Participant>().GetRightCtrl());
+                Debug.Log("setting the shape as VR (IH)");
                 GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em

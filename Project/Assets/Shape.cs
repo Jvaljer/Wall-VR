@@ -31,6 +31,7 @@ public class Shape : MonoBehaviourPun {
         dragged = false;
     }
     public void SetAsVR(){
+        Debug.Log("setting the shape as VR");
         vr = true;
     }
     
@@ -92,6 +93,7 @@ public class Shape : MonoBehaviourPun {
     public void MoveRPC(Vector3 pos, float zoom, bool vr){
         if(!PhotonNetwork.IsMasterClient){
             Debug.Log("I am participant with vr : "+vr);
+            Debug.Log("I am photon with VR : "+PhotonView.Find(PhotonNetwork.LocalPlayer.ActorNumber).gameObject.GetComponent<Participant>().setup.is_vr);
             if(!vr){
                 pos *= zoom;
             } else {

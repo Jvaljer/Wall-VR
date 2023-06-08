@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class Participant : MonoBehaviourPun {
     //referenced setup
-    private Setup setup;
+    public Setup setup { get; set; }
 
     //VR Components
     private GameObject right_hand;
@@ -51,7 +51,7 @@ public class Participant : MonoBehaviourPun {
     }
 
     public GameObject GetRightCtrl(){
-        Debug.Log("GetRightCtrl with Setup : "+(setup==null));
+        Debug.Log("GetRightCtrl with Setup : "+(setup!=null));
         if(setup.is_vr){
             return right_hand;
         } else {

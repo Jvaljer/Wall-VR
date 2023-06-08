@@ -24,11 +24,13 @@ public class Participant : MonoBehaviourPun {
 
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
-        Ray ray = new Ray(ray_go.transform.position, ray_go.transform.forward);
-        if(Physics.Raycast(ray, out hit)){
-            if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
-                //we wanna move the cursor to the hit position
-                ope.GetComponent<PhotonView>().RPC("MoveRayCursor", RpcTarget.AllBuffered, hit.point, right_hand);
+        if(photonView.IsMine){
+            Ray ray = new Ray(ray_go.transform.position, ray_go.transform.forward);
+            if(Physics.Raycast(ray, out hit)){
+                if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
+                    //we wanna move the cursor to the hit position
+                    ope.GetComponent<PhotonView>().RPC("MoveRayCursor", RpcTarget.AllBuffered, hit.point, right_hand);
+                }
             }
         }
     }

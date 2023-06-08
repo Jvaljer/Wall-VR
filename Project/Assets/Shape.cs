@@ -96,10 +96,12 @@ public class Shape : MonoBehaviourPun {
             if(!vr){
                 pos *= zoom;
             } else {
-                pos.z = 0f;
+                pos.z = 9.99f;
             }
         }
-        gameObject.transform.GetChild(0).position = pos;
+        Debug.Log("Moving shape on : "+pos);
+        gameObject.transform.position = pos;
+        //gameObject.transform.GetChild(0).position = pos;
         position = pos;
     }
 }

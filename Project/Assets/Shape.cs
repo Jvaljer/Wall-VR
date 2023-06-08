@@ -90,10 +90,9 @@ public class Shape : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void MoveRPC(Vector3 pos, float zoom, bool vr){
+    public void MoveRPC(Vector3 pos, float zoom){
         if(!PhotonNetwork.IsMasterClient){
             Debug.Log("I am participant with vr : "+vr);
-            Debug.Log("I am photon with VR : "+PhotonView.Find(PhotonNetwork.LocalPlayer.ActorNumber).gameObject.GetComponent<Participant>().setup.is_vr);
             if(!vr){
                 pos *= zoom;
             } else {

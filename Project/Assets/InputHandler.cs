@@ -55,7 +55,7 @@ public class InputHandler : MonoBehaviourPun {
             Vector2 mouse_pos = Mouse.current.position.ReadValue();
             float mouse_x = mouse_pos.x/Screen.width;
             float mouse_y = (Screen.height - mouse_pos.y)/Screen.height;
-            //Debug.Log("Mouse is on pos : "+mouse_pos);
+
             //handling operator's mouse
             if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
@@ -163,7 +163,10 @@ public class InputHandler : MonoBehaviourPun {
             if(setup.is_vr){
                 //I am a VR participant so initialize the cursor on the wall 
                 // + register my right controller as a device
+                Debug.Log("adding RightCtrl to the Devices");
+                //must check how to access this properly ...
                 RegisterDevice("RightCtrl", network.cur_participant.GetComponent<Participant>().GetRightCtrl());
+                GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em
                 Cursor.visible = false;

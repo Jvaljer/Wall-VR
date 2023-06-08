@@ -10,6 +10,7 @@ public class Shape : MonoBehaviourPun {
     public float size { get; set; }
     public Vector3 position { get; set; }
     private bool dragged = false;
+    private bool vr = false;
     public List<int> owners { get; private set; } = new List<int>();
 
     //setters
@@ -28,6 +29,9 @@ public class Shape : MonoBehaviourPun {
     }
     public void Drop(){
         dragged = false;
+    }
+    public void SetAsVR(){
+        vr = true;
     }
     
     //getters
@@ -52,10 +56,6 @@ public class Shape : MonoBehaviourPun {
 
     //Some predicates
     public bool CoordsInside(Vector3 coord){
-        Debug.Log("checking for coords : "+coord+" inside of shape centered at : "+position);
-        Vector3 c_wts = Camera.main.WorldToScreenPoint(coord);
-        Vector3 c_stw = Camera.main.ScreenToWorldPoint(c_wts);
-        Debug.Log("on camera : "+Camera.main.name+"coords -> "+c_wts+" -> "+c_stw);
         bool cond = false;
         switch (category){
             case "circle":
@@ -90,8 +90,13 @@ public class Shape : MonoBehaviourPun {
 
     [PunRPC]
     public void MoveRPC(Vector3 pos, float zoom, bool vr){
-        if(!PhotonNetwork.IsMasterClient && !vr){
-            pos *= zoom;
+        if(!PhotonNetwork.IsMasterClient){
+            Debug.Log("I am participant with vr : "+vr);
+            if(!vr){
+                pos *= zoom;
+            } else {
+                pos.z = 0f;
+            }
         }
         gameObject.transform.GetChild(0).position = pos;
         position = pos;

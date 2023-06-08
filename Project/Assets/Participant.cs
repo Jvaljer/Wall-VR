@@ -8,7 +8,7 @@ using Photon.Pun;
 public class Participant : MonoBehaviourPun {
     //referenced setup & operator
     public Setup setup { get; set; }
-    public Operator ope { get; set; }
+    public GameObject ope { get; set; }
 
     //VR Components
     private GameObject right_hand;
@@ -86,7 +86,8 @@ public class Participant : MonoBehaviourPun {
     public void FetchForOperatorRPC(){
         if(photonView.IsMine || PhotonNetwork.IsMasterClient){
             //might have to fetch the one of the Wall Scene ??
-            GameObject.Find("Operator(Clone)").GetComponent<InputHandler>().ParticipantIsReady();
+            ope = GameObject.Find("Operator(Clone)");
+            ope.GetComponent<InputHandler>().ParticipantIsReady();
         }
     }
 

@@ -166,10 +166,6 @@ public class InputHandler : MonoBehaviourPun {
             if(setup.is_vr){
                 //I am a VR participant so initialize the cursor on the wall 
                 // + register my right controller as a device
-                Debug.Log("adding RightCtrl to the Devices");
-                //must check how to access this properly ...
-                RegisterDevice("RightCtrl", network.cur_participant.GetComponent<Participant>().GetRightCtrl());
-                CreateMCursor(network.cur_participant.GetComponent<Participant>().GetRightCtrl(), PhotonNetwork.LocalPlayer.ActorNumber, 0.5f, 0.5f, Color.green);
                 GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em
@@ -198,8 +194,6 @@ public class InputHandler : MonoBehaviourPun {
                 //first we wanna get the coordinates as they are in the ope section
                 Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 4.99f));
                 screen_to_world.y *= -1f;
-                //now we wanna make it appear on the WallGO
-                Debug.LogError("input : "+str+" on "+"("+x_+","+y_+")");
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y), screen_to_world.z);
                 render.Input(str, input, id_);
@@ -434,6 +428,17 @@ public class InputHandler : MonoBehaviourPun {
         }
     };
 
+    public MDevice GetDeviceFromName(string name){
+        foreach(MDevice device in m_devices.Values){
+            if(device.name==name){
+                Debug.Log("Found a device named "+name);
+                return device;
+            }
+        }
+        Debug.Log("Not any device named "+name);
+        return null;
+    }
+
     public MDevice GetDevice(object obj){
         if(m_devices.ContainsKey(obj)){
             return m_devices[obj];
@@ -442,6 +447,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void RegisterDevice(string str, object obj){
+        Debug.Log("Registering a new device : "+str);
         //if the object is already referrring a device -> nothing to register
         if(GetDevice(obj)!=null){
             return;
@@ -449,6 +455,10 @@ public class InputHandler : MonoBehaviourPun {
         m_devices.Add(obj, new MDevice(str));
     }
 
+    public void RegisterDeviceRPC(string str, object obj){
+        Debug.Log("Registering new device from RPC : "+str);
+    }
+    
     /******************************************************************************/
     /*                        SHAPES & VR HANDLING METHODS                        */
     /******************************************************************************/
@@ -479,12 +489,4 @@ public class InputHandler : MonoBehaviourPun {
             }
         }
     }
-
-    [PunRPC]
-    public void  MoveRayCursor(Vector3 hit_point, int id_, object obj){
-        Debug.Log("MoveRayCursor from "+id_+" on point "+hit_point);
-        //must implement
-        return;
-    }
-    
 }

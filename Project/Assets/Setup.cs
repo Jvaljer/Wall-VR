@@ -88,7 +88,6 @@ public class Setup : MonoBehaviourPun {
             }
         }
         Debug.Log("ended parsing");
-
         switch (wall_str){
             case "WILDER":
                 wall = new Wilder();

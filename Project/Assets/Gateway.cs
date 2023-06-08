@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Gateway : MonoBehaviour {
     public static string[] arguments;
+    public bool is_operator = false;
     //public StreamWriter writer;
 
     public void Awake(){
@@ -13,32 +14,49 @@ public class Gateway : MonoBehaviour {
         //writer = new StreamWriter(path, true);
 
 #if UNITY_EDITOR
-  #if UNITY_EDITOR_WIN
-        Debug.Log("Windows Editor -> VR Part by default");
-        //must initialize all args
         arguments = new string[10];
-        arguments[0] = "-vr";
-        arguments[1] = "1";
-        arguments[2] = "-r";
-        arguments[3] = "p";
-        arguments[4] = "-sw"; 
-        arguments[5] = "1980"; 
-        arguments[6] = "-sh"; 
-        arguments[7] = "1080"; 
-        arguments[8] = "-wall";
-        arguments[9] = "DESKTOP";
+  #if UNITY_EDITOR_WIN
+        if(is_operator){
+            Debug.Log("Windows Editor -> Operator by Choice");
+            arguments[0] = "-mo";
+            arguments[1] = "1";
+            arguments[2] = "-r";
+            arguments[3] = "m";
+            arguments[4] = "-sw"; 
+            arguments[5] = "1980"; 
+            arguments[6] = "-sh"; 
+            arguments[7] = "1080"; 
+            arguments[8] = "-wall";
+            arguments[9] = "DESKTOP";
+        } else {
+            Debug.Log("Windows Editor -> VR Part by default");
+            //initializing all args
+            arguments[0] = "-vr";
+            arguments[1] = "1";
+            arguments[2] = "-r";
+            arguments[3] = "p";
+            arguments[4] = "-sw"; 
+            arguments[5] = "1980"; 
+            arguments[6] = "-sh"; 
+            arguments[7] = "1080"; 
+            arguments[8] = "-wall";
+            arguments[9] = "DESKTOP";
+        }
         string args = "";
         for(int i=0; i<10; i++){
             args += arguments[i];
             args += " ";
         }
         Debug.Log("arguments : "+args);
-        SceneManager.LoadScene("VR");
+        if(is_operator){
+            SceneManager.LoadScene("Wall");
+        } else {
+            SceneManager.LoadScene("VR");
+        }
 
   #elif UNITY_EDITOR_LINUX
         Debug.LogError("Linux Editor -> Operator by default");
-        //must initialize all args
-        arguments = new string[10];
+        //initializing all args
         arguments[0] = "-vr";
         arguments[1] = "0";
         arguments[2] = "-r";
@@ -70,6 +88,7 @@ public class Gateway : MonoBehaviour {
             }
         }
         if(vr_scene){
+            //if there's not any argument then default ones are choosen
             if(arguments.Count == 0){
                 arguments = new string[10];
                 arguments[0] = "-vr";

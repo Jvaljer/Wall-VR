@@ -47,9 +47,16 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             Debug.LogError("instantiating shape");
             shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
             Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
+            Debug.LogError("setting shape up : "+shape1_prefab.transform.localScale+" , "+shape1_prefab.transform.position);
             sh1_ctrl.Categorize("circle");
             sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
             sh1_ctrl.PositionOn(Vector3.zero);
+
+            if(setup.master_only){
+                ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
+                ope_prefab.GetComponent<InputHandler>().ParticipantIsReady();
+            }
+
         } else {
             if(setup.is_vr){
                 Debug.Log("OnJoinedRoom as VR Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);

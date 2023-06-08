@@ -17,6 +17,7 @@ public class Shape : MonoBehaviourPun {
         category  = cat;
     }
     public void SetSize(float n){
+        Debug.Log("setting size of shape");
         size = n;
     }
     public void PositionOn(Vector3 pos){
@@ -51,6 +52,10 @@ public class Shape : MonoBehaviourPun {
 
     //Some predicates
     public bool CoordsInside(Vector3 coord){
+        Debug.Log("checking for coords : "+coord+" inside of shape centered at : "+position);
+        Vector3 c_wts = Camera.main.WorldToScreenPoint(coord);
+        Vector3 c_stw = Camera.main.ScreenToWorldPoint(c_wts);
+        Debug.Log("on camera : "+Camera.main.name+"coords -> "+c_wts+" -> "+c_stw);
         bool cond = false;
         switch (category){
             case "circle":

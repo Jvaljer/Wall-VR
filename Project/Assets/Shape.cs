@@ -92,11 +92,21 @@ public class Shape : MonoBehaviourPun {
     [PunRPC]
     public void MoveRPC(Vector3 pos, float zoom){
         if(!PhotonNetwork.IsMasterClient){
-            Debug.Log("I am participant with vr : "+vr);
             if(!vr){
                 pos *= zoom;
             } else {
-                pos.z = 9.99f;
+                //now must scale on the wall's coordinates
+                float tmp = pos.y;
+                tmp += 2.5f;
+                pos.y = tmp;
+                pos.z = 4.99f;
+                /*
+                Vector3 tmp = new Vector3((float)pos.x, (float)pos.y, 4.99f);
+                tmp.x = 10*tmp.x -5;
+                tmp.y = 5*(1-tmp.y);
+                tmp.z = 4.99f;
+                pos = tmp;
+                */
             }
         }
         Debug.Log("Moving shape on : "+pos);

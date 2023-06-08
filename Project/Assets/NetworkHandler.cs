@@ -89,7 +89,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
 
     public override void OnPlayerLeftRoom(Player otherPlayer){
         base.OnPlayerLeftRoom(otherPlayer);
-        cur_participant.GetComponent<PhotonView>().RPC("SomeoneLeft", RpcTarget.AllBuffered, otherPlayer.ActorNumber);
+        if(!PhotonNetwork.IsMasterClient){
+            cur_participant.GetComponent<PhotonView>().RPC("SomeoneLeft", RpcTarget.AllBuffered, otherPlayer.ActorNumber);
+        }
     }
 
     public void SendOpeToParticipants(){

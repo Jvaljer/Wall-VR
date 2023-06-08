@@ -484,6 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setup: {fileID: 0}
   cur_participant: {fileID: 0}
+  shape1_prefab: {fileID: 0}
 --- !u!114 &785745251
 MonoBehaviour:
   m_ObjectHideFlags: 0

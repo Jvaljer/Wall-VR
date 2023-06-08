@@ -51,6 +51,7 @@ public class Render : MonoBehaviourPun {
                         //already tested if dragging ? test it again ?
                         if(obj_ctrl.IsDragged()){
                             //then move shape depending on role
+                            Debug.Log("Moving the shape with input on : "+coord);
                             obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
                         }
                         break;

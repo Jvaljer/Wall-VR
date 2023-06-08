@@ -96,17 +96,13 @@ public class Shape : MonoBehaviourPun {
                 pos *= zoom;
             } else {
                 //now must scale on the wall's coordinates
-                float tmp = pos.y;
-                tmp += 2.5f;
-                pos.y = tmp;
-                pos.z = 4.99f;
-                /*
-                Vector3 tmp = new Vector3((float)pos.x, (float)pos.y, 4.99f);
-                tmp.x = 10*tmp.x -5;
-                tmp.y = 5*(1-tmp.y);
+                Vector3 tmp = new Vector3.zero;
+
+                tmp.x = pos.x/2f;
+                tmp.y = (pos.y/2f) + 2.5f;
                 tmp.z = 4.99f;
+
                 pos = tmp;
-                */
             }
         }
         Debug.Log("Moving shape on : "+pos);

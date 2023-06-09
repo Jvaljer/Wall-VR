@@ -51,7 +51,7 @@ public class InputHandler : MonoBehaviourPun {
 
     private void Update(){
         if(photonView.IsMine && initialized){
-            //Debug.Log("we do be running");
+            Debug.Log("we do be running");
             Vector2 mouse_pos = Mouse.current.position.ReadValue();
             float mouse_x = mouse_pos.x/Screen.width;
             float mouse_y = (Screen.height - mouse_pos.y)/Screen.height;
@@ -71,6 +71,9 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
+            //handling VR's inputs
+                //must implement
+                
             //handling shape creation ? (not yet)
             /*
             if(Mouse.current.rightButton.wasPressedThisFrame){

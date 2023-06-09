@@ -29,7 +29,8 @@ public class Participant : MonoBehaviourPun {
             if(Physics.Raycast(ray, out hit)){
                 if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
                     //we wanna move the cursor to the hit position
-                    ope.GetComponent<PhotonView>().RPC("MoveRayCursor", RpcTarget.AllBuffered, hit.point, right_hand);
+                    Debug.Log("Ray hitting wall on point : "+hit.point);
+                    ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                 }
             }
         }

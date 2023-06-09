@@ -56,4 +56,9 @@ public class Operator : MonoBehaviourPun {
         Debug.Log("AddVRCursorFromOpe (ope PunRPC) : "+n);
         input_handler.AddVRCursorFromOpe(n);
     }
+
+    [PunRPC]
+    public void VRInputRPC(string name, Vector3 coord, int n){
+
+    }
 }

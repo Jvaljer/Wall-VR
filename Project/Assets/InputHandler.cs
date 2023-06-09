@@ -181,6 +181,9 @@ public class InputHandler : MonoBehaviourPun {
             Debug.Log("ParticipantIsReady from myself");
         } else {
             Debug.Log("ParticipantIsReady from other");
+            if(setup.is_vr){
+                ope.GetComponent<photonView>().RPC("SayHiOpe", RpcTarget.AllBuffered);
+            }
         }
         initialized = true;
         render.InitializeFromIH(ope);

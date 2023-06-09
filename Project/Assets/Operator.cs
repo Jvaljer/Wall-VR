@@ -31,7 +31,6 @@ public class Operator : MonoBehaviourPun {
         }
         input_handler.InitializeFromOpe();
         if(setup.master_only){
-            Debug.Log("InitializeRPC -> master_only -> ParticipantIsReady");
             input_handler.ParticipantIsReady();
         } else {
             network.SendOpeToParticipants();
@@ -49,6 +48,15 @@ public class Operator : MonoBehaviourPun {
                 break;
             default:
                 break;
+        }
+    }
+
+    [PunRPC]
+    public void SayHiOpe(){
+        if(photonView.IsMine){
+            Debug.Log("Hi Ope");
+        } else {
+            Debug.Log("Hi Ope (bruh)");
         }
     }
 }

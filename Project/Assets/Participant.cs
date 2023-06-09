@@ -90,7 +90,7 @@ public class Participant : MonoBehaviourPun {
             //might have to fetch the one of the Wall Scene ??
             ope = GameObject.Find("Operator(Clone)");
             Debug.Log("FetchForOperatorRPC -> ParticipantIsReady");
-            ope.GetComponent<InputHandler>().ParticipantIsReady();
+            ope.GetComponent<InputHandler>().ParticipantIsReady(PhotonNetwork.LocalPlayer.ActorNumber);
         }
     }
 

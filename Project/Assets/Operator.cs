@@ -52,11 +52,8 @@ public class Operator : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void SayHiOpe(){
-        if(photonView.IsMine){
-            Debug.Log("Hi Ope");
-        } else {
-            Debug.Log("Hi Ope (bruh)");
-        }
+    public void AddVRCursor(int n = -1){
+        Debug.Log("AddVRCursorFromOpe (ope PunRPC) : "+n);
+        input_handler.AddVRCursorFromOpe(n);
     }
 }

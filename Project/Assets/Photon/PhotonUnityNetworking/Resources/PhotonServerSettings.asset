@@ -53,6 +53,9 @@ MonoBehaviour:
   - InstantiateShape
   - NewShapeRPC
   - MoveRayCursor
+  - SayHiOpe
+  - AddVRCursor
+  - SayHi
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

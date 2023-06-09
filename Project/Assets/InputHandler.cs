@@ -176,17 +176,25 @@ public class InputHandler : MonoBehaviourPun {
         GameObject.Find("Circle(Clone)").GetComponent<Shape>().AddOwner(0);
     }
 
-    public void ParticipantIsReady(){
+    public void ParticipantIsReady(int n =-1){
         if(photonView.IsMine){
             Debug.Log("ParticipantIsReady from myself");
         } else {
             Debug.Log("ParticipantIsReady from other");
             if(setup.is_vr){
-                ope.GetComponent<photonView>().RPC("SayHiOpe", RpcTarget.AllBuffered);
+                if(n!=-1){
+                    ope.GetComponent<PhotonView>().RPC("AddVRCursor", RpcTarget.AllBuffered, n);
+                }
             }
+            photonView.RPC("SayHi", RpcTarget.AllBuffered);
         }
         initialized = true;
         render.InitializeFromIH(ope);
+    }
+
+    [PunRPC]
+    public void SayHi(){
+        Debug.Log("Hi from IH");
     }
 
     [PunRPC]
@@ -494,5 +502,11 @@ public class InputHandler : MonoBehaviourPun {
                 render.NewShape(obj.name, src, id, "square"); //only creating squares yet
             }
         }
+    }
+
+    public void AddVRCursorFromOpe(int n = -1){
+        Debug.Log("AddVRCursorFromOpe -> IH : "+n);
+        //must implement
+        return;
     }
 }

@@ -25,8 +25,10 @@ public class Participant : MonoBehaviourPun {
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
         if(photonView.IsMine){
+            Debug.Log("I am a VR participant");
             Ray ray = new Ray(ray_go.transform.position, ray_go.transform.forward);
             if(Physics.Raycast(ray, out hit)){
+                Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
                 if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
                     //we wanna move the cursor to the hit position
                     Debug.Log("Ray hitting wall on point : "+hit.point);

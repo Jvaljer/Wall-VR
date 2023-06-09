@@ -162,10 +162,10 @@ public class InputHandler : MonoBehaviourPun {
             Cursor.visible = true; 
             RegisterDevice("Mouse", this);
             CreateMCursor(this, 0, 0.5f, 0.5f, Color.red);
+            //now registering the device that will hold all VR cursors
+            RegisterDevice("VR",gameObject.GetComponent<Operator>()); //associating operator as an object
         } else {
             if(setup.is_vr){
-                //I am a VR participant so initialize the cursor on the wall 
-                // + register my right controller as a device
                 GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em
@@ -177,6 +177,11 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void ParticipantIsReady(){
+        if(photonView.IsMine){
+            Debug.Log("ParticipantIsReady from myself");
+        } else {
+            Debug.Log("ParticipantIsReady from other");
+        }
         initialized = true;
         render.InitializeFromIH(ope);
     }

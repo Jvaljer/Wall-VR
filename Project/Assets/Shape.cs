@@ -95,6 +95,7 @@ public class Shape : MonoBehaviourPun {
             if(!vr){
                 pos *= zoom;
             } else {
+                //DO I REALLY NEED TO READJUST HERE ???
                 //now must scale on the wall's coordinates
                 Vector3 tmp = Vector3.zero;
                 //shall use more absolute values (such as cameras & screens size)

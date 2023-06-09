@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wall.unity
     guid: 7d780831c00a2e2d2883da3f4ee6b209
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VR.unity
     guid: 749da597b2d372879ae481a4bf1abe9b
   m_configObjects:

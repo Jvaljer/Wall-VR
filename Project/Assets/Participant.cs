@@ -89,6 +89,7 @@ public class Participant : MonoBehaviourPun {
         if(photonView.IsMine || PhotonNetwork.IsMasterClient){
             //might have to fetch the one of the Wall Scene ??
             ope = GameObject.Find("Operator(Clone)");
+            Debug.Log("FetchForOperatorRPC -> ParticipantIsReady");
             ope.GetComponent<InputHandler>().ParticipantIsReady();
         }
     }

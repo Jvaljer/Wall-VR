@@ -31,6 +31,7 @@ public class Operator : MonoBehaviourPun {
         }
         input_handler.InitializeFromOpe();
         if(setup.master_only){
+            Debug.Log("InitializeRPC -> master_only -> ParticipantIsReady");
             input_handler.ParticipantIsReady();
         } else {
             network.SendOpeToParticipants();

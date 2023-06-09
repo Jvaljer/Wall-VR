@@ -54,6 +54,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
 
             if(setup.master_only){
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
+                Debug.Log("OnJoinedRoom -> master_only -> ParticipantIsReady");
                 ope_prefab.GetComponent<InputHandler>().ParticipantIsReady();
             }
 
@@ -63,8 +64,6 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
                 vr_prefab = PhotonNetwork.Instantiate("VR Participant", transform.position, transform.rotation);
                 vr_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = vr_prefab;
-                GameObject.Find("Operator(Clone)").GetComponent<InputHandler>().RegisterDevice("Right", cur_participant.GetComponent<Participant>().GetRightCtrl());
-                GameObject.Find("Operator(Clone)").GetComponent<PhotonView>().RPC("RegisterDeviceRPC", RpcTarget.AllBuffered, "Right", cur_participant.GetComponent<Participant>().GetRightCtrl());
             } else {
                 Debug.Log("OnJoinedRoom as Wall Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
                 part_prefab = PhotonNetwork.Instantiate("Wall Participant", transform.position, transform.rotation);

@@ -101,7 +101,6 @@ public class Shape : MonoBehaviourPun {
                 tmp.x = pos.x/2f;
                 tmp.y = (pos.y/2f) + 2.5f;
                 tmp.z = 4.99f;
-
                 pos = tmp;
             }
         }

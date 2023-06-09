@@ -59,7 +59,7 @@ public class Operator : MonoBehaviourPun {
 
     [PunRPC]
     public void VRInputRPC(string name, Vector3 coord, int n){
-        Debug.Log("Receiving a VR Input : "+name+"from "+n+" on coord : "+coord);
+        Debug.Log("Receiving a VR Input : "+name+" from "+n+" on coord : "+coord);
         input_handler.VRInput(name,coord,n);
     }
 }

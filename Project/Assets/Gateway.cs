@@ -89,7 +89,7 @@ public class Gateway : MonoBehaviour {
         }
         if(vr_scene){
             //if there's not any argument then default ones are choosen
-            if(arguments.Count == 0){
+            if(arguments.Length == 0){
                 arguments = new string[10];
                 arguments[0] = "-vr";
                 arguments[1] = "1";

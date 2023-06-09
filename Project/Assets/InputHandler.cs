@@ -515,14 +515,35 @@ public class InputHandler : MonoBehaviourPun {
         CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);
     }
 
-    public void VRInput(string name, Vector3 coord, int id){
+    public void VRInput(string name, Vector3 input, int id){
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
         Debug.Log("IH is acting on a received VR input");
         switch (name) {
             case "Move":
                 //in this case we simply wanna move the cursor on the screen
+                Vector3 coord = Vector3.zero;
+                //first of all must translate the coords from the WallGo (VR) coordinates to the Wall Ope coordinates
+
+                if(setup.is_master){
+                    //we wanna move the cursor on the wall scene in a full view
+                    input.x *= Screen.width;
+                    input.y *= Screen.height;
+                    coord = Camera.main.ScreenToWorldPoint(input);
+                    coord.y *= -1f;
+                    coord.z = 0f;
+                } else {
+                    if(setup.is_vr){
+                        //we wanna move the cursor on the VR scene (wallGO)
+                    } else {
+                        //we wanna move the cursor on the wall scene in a zoomed view
+                        Vector3 screen_coord = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + input.x * setup.wall_width, -setup.y_pos + input.y * setup.wall_height, input.z));
+
+                    }
+                }
                 break;
+            
+            //must implement all other asap
             case "TriggerDown":
                 //in this case we wanna pick the potentially hit shape
                 break;

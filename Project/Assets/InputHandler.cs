@@ -134,6 +134,7 @@ public class InputHandler : MonoBehaviourPun {
                     if(setup.is_vr){
                         x = 10f*pc.x- 5f;
                         y = 5f*(1f-pc.y);
+                        Debug.Log("OnGUI -> from "+new Vector2(pc.x, pc.y)+" to "+new Vector2(x, y));
                     } else {
                         x = -setup.x_pos + pc.x * setup.wall_width;
                         y = -setup.y_pos + pc.y * setup.wall_height;
@@ -217,6 +218,7 @@ public class InputHandler : MonoBehaviourPun {
                 screen_to_world.y *= -1f;
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y), screen_to_world.z);
+                Debug.Log("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
                 render.Input(str, input, id_);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
@@ -518,27 +520,19 @@ public class InputHandler : MonoBehaviourPun {
     public void VRInput(string name, Vector3 input, int id){
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
-        Debug.Log("IH is acting on a received VR input");
         switch (name) {
             case "Move":
+                Debug.Log("Must move cursor from coord : "+input);
                 //in this case we simply wanna move the cursor on the screen
-                Vector3 coord = Vector3.zero;
                 //first of all must translate the coords from the WallGo (VR) coordinates to the Wall Ope coordinates
-
+                Vector3 coord = new Vector3((9f*input.x/5f),(4.5f*input.y/2.5f),0f);
                 if(setup.is_master){
-                    //we wanna move the cursor on the wall scene in a full view
-                    input.x *= Screen.width;
-                    input.y *= Screen.height;
-                    coord = Camera.main.ScreenToWorldPoint(input);
-                    coord.y *= -1f;
-                    coord.z = 0f;
+                    //we wanna move on the full view coords
                 } else {
                     if(setup.is_vr){
                         //we wanna move the cursor on the VR scene (wallGO)
                     } else {
                         //we wanna move the cursor on the wall scene in a zoomed view
-                        Vector3 screen_coord = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + input.x * setup.wall_width, -setup.y_pos + input.y * setup.wall_height, input.z));
-
                     }
                 }
                 break;

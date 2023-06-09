@@ -98,8 +98,8 @@ public class Shape : MonoBehaviourPun {
                 //now must scale on the wall's coordinates
                 Vector3 tmp = Vector3.zero;
                 //shall use more absolute values (such as cameras & screens size)
-                tmp.x = pos.x/2f;
-                tmp.y = (pos.y/2f) + 2.5f;
+                tmp.x = (5f*pos.x)/9f;
+                tmp.y = (2.5f*pos.y)/4.5f;
                 tmp.z = 4.99f;
                 pos = tmp;
             }

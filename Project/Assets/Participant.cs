@@ -21,17 +21,19 @@ public class Participant : MonoBehaviourPun {
 
     //devices & shape manipulation ids
     private int id;
+    private bool started = false;
 
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
-        if(photonView.IsMine){
+        if(photonView.IsMine && started){
             Debug.Log("I am a VR participant");
-            Ray ray = new Ray(ray_go.transform.position, ray_go.transform.forward);
+            Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
             if(Physics.Raycast(ray, out hit)){
-                Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
+                //Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
                 if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
                     //we wanna move the cursor to the hit position
-                    Debug.Log("Ray hitting wall on point : "+hit.point);
+                    //Debug.Log("Ray hitting wall on point : "+hit.point);
+                    Debug.Log("sending move input to Ope");
                     ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                 }
             }
@@ -94,6 +96,7 @@ public class Participant : MonoBehaviourPun {
             ope = GameObject.Find("Operator(Clone)");
             Debug.Log("FetchForOperatorRPC -> ParticipantIsReady");
             ope.GetComponent<InputHandler>().ParticipantIsReady(PhotonNetwork.LocalPlayer.ActorNumber);
+            started = true;
         }
     }
 

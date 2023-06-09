@@ -11,6 +11,7 @@ public class InputHandler : MonoBehaviourPun {
     //operator & cursors prefab
     private Operator ope;
     public GameObject cursor_prefab;
+    private object vr_ref;
 
     //referenced setup, render & network
     private Setup setup;
@@ -73,7 +74,7 @@ public class InputHandler : MonoBehaviourPun {
 
             //handling VR's inputs
                 //must implement
-                
+
             //handling shape creation ? (not yet)
             /*
             if(Mouse.current.rightButton.wasPressedThisFrame){
@@ -158,6 +159,7 @@ public class InputHandler : MonoBehaviourPun {
         setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
         render = GameObject.Find("ScriptManager").GetComponent<Render>();
         network = GameObject.Find("ScriptManager").GetComponent<NetworkHandler>();
+        vr_ref = gameObject.GetComponent<Operator>(); //might specify with abstract class ? not really needed I guess
 
         if(photonView.IsMine){
             //I am me -> operator so set cursor visible
@@ -166,7 +168,7 @@ public class InputHandler : MonoBehaviourPun {
             RegisterDevice("Mouse", this);
             CreateMCursor(this, 0, 0.5f, 0.5f, Color.red);
             //now registering the device that will hold all VR cursors
-            RegisterDevice("VR",gameObject.GetComponent<Operator>()); //associating operator as an object
+            RegisterDevice("VR",vr_ref); //associating operator as an object
         } else {
             if(setup.is_vr){
                 GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
@@ -511,5 +513,33 @@ public class InputHandler : MonoBehaviourPun {
     public void AddVRCursorFromOpe(int n = -1){
         Debug.Log("AddVRCursorFromOpe -> IH : "+n);
         CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);
+    }
+
+    public void VRInput(string name, Vector3 coord, int id){
+        //here we wanna first get the associated cursor
+        MCursor mc = GetMCursor(vr_ref, id);
+        Debug.Log("IH is acting on a received VR input");
+        switch (name) {
+            case "Move":
+                //in this case we simply wanna move the cursor on the screen
+                break;
+            case "TriggerDown":
+                //in this case we wanna pick the potentially hit shape
+                break;
+            case "TriggerUp":
+                //in this case we wanna drop the potentially held shape
+                break;
+            case "JoyDown":
+                //dunno what to do in this case
+                break;
+            case "JoyUp":
+                //dunno what to do in this case
+                break;
+            case "JoyTouch":
+                //duno what to do in this case
+                break;
+            default:
+                break;
+        }
     }
 }

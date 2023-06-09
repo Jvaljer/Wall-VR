@@ -281,6 +281,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void CreateMCursor(object obj, int id_, float x_, float y_, Color c_, bool hid_=false){
+        Debug.Log("Creating a Master Cursor of id "+id_+" from object "+obj);
         //Debug.Log("first Create Cursor");
         MDevice device = GetDevice(obj);
         if(device==null){
@@ -506,7 +507,6 @@ public class InputHandler : MonoBehaviourPun {
 
     public void AddVRCursorFromOpe(int n = -1){
         Debug.Log("AddVRCursorFromOpe -> IH : "+n);
-        //must implement
-        return;
+        CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);
     }
 }

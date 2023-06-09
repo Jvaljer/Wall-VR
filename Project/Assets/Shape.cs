@@ -101,6 +101,7 @@ public class Shape : MonoBehaviourPun {
                 tmp.x = (5f*pos.x)/9f;
                 tmp.y = (2.5f*pos.y)/4.5f;
                 tmp.z = 4.99f;
+                Debug.Log("MoveRPC (Shape) -> from "+pos+" to "+tmp);
                 pos = tmp;
             }
         }

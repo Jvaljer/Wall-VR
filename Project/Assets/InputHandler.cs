@@ -218,7 +218,7 @@ public class InputHandler : MonoBehaviourPun {
                 screen_to_world.y *= -1f;
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y), screen_to_world.z);
-                Debug.Log("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
+                Debug.LogError("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
                 render.Input(str, input, id_);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));

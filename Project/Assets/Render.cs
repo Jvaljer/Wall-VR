@@ -37,10 +37,10 @@ public class Render : MonoBehaviourPun {
     public void Input(string name, Vector3 coord, int id){
         //first we wanna check which one of the shape we are tryna move
         foreach(GameObject obj in shapes.Values){
-            Debug.Log("for shape : "+obj.name);
+            //Debug.Log("for shape : "+obj.name);
             Shape obj_ctrl = obj.GetComponent<Shape>();
             if(obj_ctrl.IsOwnedBy(id)){ //later on we'll like to add more scripts + abstract class
-                Debug.Log("we have the owner : "+id);
+                //Debug.Log("we have the owner : "+id);
                 switch (name){
                     case "Down":
                         if(obj_ctrl.CoordsInside(coord)){

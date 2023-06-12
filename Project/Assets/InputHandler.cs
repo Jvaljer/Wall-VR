@@ -67,7 +67,6 @@ public class InputHandler : MonoBehaviourPun {
                 MoveMCursor(this, 0, mouse_x, mouse_y);
 
                 if(GetMCursor(this,0).drag){
-                    Debug.Log("click detected on "+new Vector2(mouse_x,mouse_y));
                     photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Move", mouse_x, mouse_y, 0);
                 }
             }
@@ -125,7 +124,6 @@ public class InputHandler : MonoBehaviourPun {
                         dst.y = 5f*(1f-pc.y); */
                         dst = CoordOfMouseToVR(pc.Coord());
                         dst.y -= 2.5f;
-                        Debug.Log("OnGUI VR -> from "+new Vector2(pc.x, pc.y)+" to "+dst);
                     } else {
                         /*dst.x = -setup.x_pos + pc.x * setup.wall_width;
                         dst.y = -setup.y_pos + pc.y * setup.wall_height; */
@@ -136,7 +134,6 @@ public class InputHandler : MonoBehaviourPun {
                     //here we wanna move the related GO in the VR scene 
                     dst.z = vr_cursors[pc].transform.position.z;
                     vr_cursors[pc].transform.position = dst;
-                    Debug.Log("Moved cursor on : "+dst+" == "+vr_cursors[pc].transform.position);
                 } else {
                     GUI.DrawTexture(new Rect(dst.x - cursor_HW, dst.y - cursor_HW, 2*cursor_HW, 2*cursor_HW), pc.tex);
                 }
@@ -203,7 +200,7 @@ public class InputHandler : MonoBehaviourPun {
             Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
             screen_to_world.y *= -1f;
             render.Input(str, input, id_);
-        } else if(photonView.IsMine){
+        } /* else if(photonView.IsMine){
             if(setup.is_vr){
                 Debug.LogError("duh duh duh");
                 //MUST CORRECT THIS !!!
@@ -221,7 +218,7 @@ public class InputHandler : MonoBehaviourPun {
                 input.z = 0f;
                 render.Input(str, input, id_);
             }
-        }
+        } */ //seems to never be called 
     }
 
     /******************************************************************************/
@@ -516,21 +513,23 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void VRInput(string name, Vector3 input, int id){
+        Debug.Log("VRInput has been called");
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
         if(mc==null){
+            Debug.LogError("cursor is null");
             return;
         }
         //mc is the cursor we wanna move onto the coord 'input'
         switch (name) {
             case "Move":
-                Debug.Log("Must move cursor from coord : "+input);
+                Debug.Log("Must move cursor from VR coord : "+input);
                 //to go from vr to mouse we can do the inverse of what we're doing in OnGUI
-                Vector3 pos = new Vector3((input.x+5f)/10f, ((-input.y+5f)/5f), 0f);
-                Debug.Log("moving the vr cursor on "+pos);
-                //here we technically need to only modify the mc pos referring to the mouse pos 
+                //Vector3 dst = CoordOfVRToMouse(input);
+                Vector3 dst = CoordOfVRToOpe(input);
+                Debug.Log("moving the vr cursor on "+dst);
                 //because visual pos will be adjusted later on
-                mc.Move(input.x, input.y);
+                mc.Move(dst.x, dst.y);
                 break;
             
             //must implement all other asap
@@ -578,5 +577,20 @@ public class InputHandler : MonoBehaviourPun {
         wall_c.x = -setup.x_pos + mouse.x * setup.wall_width;
         wall_c.y = -setup.y_pos + mouse.y * setup.wall_height; 
         return wall_c;
+    }
+
+    public Vector3 CoordOfVRToMouse(Vector3 vr){
+        Vector3 mouse_c = Vector3.zero;
+        mouse_c.x = (vr.x - 5f)/10f;
+        mouse_c.y = -1f*(((vr.y-2.5f)/5f) -1f);
+        mouse_c.z = 0f;
+        return mouse_c;
+    }
+
+    public Vector3 CoordOfVRToOpe(Vector3 vr){
+        Vector3 ope_c = Vector3.zero;
+        ope_c.x = (10f*vr.x)/5f;
+        ope_c.y = (5f*(vr.y - 2.5f))/2.5f;
+        return ope_c;
     }
 }

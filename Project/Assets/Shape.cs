@@ -98,15 +98,10 @@ public class Shape : MonoBehaviourPun {
                 Vector3 stack = pos;
                 //now must scale on the wall's coordinates
                 Vector3 tmp = Vector3.zero;
-                //shall use more absolute values (such as cameras & screens size)
-                /*
-                input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
-                */
                 tmp.x = (5f*pos.x)/10f;
                 tmp.y = (2.5f*pos.y)/5f + 2.5f;
                 tmp.z = 4.99f;
                 pos = tmp;
-                Debug.Log("shape moves from "+stack+" to "+pos);
             }
         }
         gameObject.transform.position = pos;

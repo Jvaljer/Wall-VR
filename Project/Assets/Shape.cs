@@ -90,22 +90,23 @@ public class Shape : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void MoveRPC(Vector3 pos, float zoom, Vector3 debug){
+    public void MoveRPC(Vector3 pos, float zoom){
         if(!PhotonNetwork.IsMasterClient){
             if(!vr){
                 pos *= zoom;
             } else {
+                Vector3 stack = pos;
                 //now must scale on the wall's coordinates
                 Vector3 tmp = Vector3.zero;
                 //shall use more absolute values (such as cameras & screens size)
                 tmp.x = (5f*pos.x)/9f;
-                tmp.y = (2.5f*pos.y)/4.5f;
+                tmp.y = (2.5f*pos.y)/4.5f + 2.5f;
                 tmp.z = 4.99f;
                 pos = tmp;
+                Debug.Log("shape moves from "+stack+" to "+pos);
             }
         }
-        Vector3 vr_pos = new Vector3(5f*debug.x/9f, 2.5f*debug.y/4.5f, 4.99f);
-        Debug.LogError("Moving shape on : "+pos+" and for vr : "+vr_pos);
+        Debug.Log("I am VR : "+vr+" so my shape moves on "+pos);
         gameObject.transform.position = pos;
         position = pos;
     }

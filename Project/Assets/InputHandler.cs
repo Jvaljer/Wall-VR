@@ -67,7 +67,7 @@ public class InputHandler : MonoBehaviourPun {
                 MoveMCursor(this, 0, mouse_x, mouse_y);
 
                 if(GetMCursor(this,0).drag){
-                    Debug.LogError("click detected on "+new Vector2(mouse_x,mouse_y));
+                    Debug.Log("click detected on "+new Vector2(mouse_x,mouse_y));
                     photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Move", mouse_x, mouse_y, 0);
                 }
             }
@@ -119,14 +119,13 @@ public class InputHandler : MonoBehaviourPun {
                     /*dst.x = pc.x*Screen.width;
                     dst.y = pc.y*Screen.height; */
                     dst = CoordOfMouseToOpe(pc.Coord());
-                    Vector3 vr_dst = CoordOfMouseToVR(pc.Coord());
-                    Debug.Log("moving the PCursor on : "+dst+" and "+vr_dst);
                 } else {
                     if(setup.is_vr){
                         /*dst.x = 10f*pc.x- 5f;
                         dst.y = 5f*(1f-pc.y); */
                         dst = CoordOfMouseToVR(pc.Coord());
-                        Debug.Log("OnGUI -> from "+new Vector2(pc.x, pc.y)+" to "+new Vector2(dst.x, dst.y));
+                        dst.y -= 2.5f;
+                        Debug.Log("OnGUI VR -> from "+new Vector2(pc.x, pc.y)+" to "+dst);
                     } else {
                         /*dst.x = -setup.x_pos + pc.x * setup.wall_width;
                         dst.y = -setup.y_pos + pc.y * setup.wall_height; */
@@ -135,8 +134,9 @@ public class InputHandler : MonoBehaviourPun {
                 }
                 if(setup.is_vr){
                     //here we wanna move the related GO in the VR scene 
-                    float z = vr_cursors[pc].transform.position.z;
-                    vr_cursors[pc].transform.position = new Vector3(dst.x, dst.y, z);
+                    dst.z = vr_cursors[pc].transform.position.z;
+                    vr_cursors[pc].transform.position = dst;
+                    Debug.Log("Moved cursor on : "+dst+" == "+vr_cursors[pc].transform.position);
                 } else {
                     GUI.DrawTexture(new Rect(dst.x - cursor_HW, dst.y - cursor_HW, 2*cursor_HW, 2*cursor_HW), pc.tex);
                 }
@@ -202,10 +202,7 @@ public class InputHandler : MonoBehaviourPun {
             //input = CoordOfMouseToOpe(new Vector3(x_,y_,0f)); //isn't it the same ??
             Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
             screen_to_world.y *= -1f;
-            //here we wanna modify the coordinates to be the good ones in VR scene 
-            Vector3 input_ = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
-            Debug.Log("IH -> InputRPC "+input+" _ "+input_);
-            render.Input(str, input, id_, input_);
+            render.Input(str, input, id_);
         } else if(photonView.IsMine){
             if(setup.is_vr){
                 //MUST CORRECT THIS !!!
@@ -214,14 +211,14 @@ public class InputHandler : MonoBehaviourPun {
                 screen_to_world.y *= -1f;
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
-                Debug.LogError("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
-                render.Input(str, input, id_, Vector3.zero);
+                Debug.Log("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
+                render.Input(str, input, id_);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
                 input = Camera.main.ScreenToWorldPoint(screen_input);
                 input.y *= -1f;
                 input.z = 0f;
-                render.Input(str, input, id_, Vector3.zero);
+                render.Input(str, input, id_);
             }
         }
     }
@@ -526,9 +523,10 @@ public class InputHandler : MonoBehaviourPun {
                 Debug.Log("Must move cursor from coord : "+input);
                 //to go from vr to mouse we can do the inverse of what we're doing in OnGUI
                 Vector3 pos = new Vector3((input.x+5f)/10f, ((-input.y+5f)/5f), 0f);
+                Debug.Log("moving the vr cursor on "+pos);
                 //here we technically need to only modify the mc pos referring to the mouse pos 
                 //because visual pos will be adjusted later on
-                mc.Move(pos.x, pos.y);
+                mc.Move(input.x, input.y);
                 break;
             
             //must implement all other asap

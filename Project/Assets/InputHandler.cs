@@ -576,9 +576,11 @@ public class InputHandler : MonoBehaviourPun {
 
     public Vector3 CoordOfVRToMouse(Vector3 vr){
         Vector3 mouse_c = Vector3.zero;
-        mouse_c.x = (vr.x - 5f)/10f;
+        /* mouse_c.x = (vr.x - 5f)/10f;
         mouse_c.y = -1f*(((vr.y-2.5f)/5f) -1f);
-        mouse_c.z = 0f;
+        mouse_c.z = 0f; */ //ALMOST WORKING
+        mouse_c.x = (vr.x)/10f + 0.5f;
+        mouse_c.y = (-1f/5f)*vr.y +1f;
         return mouse_c;
     }
 

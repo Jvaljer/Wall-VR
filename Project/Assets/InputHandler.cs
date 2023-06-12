@@ -205,6 +205,7 @@ public class InputHandler : MonoBehaviourPun {
             render.Input(str, input, id_);
         } else if(photonView.IsMine){
             if(setup.is_vr){
+                Debug.LogError("duh duh duh");
                 //MUST CORRECT THIS !!!
                 //first we wanna get the coordinates as they are in the ope section
                 Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
@@ -517,6 +518,9 @@ public class InputHandler : MonoBehaviourPun {
     public void VRInput(string name, Vector3 input, int id){
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
+        if(mc==null){
+            return;
+        }
         //mc is the cursor we wanna move onto the coord 'input'
         switch (name) {
             case "Move":

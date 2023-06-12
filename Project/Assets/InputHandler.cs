@@ -75,6 +75,7 @@ public class InputHandler : MonoBehaviourPun {
             to_delete_ids.Clear();
             foreach(MDevice dev in m_devices.Values){
                 foreach(MCursor mc in dev.cursors.Values){
+                    Debug.Log(dev.name+" cursor has pos ("+mc.x+","+mc.y+")");
                     //if not related PCursor then create it
                     if(mc.p_cursor==null){
                         mc.AddPCursor(new PCursor(mc.x, mc.y, mc.c));
@@ -114,19 +115,14 @@ public class InputHandler : MonoBehaviourPun {
         if(initialized){
             foreach(PCursor pc in p_cursors.Values){
                 Vector3 dst;
+                Debug.Log("pcursor coords : "+pc);
                 if(PhotonNetwork.IsMasterClient){
-                    /*dst.x = pc.x*Screen.width;
-                    dst.y = pc.y*Screen.height; */
                     dst = CoordOfMouseToOpe(pc.Coord());
                 } else {
                     if(setup.is_vr){
-                        /*dst.x = 10f*pc.x- 5f;
-                        dst.y = 5f*(1f-pc.y); */
                         dst = CoordOfMouseToVR(pc.Coord());
                         dst.y -= 2.5f;
                     } else {
-                        /*dst.x = -setup.x_pos + pc.x * setup.wall_width;
-                        dst.y = -setup.y_pos + pc.y * setup.wall_height; */
                         dst = CoordOfMouseToWall(pc.Coord());
                     }
                 }
@@ -513,7 +509,6 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void VRInput(string name, Vector3 input, int id){
-        Debug.Log("VRInput has been called");
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
         if(mc==null){
@@ -523,11 +518,11 @@ public class InputHandler : MonoBehaviourPun {
         //mc is the cursor we wanna move onto the coord 'input'
         switch (name) {
             case "Move":
-                Debug.Log("Must move cursor from VR coord : "+input);
                 //to go from vr to mouse we can do the inverse of what we're doing in OnGUI
-                //Vector3 dst = CoordOfVRToMouse(input);
-                Vector3 dst = CoordOfVRToOpe(input);
-                Debug.Log("moving the vr cursor on "+dst);
+
+                Vector3 dst = CoordOfVRToMouse(input);
+                //Vector3 dst = CoordOfVRToOpe(input);
+
                 //because visual pos will be adjusted later on
                 mc.Move(dst.x, dst.y);
                 break;
@@ -591,6 +586,7 @@ public class InputHandler : MonoBehaviourPun {
         Vector3 ope_c = Vector3.zero;
         ope_c.x = (10f*vr.x)/5f;
         ope_c.y = (5f*(vr.y - 2.5f))/2.5f;
+        ope_c.y *= -1f;
         return ope_c;
     }
 }

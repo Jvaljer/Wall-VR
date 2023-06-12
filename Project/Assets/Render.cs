@@ -34,7 +34,7 @@ public class Render : MonoBehaviourPun {
         shapes = new Dictionary<string, GameObject>();
     }
 
-    public void Input(string name, Vector3 coord, int id){
+    public void Input(string name, Vector3 coord, int id, Vector3 debug_vec){
         //first we wanna check which one of the shape we are tryna move
         foreach(GameObject obj in shapes.Values){
             Debug.Log("for shape : "+obj.name);
@@ -51,8 +51,8 @@ public class Render : MonoBehaviourPun {
                         //already tested if dragging ? test it again ?
                         if(obj_ctrl.IsDragged()){
                             //then move shape depending on role
-                            Debug.Log("Moving the shape with input on : "+coord);
-                            obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
+                            Debug.Log("Moving the shape with input on : "+coord+" or "+debug_vec);
+                            obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio, debug_vec);
                         }
                         break;
                     case "Up":

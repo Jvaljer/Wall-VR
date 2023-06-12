@@ -52,7 +52,6 @@ public class InputHandler : MonoBehaviourPun {
 
     private void Update(){
         if(photonView.IsMine && initialized){
-            Debug.Log("we do be running");
             Vector2 mouse_pos = Mouse.current.position.ReadValue();
             float mouse_x = mouse_pos.x/Screen.width;
             float mouse_y = (Screen.height - mouse_pos.y)/Screen.height;
@@ -60,32 +59,21 @@ public class InputHandler : MonoBehaviourPun {
             //handling operator's mouse
             if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
-                Debug.LogError("Input Down");
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Down", mouse_x, mouse_y, 0);
             } else if(Mouse.current.leftButton.wasReleasedThisFrame){
                 StopMoveMCursor(this, 0, mouse_x, mouse_y);
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Up", mouse_x, mouse_y, 0);
             } else {
                 MoveMCursor(this, 0, mouse_x, mouse_y);
+
                 if(GetMCursor(this,0).drag){
+                    Debug.LogError("click detected on "+new Vector2(mouse_x,mouse_y));
                     photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Move", mouse_x, mouse_y, 0);
                 }
             }
 
-            //handling VR's inputs
-                //must implement
-
-            //handling shape creation ? (not yet)
-            /*
-            if(Mouse.current.rightButton.wasPressedThisFrame){
-                Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
-                photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
-            }
-            */
-
             //handling cursors
             to_delete_ids.Clear();
-            Debug.Log("amount of Devices : "+m_devices.Count);
             foreach(MDevice dev in m_devices.Values){
                 foreach(MCursor mc in dev.cursors.Values){
                     //if not related PCursor then create it
@@ -131,6 +119,8 @@ public class InputHandler : MonoBehaviourPun {
                     /*dst.x = pc.x*Screen.width;
                     dst.y = pc.y*Screen.height; */
                     dst = CoordOfMouseToOpe(pc.Coord());
+                    Vector3 vr_dst = CoordOfMouseToVR(pc.Coord());
+                    Debug.Log("moving the PCursor on : "+dst+" and "+vr_dst);
                 } else {
                     if(setup.is_vr){
                         /*dst.x = 10f*pc.x- 5f;
@@ -197,6 +187,7 @@ public class InputHandler : MonoBehaviourPun {
             }
         }
         initialized = true;
+        Debug.LogError("IH now initialized");
         render.InitializeFromIH(ope);
     }
 
@@ -209,7 +200,12 @@ public class InputHandler : MonoBehaviourPun {
             input.y *= -1f;
             input.z = 0f;
             //input = CoordOfMouseToOpe(new Vector3(x_,y_,0f)); //isn't it the same ??
-            render.Input(str, input, id_);
+            Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
+            screen_to_world.y *= -1f;
+            //here we wanna modify the coordinates to be the good ones in VR scene 
+            Vector3 input_ = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
+            Debug.Log("IH -> InputRPC "+input+" _ "+input_);
+            render.Input(str, input, id_, input_);
         } else if(photonView.IsMine){
             if(setup.is_vr){
                 //MUST CORRECT THIS !!!
@@ -219,13 +215,13 @@ public class InputHandler : MonoBehaviourPun {
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
                 Debug.LogError("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
-                render.Input(str, input, id_);
+                render.Input(str, input, id_, Vector3.zero);
             } else {
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
                 input = Camera.main.ScreenToWorldPoint(screen_input);
                 input.y *= -1f;
                 input.z = 0f;
-                render.Input(str, input, id_);
+                render.Input(str, input, id_, Vector3.zero);
             }
         }
     }
@@ -568,8 +564,11 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public Vector3 CoordOfMouseToVR(Vector3 mouse){
-        //must implement
-        return Vector3.zero;
+        Vector3 vr_c = Vector3.zero;
+        vr_c.x = 10f*mouse.x -5f;
+        vr_c.y = 5f*(1f-mouse.y) + 2.5f;
+        vr_c.z = 4.99f;
+        return vr_c;
     }
 
     public Vector3 CoordOfMouseToWall(Vector3 mouse){

@@ -4,7 +4,7 @@ WALL="DESKTOP"
 PART_AMOUNT=1
 MASTER_ID="m"
 PART_ID="p"
-MASTER_ONLY=0
+MASTER_ONLY=1
 FS=0
 
 echo "executing for operator"

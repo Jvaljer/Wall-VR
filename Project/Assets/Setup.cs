@@ -37,7 +37,6 @@ public class Setup : MonoBehaviourPun {
 
     public void Start(){
         Debug.LogError("Setup Starting on scene : "+SceneManager.GetActiveScene().name);
-        Debug.Log("args are : "+Gateway.arguments);
         args = Gateway.arguments;
         Debug.Log("got args : "+args);
         for(int i=0; i<args.Length; i++){

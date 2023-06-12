@@ -121,7 +121,7 @@ public class InputHandler : MonoBehaviourPun {
                 } else {
                     if(setup.is_vr){
                         dst = CoordOfMouseToVR(pc.Coord());
-                        dst.y -= 2.5f;
+                        dst.x += 5f;
                     } else {
                         dst = CoordOfMouseToWall(pc.Coord());
                     }

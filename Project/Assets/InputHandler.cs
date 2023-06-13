@@ -197,7 +197,7 @@ public class InputHandler : MonoBehaviourPun {
             input.y *= -1f;
             input.z = 0f;
             Debug.Log("operator coords for input : "+input);
-            render.Input(str, input, id_);
+            render.Input(str, input.x, input.y, input.z, id_);
         } else {
             Debug.Log("InputRPC - ("+x_+","+y_+")");
             if(setup.is_vr){
@@ -207,18 +207,27 @@ public class InputHandler : MonoBehaviourPun {
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
                 //input = CoordOfMouseToVR(new Vector3(x_,y_,0f));
-                render.Input(str, input, id_);
+                render.Input(str, input.x, input.y, input.z, id_);
             } else {
                 Debug.Log("-> I call the Wall part of it");
-                Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
-                input = Camera.main.ScreenToWorldPoint(screen_input);
-                input.y *= -1f;
-                input.z = 0f;
-                Debug.Log("render.Input("+str+","+input+","+id_+")");
-                //input = CoordOfMouseToWall(new Vector3(x_,y_,0f));
-                render.Input(str, input, id_);
+                float y = y_;
+                //Debug.LogError("y mouse : "+y_+" y OGL : "+y);
+                input = Camera.main.ScreenToWorldPoint(CoordOfMouseToWall(new Vector3(x_,y,0f)));
+                Debug.LogError("y = "+input.y);
+                render.Input(str, (float)input.x, (float)input.y, 0f, id_);
             }
         }
+        //ope sends momuse coords (0,1) by RPC to clients
+        // --> 
+        //each calculates (with diff sw & sh)
+        //px = mouse_x*sw - (sw/2f);
+        //py = (sh/2f) - mouse_y*sh;
+        // --> move shape on these coords
+
+        //if client does input 
+        // --> send pos
+        // mouse_x & mouse_y from px & py (pos)
+        //
     }
 
     /******************************************************************************/
@@ -570,7 +579,7 @@ public class InputHandler : MonoBehaviourPun {
     public Vector3 CoordOfMouseToWall(Vector3 mouse){
         Vector3 wall_c = Vector3.zero;
         wall_c.x = -setup.x_pos + mouse.x * setup.wall_width;
-        wall_c.y = -setup.y_pos + mouse.y * setup.wall_height; 
+        wall_c.y = -setup.y_pos + mouse.y * setup.wall_height;
         return wall_c;
     }
 

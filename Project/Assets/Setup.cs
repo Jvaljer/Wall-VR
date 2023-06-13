@@ -100,7 +100,7 @@ public class Setup : MonoBehaviourPun {
         }
         wall_height = wall.Height();
         wall_width = wall.Width();
-        
+        Debug.LogError("wall width : "+wall_width+"  wall height : "+wall_height);
         Debug.Log("Setup Connects to the Server");
         //now connecting to the server
         ConnectToServer();

@@ -34,7 +34,7 @@ public class Render : MonoBehaviourPun {
         shapes = new Dictionary<string, GameObject>();
     }
 
-    public void Input(string name, Vector3 coord, int id){
+    public void Input(string name, float x, float y, float z, int id){
         //first we wanna check which one of the shape we are tryna move
         foreach(GameObject obj in shapes.Values){
             //Debug.Log("for shape : "+obj.name);
@@ -43,7 +43,8 @@ public class Render : MonoBehaviourPun {
                 //Debug.Log("we have the owner : "+id);
                 switch (name){
                     case "Down":
-                        if(obj_ctrl.CoordsInside(coord)){
+                        Debug.LogError("clicked on coords : ("+x+","+y+")");
+                        if(obj_ctrl.CoordsInside(new Vector3(x,y,z))){
                             obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
                         }
                         break;
@@ -52,7 +53,7 @@ public class Render : MonoBehaviourPun {
                         if(obj_ctrl.IsDragged()){
                             //then move shape depending on role
                             //obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
-                            obj_ctrl.Move(coord ,setup.zoom_ratio);
+                            obj_ctrl.Move(x,y,z ,setup.zoom_ratio);
                         }
                         break;
                     case "Up":
@@ -76,6 +77,8 @@ public class Render : MonoBehaviourPun {
             sh = Screen.height;
             screen_ratio = sh/sw;
             pix_to_unit = Camera.main.orthographicSize /(sh/2.0f);
+            swu = sw*pix_to_unit;
+            shu = sh*pix_to_unit;
             abs = 0.1f;
             ih_scale = ih_scale*abs;
         } else {
@@ -83,12 +86,15 @@ public class Render : MonoBehaviourPun {
                 //simply replacing the shape on the wall ?
                 shapes["Circle(Clone)"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 shapes["Circle(Clone)"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+                //must implement
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;
                 screen_ratio = sh/sw;
                 ortho_size = (float)Camera.main.orthographicSize / (float)setup.wall.RowsAmount();
                 pix_to_unit = (float)setup.wall.RowsAmount() * (float)Camera.main.orthographicSize / (sh/2.0f);
+                swu = sw*pix_to_unit;
+                shu = sh*pix_to_unit;
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?

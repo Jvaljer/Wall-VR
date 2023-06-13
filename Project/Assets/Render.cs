@@ -51,7 +51,8 @@ public class Render : MonoBehaviourPun {
                         //already tested if dragging ? test it again ?
                         if(obj_ctrl.IsDragged()){
                             //then move shape depending on role
-                            obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
+                            //obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
+                            obj_ctrl.Move(coord ,setup.zoom_ratio);
                         }
                         break;
                     case "Up":
@@ -91,7 +92,6 @@ public class Render : MonoBehaviourPun {
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?
-                    //shape.transform.localScale *= 2f;
                     shape.transform.localScale *= setup.zoom_ratio;
                 }
             }

@@ -43,7 +43,6 @@ public class Setup : MonoBehaviourPun {
             Debug.Log(args[i]);
             switch (args[i]){
                 case "-wall":
-                    Debug.Log("getting arg -wall");
                     wall_str = args[i+1];
                     break;
                 case "-sh":
@@ -58,7 +57,9 @@ public class Setup : MonoBehaviourPun {
 
                 case "-r":
                     is_master = (args[i+1]=="m");
+                    Debug.Log("Is Master : "+is_master);
                     break;
+
                 case "-vr":
                     is_vr = ((int.Parse(args[i+1]))!=0);
                     break;
@@ -92,7 +93,7 @@ public class Setup : MonoBehaviourPun {
                 wall = new Wilder();
                 break;
             case "DESKTOP":
-                wall = new Desktop(1,2);
+                wall = new Desktop(2,2);
                 break;
             default:
                 break;
@@ -100,7 +101,7 @@ public class Setup : MonoBehaviourPun {
         wall_height = wall.Height();
         wall_width = wall.Width();
         
-        Debug.Log("Wall well set");
+        Debug.Log("Setup Connects to the Server");
         //now connecting to the server
         ConnectToServer();
     }

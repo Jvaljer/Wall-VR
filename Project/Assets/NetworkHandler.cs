@@ -39,15 +39,13 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
         base.OnJoinedRoom();
         Debug.Log("OnJoinedRoom"+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
-        if(setup.is_master){
+        if(PhotonNetwork.IsMasterClient){
             Debug.Log("OnJoinedRoom as Operator : "+PhotonNetwork.LocalPlayer.ActorNumber);
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
-            Debug.LogError("instantiating shape");
             shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
             Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
-            Debug.LogError("setting shape up : "+shape1_prefab.transform.localScale+" , "+shape1_prefab.transform.position);
             sh1_ctrl.Categorize("circle");
             sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
             sh1_ctrl.PositionOn(Vector3.zero);
@@ -67,10 +65,12 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             } else {
                 Debug.Log("OnJoinedRoom as Wall Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
                 part_prefab = PhotonNetwork.Instantiate("Wall Participant", transform.position, transform.rotation);
+                if(setup==null){
+                    Debug.Log("SETUP IS NULL");
+                }
                 part_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = part_prefab;
             }
- 
         }
     }
 

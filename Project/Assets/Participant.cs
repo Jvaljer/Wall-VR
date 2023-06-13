@@ -26,19 +26,25 @@ public class Participant : MonoBehaviourPun {
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
         if(photonView.IsMine && started){
-            Debug.Log("I am a VR participant");
-            Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
-            if(Physics.Raycast(ray, out hit)){
-                //Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
-                if(hit.transform.tag == "Wall" ||hit.transform.tag == "Shape"){
-                    //we wanna move the cursor to the hit position
-                    Debug.Log("sending move input to Ope on wall point "+hit.point);
-                    ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+            if(setup==null){
+                Debug.Log("NO SETUP");
+            }   
+            if(setup.is_vr){
+                if(photonView.IsMine){
+                    Debug.Log("I am a VR participant");
+                    Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
+                    if(Physics.Raycast(ray, out hit)){
+                        //Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
+                        if(hit.transform.tag == "Wall" || hit.transform.tag == "Shape"){
+                            //we wanna move the cursor to the hit position
+                            //Debug.Log("sending move input to Ope on wall point "+hit.point);
+                            ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                        }
+                    }
                 }
             }
         }
     }
-
     public void InitializeFromNetwork(Setup S_){
         Debug.Log("InitializeFromNetwork with Setup : "+(S_==null)+" with potential id : "+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = S_;

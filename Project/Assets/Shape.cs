@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 
 public class Shape : MonoBehaviourPun {
+    public Setup setup { get; set; } 
     public string category { get; set; }
     public float size { get; set; }
     public Vector3 position { get; set; }
@@ -88,13 +89,12 @@ public class Shape : MonoBehaviourPun {
     public void DropRPC(){
         dragged = false;
     }
-
-    [PunRPC]
-    public void MoveRPC(Vector3 pos, float zoom){
+    
+    public void Move(Vector3 pos, float zoom){
         if(!PhotonNetwork.IsMasterClient){
-            if(!vr){
-                pos *= zoom;
-            } else {
+            Debug.Log("Moving shape on a participant program");
+            if(vr){
+                Debug.Log(" -> on VR");
                 Vector3 stack = pos;
                 //now must scale on the wall's coordinates
                 Vector3 tmp = Vector3.zero;
@@ -102,9 +102,13 @@ public class Shape : MonoBehaviourPun {
                 tmp.y = (2.5f*pos.y)/5f + 2.5f;
                 tmp.z = 4.99f;
                 pos = tmp;
+            } else {
+                Debug.Log(" -> On Wall");
+                pos *= zoom;
             }
         }
         gameObject.transform.position = pos;
         position = pos;
     }
 }
+

@@ -20,5 +20,5 @@ def clean(file_path):
     with open(file_path, 'w') as file:
         file.write(output)
 
-file_path = "log_master_alones.txt"
+file_path = "log_master.txt"
 clean(file_path)

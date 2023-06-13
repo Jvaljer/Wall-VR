@@ -71,11 +71,15 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
+            /*if(mouse_pos.current.rightButton.wasPressedThisFrame){
+                Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
+                photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
+            } */
+
             //handling cursors
             to_delete_ids.Clear();
             foreach(MDevice dev in m_devices.Values){
                 foreach(MCursor mc in dev.cursors.Values){
-                    Debug.Log(dev.name+" cursor has pos ("+mc.x+","+mc.y+")");
                     //if not related PCursor then create it
                     if(mc.p_cursor==null){
                         mc.AddPCursor(new PCursor(mc.x, mc.y, mc.c));
@@ -115,7 +119,6 @@ public class InputHandler : MonoBehaviourPun {
         if(initialized){
             foreach(PCursor pc in p_cursors.Values){
                 Vector3 dst;
-                Debug.Log("pcursor coords : "+pc);
                 if(PhotonNetwork.IsMasterClient){
                     dst = CoordOfMouseToOpe(pc.Coord());
                 } else {
@@ -188,33 +191,34 @@ public class InputHandler : MonoBehaviourPun {
     public void InputRPC(string str, float x_, float y_, int id_){
         Vector3 input; 
         if(PhotonNetwork.IsMasterClient){
+            Debug.Log("InputRPC - ("+x_+","+y_+")");
+            Debug.Log(" -> calling the Operator part of it");
             input = Camera.main.ScreenToWorldPoint(CoordOfMouseToOpe(new Vector3(x_,y_,0f)));
-            //input = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
             input.y *= -1f;
             input.z = 0f;
-            //input = CoordOfMouseToOpe(new Vector3(x_,y_,0f)); //isn't it the same ??
-            Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
-            screen_to_world.y *= -1f;
+            Debug.Log("operator coords for input : "+input);
             render.Input(str, input, id_);
-        } /* else if(photonView.IsMine){
+        } else {
+            Debug.Log("InputRPC - ("+x_+","+y_+")");
             if(setup.is_vr){
-                Debug.LogError("duh duh duh");
-                //MUST CORRECT THIS !!!
-                //first we wanna get the coordinates as they are in the ope section
+                Debug.Log("-> I call the VR part of it");
                 Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
                 screen_to_world.y *= -1f;
                 //here we wanna modify the coordinates to be the good ones in VR scene 
                 input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
-                Debug.Log("InputRPC -> from "+new Vector2(x_,y_)+" to "+input);
+                //input = CoordOfMouseToVR(new Vector3(x_,y_,0f));
                 render.Input(str, input, id_);
             } else {
+                Debug.Log("-> I call the Wall part of it");
                 Vector3 screen_input = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + x_ * setup.wall_width, -setup.y_pos + y_ * setup.wall_height, 0f));
                 input = Camera.main.ScreenToWorldPoint(screen_input);
                 input.y *= -1f;
                 input.z = 0f;
+                Debug.Log("render.Input("+str+","+input+","+id_+")");
+                //input = CoordOfMouseToWall(new Vector3(x_,y_,0f));
                 render.Input(str, input, id_);
             }
-        } */ //seems to never be called 
+        }
     }
 
     /******************************************************************************/
@@ -467,10 +471,6 @@ public class InputHandler : MonoBehaviourPun {
         }
         m_devices.Add(obj, new MDevice(str));
     }
-
-    public void RegisterDeviceRPC(string str, object obj){
-        Debug.Log("Registering new device from RPC : "+str);
-    }
     
     /******************************************************************************/
     /*                        SHAPES & VR HANDLING METHODS                        */
@@ -591,4 +591,27 @@ public class InputHandler : MonoBehaviourPun {
         ope_c.y *= -1f;
         return ope_c;
     }
+
+    /*
+    Vector2 screenTorelatif(float x, float y){
+        float sw = Screen.width;
+        float sh = Screen.height;
+        float pixToUnit = Camera.main.orthographicSize / (sh / 2.0f);
+        x = (x / sw / pixToUnit) + 0.5f;
+        y = -(y / sh / pixToUnit) + 0.5f;
+
+        return new Vector2(x, y);
+    }
+
+    Vector2 relatifToscreen(float x, float y){
+        float sw = Screen.width;
+        float sh = Screen.height; 
+        float pixToUnit = Camera.main.orthographicSize / (sh / 2.0f);
+
+        x = (x - 0.5f) * sw * pixToUnit;
+        y = -(y - 0.5f) * sh * pixToUnit;
+
+        return new Vector2(x, y);
+    }
+    */
 }

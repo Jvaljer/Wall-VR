@@ -71,10 +71,10 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
-            /*if(mouse_pos.current.rightButton.wasPressedThisFrame){
+            if(mouse_pos.current.rightButton.wasPressedThisFrame){
                 Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
                 photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
-            } */
+            }
 
             //handling cursors
             to_delete_ids.Clear();
@@ -450,31 +450,9 @@ public class InputHandler : MonoBehaviourPun {
     /*                        SHAPES & VR HANDLING METHODS                        */
     /******************************************************************************/
     [PunRPC]
-    public void NewShapeRPC(Vector3 pos, int id){
-        Vector3 src;
-        if(PhotonNetwork.IsMasterClient){
-            Debug.LogError("Creating the new shape (master)");
-            pos.x *= Screen.width;
-            pos.y *= Screen.height;
-            src = Camera.main.ScreenToWorldPoint(pos);
-            src.y *= -1f;
-            src.z = 0f;
-            GameObject obj = PhotonNetwork.InstantiateRoomObject("Square", src, Quaternion.identity);
-            render.NewShape(obj.name, src, id, "square"); //turns it into an input ?? //only creating squares yet
-        } else if(photonView.IsMine){
-            if(setup.is_vr){
-                Debug.LogError("Creating the new shape (VR part)");
-                //must implement
-            } else {
-                Debug.LogError("Creating the new shape (Wall part)");
-                Vector3 screen_src = Camera.main.WorldToScreenPoint(new Vector3(-setup.x_pos + pos.x * setup.wall_width, -setup.y_pos + pos.y * setup.wall_height, pos.z));
-                src = Camera.main.ScreenToWorldPoint(screen_src);
-                src.y *= -1f;
-                src.z = 0f;
-                GameObject obj = PhotonNetwork.InstantiateRoomObject("Square", src, Quaternion.identity);
-                render.NewShape(obj.name, src, id, "square"); //only creating squares yet
-            }
-        }
+    public void NewShapeRPC(float x_, float y_, int id){
+        GameObject obj = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
+        Render.NewShape("circle", x_, y_, id);
     }
 
     public void AddVRCursorFromOpe(int n = -1){
@@ -493,14 +471,11 @@ public class InputHandler : MonoBehaviourPun {
         switch (name) {
             case "Move":
                 //to go from vr to mouse we can do the inverse of what we're doing in OnGUI
-
                 Vector3 dst = CoordOfVRToMouse(input);
-                //Vector3 dst = CoordOfVRToOpe(input);
-
                 //because visual pos will be adjusted later on
                 mc.Move(dst.x, dst.y);
                 break;
-            
+
             //must implement all other asap
             case "TriggerDown":
                 //in this case we wanna pick the potentially hit shape
@@ -565,27 +540,4 @@ public class InputHandler : MonoBehaviourPun {
         ope_c.y *= -1f;
         return ope_c;
     }
-
-    /*
-    Vector2 screenTorelatif(float x, float y){
-        float sw = Screen.width;
-        float sh = Screen.height;
-        float pixToUnit = Camera.main.orthographicSize / (sh / 2.0f);
-        x = (x / sw / pixToUnit) + 0.5f;
-        y = -(y / sh / pixToUnit) + 0.5f;
-
-        return new Vector2(x, y);
-    }
-
-    Vector2 relatifToscreen(float x, float y){
-        float sw = Screen.width;
-        float sh = Screen.height; 
-        float pixToUnit = Camera.main.orthographicSize / (sh / 2.0f);
-
-        x = (x - 0.5f) * sw * pixToUnit;
-        y = -(y - 0.5f) * sh * pixToUnit;
-
-        return new Vector2(x, y);
-    }
-    */
 }

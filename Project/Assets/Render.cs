@@ -119,7 +119,7 @@ public class Render : MonoBehaviourPun {
             }
         }
     }
-
+    /*
     public void NewShape(string name, Vector3 pos, int id, string cat){
         Debug.LogError("Render -> NewShape");
         //shape already created so just need to get it
@@ -138,5 +138,9 @@ public class Render : MonoBehaviourPun {
         } else {
             Debug.LogError("can't get the shape bro");
         }
+    } */
+    public void NewShape(string name, float x_, float y_, int id_){
+        //must implement
+        return;
     }
 }

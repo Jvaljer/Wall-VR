@@ -18,6 +18,8 @@ public class Render : MonoBehaviourPun {
     private float pix_to_unit = 1f;
     private float sw;
     private float sh;
+    private float sw_unity;
+    private float sh_unity;
     private float abs = 1.0f;
     private float ih_scale = 1.5f;
     private float ortho_size = 5f;
@@ -34,7 +36,7 @@ public class Render : MonoBehaviourPun {
         shapes = new Dictionary<string, GameObject>();
     }
 
-    public void Input(string name, float x, float y, float z, int id){
+    /*public void Input(string name, float x, float y, float z, int id){
         //first we wanna check which one of the shape we are tryna move
         foreach(GameObject obj in shapes.Values){
             //Debug.Log("for shape : "+obj.name);
@@ -64,8 +66,39 @@ public class Render : MonoBehaviourPun {
                 }
             }
         }
-    }
+    } */
 
+    public void Input(string name, float m_x, float m_y, int id){
+        //receiving coords in (0,0)-(1,1)
+        //wanna calculate (with swU & shU)
+            //px = mouse_x*sw - (sw/2f);
+            //py = (sh/2f) - mouse_y*sh;
+        float px = m_x*sw_unity - (sw_unity/2f);
+        float py = (sh_unity/2f) - m_y*sh_unity;
+        Debug.Log("px = "+px+" & py = "+py);
+
+        //and now does input on these coords
+        foreach(GameObject obj in shapes.Values){
+            Shape obj_ctrl = obj.GetComponent<Shape>();
+            if(obj_ctrl.IsOwnedBy(id)){
+                switch (name){
+                    case "Down":
+                        if(obj_ctrl.CoordsInside(new Vector2(px,py))){
+                            obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
+                        }
+                        break;
+                    case "Move":
+                        if(obj_ctrl.IsDragged()){
+                            obj_ctrl.Move(px, py, setup.zoom_ratio);
+                        }
+                        break;
+                    case "Up":
+                        obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
+                        break;
+                }
+            }
+        }
+    }
     public void InitializeFromIH(Operator O_){
         ope = O_;
         if(!shapes.ContainsKey("Circle(Clone)")){
@@ -77,8 +110,8 @@ public class Render : MonoBehaviourPun {
             sh = Screen.height;
             screen_ratio = sh/sw;
             pix_to_unit = Camera.main.orthographicSize /(sh/2.0f);
-            swu = sw*pix_to_unit;
-            shu = sh*pix_to_unit;
+            sw_unity = sw*pix_to_unit;
+            sh_unity = sh*pix_to_unit;
             abs = 0.1f;
             ih_scale = ih_scale*abs;
         } else {
@@ -93,8 +126,8 @@ public class Render : MonoBehaviourPun {
                 screen_ratio = sh/sw;
                 ortho_size = (float)Camera.main.orthographicSize / (float)setup.wall.RowsAmount();
                 pix_to_unit = (float)setup.wall.RowsAmount() * (float)Camera.main.orthographicSize / (sh/2.0f);
-                swu = sw*pix_to_unit;
-                shu = sh*pix_to_unit;
+                sw_unity = sw*pix_to_unit;
+                sh_unity = sh*pix_to_unit;
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?

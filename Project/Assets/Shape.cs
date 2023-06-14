@@ -57,7 +57,7 @@ public class Shape : MonoBehaviourPun {
     }
 
     //Some predicates
-    public bool CoordsInside(Vector3 coord){
+    public bool CoordsInside(Vector2 coord){
         bool cond = false;
         switch (category){
             case "circle":
@@ -89,7 +89,7 @@ public class Shape : MonoBehaviourPun {
     public void DropRPC(){
         dragged = false;
     }
-    
+    /*
     public void Move(Vector3 pos, float zoom){
         if(!PhotonNetwork.IsMasterClient){
             Debug.Log("Moving shape on a participant program");
@@ -109,8 +109,8 @@ public class Shape : MonoBehaviourPun {
         }
         gameObject.transform.position = pos;
         position = pos;
-    }
-
+    }*/
+    /*
     public void Move(float x, float y, float z, float zoom){
         if(!PhotonNetwork.IsMasterClient){
             Debug.Log("Moving shape on a participant program");
@@ -133,6 +133,19 @@ public class Shape : MonoBehaviourPun {
         }
         gameObject.transform.position = new Vector3(x,y,z);
         position = new Vector3(x,y,z);
+    } */
+
+    public void Move(float x_, float y_, float zoom){
+        //received the correct coords so simply moving the shape
+        float z_;
+        if(vr){
+            z_ = 4.99f;
+        } else {
+            z_ = 1f;
+        }
+        Vector3 new_pos = new Vector3(x_,y_,z_);
+        gameObject.transform.position = new_pos;
+        position = new_pos;
     }
 }
 

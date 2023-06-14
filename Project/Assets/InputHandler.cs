@@ -187,7 +187,7 @@ public class InputHandler : MonoBehaviourPun {
         render.InitializeFromIH(ope);
     }
 
-    [PunRPC]
+    /*[PunRPC]
     public void InputRPC(string str, float x_, float y_, int id_){
         Vector3 input; 
         if(PhotonNetwork.IsMasterClient){
@@ -217,17 +217,14 @@ public class InputHandler : MonoBehaviourPun {
                 render.Input(str, (float)input.x, (float)input.y, 0f, id_);
             }
         }
-        //ope sends momuse coords (0,1) by RPC to clients
-        // --> 
-        //each calculates (with diff sw & sh)
-        //px = mouse_x*sw - (sw/2f);
-        //py = (sh/2f) - mouse_y*sh;
-        // --> move shape on these coords
+    } */
 
-        //if client does input 
-        // --> send pos
-        // mouse_x & mouse_y from px & py (pos)
-        //
+    [PunRPC]
+    public void InputRPC(string str, float x_, float y_, int id_){
+        //(x,y) are in (0,0)-(1,1)
+        //we wanna send em to each render
+        Debug.Log("Sending an input to the render : ("+x_+","+y_+")");
+        render.Input(str, x_, y_, id_);
     }
 
     /******************************************************************************/

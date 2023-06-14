@@ -93,7 +93,7 @@ public class Render : MonoBehaviourPun {
                 sw = wall_go.transform.localScale.x;
                 sh = wall_go.transform.localScale.y;
                 //put WallGO size instead ??
-                pix_to_unit = 0f;
+                pix_to_unit = (sw/2f) / (sh/2f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
             } else {

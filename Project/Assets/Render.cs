@@ -43,6 +43,11 @@ public class Render : MonoBehaviourPun {
             //py = (sh/2f) - mouse_y*sh;
         float px = m_x*sw_unity - (sw_unity/2f);
         float py = (sh_unity/2f) - m_y*sh_unity;
+        if(setup.is_vr){
+            //we simply need to adjust the y value because center of wall is (0,2.5)
+            float tmp = py + 2.5f;
+            py = tmp;
+        }
         Debug.Log("px = "+px+" & py = "+py);
 
         //and now does input on these coords
@@ -93,9 +98,10 @@ public class Render : MonoBehaviourPun {
                 sw = wall_go.transform.localScale.x;
                 sh = wall_go.transform.localScale.y;
                 //put WallGO size instead ??
-                pix_to_unit = (sw/2f) / (sh/2f);
+                pix_to_unit = (sw/2.0f) / (sh/1.0f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
+                Debug.LogError("VR's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;

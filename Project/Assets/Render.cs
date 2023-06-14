@@ -81,7 +81,7 @@ public class Render : MonoBehaviourPun {
             pix_to_unit = Camera.main.orthographicSize /(sh/2.0f);
             sw_unity = sw*pix_to_unit;
             sh_unity = sh*pix_to_unit;
-            Debug.LogError("Operator's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
+            Debug.LogError("Operator's render has -> cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
             abs = 0.1f;
             ih_scale = ih_scale*abs;
         } else {
@@ -89,6 +89,13 @@ public class Render : MonoBehaviourPun {
                 //simply replacing the shape on the wall ?
                 shapes["Circle(Clone)"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 shapes["Circle(Clone)"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+                GameObject wall_go = GameObject.Find("WallGO");
+                sw = wall_go.transform.localScale.x;
+                sh = wall_go.transform.localScale.y;
+                //put WallGO size instead ??
+                pix_to_unit = 0f;
+                sw_unity = sw*pix_to_unit;
+                sh_unity = sh*pix_to_unit;
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;
@@ -97,7 +104,7 @@ public class Render : MonoBehaviourPun {
                 pix_to_unit = (float)setup.wall.RowsAmount() * (float)Camera.main.orthographicSize / (sh/2.0f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
-                Debug.LogError("Participant's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
+                Debug.LogError("Participant's render has -> cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?

@@ -89,51 +89,6 @@ public class Shape : MonoBehaviourPun {
     public void DropRPC(){
         dragged = false;
     }
-    /*
-    public void Move(Vector3 pos, float zoom){
-        if(!PhotonNetwork.IsMasterClient){
-            Debug.Log("Moving shape on a participant program");
-            if(vr){
-                Debug.Log(" -> on VR");
-                Vector3 stack = pos;
-                //now must scale on the wall's coordinates
-                Vector3 tmp = Vector3.zero;
-                tmp.x = (5f*pos.x)/10f;
-                tmp.y = (2.5f*pos.y)/5f + 2.5f;
-                tmp.z = 4.99f;
-                pos = tmp;
-            } else {
-                Debug.Log(" -> On Wall");
-                pos *= zoom;
-            }
-        }
-        gameObject.transform.position = pos;
-        position = pos;
-    }*/
-    /*
-    public void Move(float x, float y, float z, float zoom){
-        if(!PhotonNetwork.IsMasterClient){
-            Debug.Log("Moving shape on a participant program");
-            if(vr){
-                Debug.Log(" -> on VR");
-                //now must scale on the wall's coordinates
-                Vector3 tmp = new Vector3(0f,0f,0f);
-                tmp.x = (5f*x)/10f;
-                tmp.y = (2.5f*y)/5f + 2.5f;
-                tmp.z = 4.99f;
-                x = tmp.x;
-                y = tmp.y;
-                z = tmp.z;
-            } else {
-                Debug.Log(" -> On Wall");
-                x *= zoom;
-                y *= zoom;
-                z *= zoom;
-            }
-        }
-        gameObject.transform.position = new Vector3(x,y,z);
-        position = new Vector3(x,y,z);
-    } */
 
     public void Move(float x_, float y_, float zoom){
         //received the correct coords so simply moving the shape

@@ -36,38 +36,6 @@ public class Render : MonoBehaviourPun {
         shapes = new Dictionary<string, GameObject>();
     }
 
-    /*public void Input(string name, float x, float y, float z, int id){
-        //first we wanna check which one of the shape we are tryna move
-        foreach(GameObject obj in shapes.Values){
-            //Debug.Log("for shape : "+obj.name);
-            Shape obj_ctrl = obj.GetComponent<Shape>();
-            if(obj_ctrl.IsOwnedBy(id)){ //later on we'll like to add more scripts + abstract class
-                //Debug.Log("we have the owner : "+id);
-                switch (name){
-                    case "Down":
-                        Debug.LogError("clicked on coords : ("+x+","+y+")");
-                        if(obj_ctrl.CoordsInside(new Vector3(x,y,z))){
-                            obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
-                        }
-                        break;
-                    case "Move":
-                        //already tested if dragging ? test it again ?
-                        if(obj_ctrl.IsDragged()){
-                            //then move shape depending on role
-                            //obj.GetComponent<PhotonView>().RPC("MoveRPC", RpcTarget.AllBuffered, coord, setup.zoom_ratio);
-                            obj_ctrl.Move(x,y,z ,setup.zoom_ratio);
-                        }
-                        break;
-                    case "Up":
-                        obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-    } */
-
     public void Input(string name, float m_x, float m_y, int id){
         //receiving coords in (0,0)-(1,1)
         //wanna calculate (with swU & shU)
@@ -99,6 +67,7 @@ public class Render : MonoBehaviourPun {
             }
         }
     }
+
     public void InitializeFromIH(Operator O_){
         ope = O_;
         if(!shapes.ContainsKey("Circle(Clone)")){
@@ -112,6 +81,7 @@ public class Render : MonoBehaviourPun {
             pix_to_unit = Camera.main.orthographicSize /(sh/2.0f);
             sw_unity = sw*pix_to_unit;
             sh_unity = sh*pix_to_unit;
+            Debug.LogError("Operator's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
             abs = 0.1f;
             ih_scale = ih_scale*abs;
         } else {
@@ -119,7 +89,6 @@ public class Render : MonoBehaviourPun {
                 //simply replacing the shape on the wall ?
                 shapes["Circle(Clone)"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 shapes["Circle(Clone)"].transform.position = new Vector3(0f, 2.5f, 4.99f);
-                //must implement
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;
@@ -128,6 +97,7 @@ public class Render : MonoBehaviourPun {
                 pix_to_unit = (float)setup.wall.RowsAmount() * (float)Camera.main.orthographicSize / (sh/2.0f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
+                Debug.LogError("Participant's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?

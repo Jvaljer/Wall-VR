@@ -187,38 +187,6 @@ public class InputHandler : MonoBehaviourPun {
         render.InitializeFromIH(ope);
     }
 
-    /*[PunRPC]
-    public void InputRPC(string str, float x_, float y_, int id_){
-        Vector3 input; 
-        if(PhotonNetwork.IsMasterClient){
-            Debug.Log("InputRPC - ("+x_+","+y_+")");
-            Debug.Log(" -> calling the Operator part of it");
-            input = Camera.main.ScreenToWorldPoint(CoordOfMouseToOpe(new Vector3(x_,y_,0f)));
-            input.y *= -1f;
-            input.z = 0f;
-            Debug.Log("operator coords for input : "+input);
-            render.Input(str, input.x, input.y, input.z, id_);
-        } else {
-            Debug.Log("InputRPC - ("+x_+","+y_+")");
-            if(setup.is_vr){
-                Debug.Log("-> I call the VR part of it");
-                Vector3 screen_to_world = Camera.main.ScreenToWorldPoint(new Vector3(x_*Screen.width, y_*Screen.height, 0f));
-                screen_to_world.y *= -1f;
-                //here we wanna modify the coordinates to be the good ones in VR scene 
-                input = new Vector3(10f*screen_to_world.x - 5f, 5f*(1f-screen_to_world.y),  4.99f);
-                //input = CoordOfMouseToVR(new Vector3(x_,y_,0f));
-                render.Input(str, input.x, input.y, input.z, id_);
-            } else {
-                Debug.Log("-> I call the Wall part of it");
-                float y = y_;
-                //Debug.LogError("y mouse : "+y_+" y OGL : "+y);
-                input = Camera.main.ScreenToWorldPoint(CoordOfMouseToWall(new Vector3(x_,y,0f)));
-                Debug.LogError("y = "+input.y);
-                render.Input(str, (float)input.x, (float)input.y, 0f, id_);
-            }
-        }
-    } */
-
     [PunRPC]
     public void InputRPC(string str, float x_, float y_, int id_){
         //(x,y) are in (0,0)-(1,1)

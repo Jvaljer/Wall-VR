@@ -33,7 +33,7 @@ public class Setup : MonoBehaviourPun {
     public int screen_width { get; set; } = 1024;
     public int screen_height { get; set; } = 512;
     public bool full_screen { get; private set; } = false;
-    public float zoom_ratio { get; private set; } = 1f;
+    public float zoom_ratio { get; private set; } = 2f;
 
     public void Start(){
         Debug.LogError("Setup Starting on scene : "+SceneManager.GetActiveScene().name);

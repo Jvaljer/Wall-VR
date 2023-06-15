@@ -48,7 +48,6 @@ public class Render : MonoBehaviourPun {
             float tmp = py + 2.5f;
             py = tmp;
         }
-        Debug.Log("px = "+px+" & py = "+py);
 
         //and now does input on these coords
         foreach(GameObject obj in shapes.Values){
@@ -75,8 +74,8 @@ public class Render : MonoBehaviourPun {
 
     public void InitializeFromIH(Operator O_){
         ope = O_;
-        if(!shapes.ContainsKey("Circle(Clone)")){
-            shapes.Add(GameObject.Find("Circle(Clone)").name,GameObject.Find("Circle(Clone)"));
+        if(!shapes.ContainsKey("Circle0")){
+            shapes.Add(GameObject.Find("Circle0").name,GameObject.Find("Circle0"));
         }
 
         if(PhotonNetwork.IsMasterClient){
@@ -92,8 +91,9 @@ public class Render : MonoBehaviourPun {
         } else {
             if(setup.is_vr){
                 //simply replacing the shape on the wall ?
-                shapes["Circle(Clone)"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                shapes["Circle(Clone)"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+                shapes["Circle0"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                shapes["Circle0"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+
                 GameObject wall_go = GameObject.Find("WallGO");
                 sw = wall_go.transform.localScale.x;
                 sh = wall_go.transform.localScale.y;
@@ -119,28 +119,29 @@ public class Render : MonoBehaviourPun {
             }
         }
     }
-    /*
-    public void NewShape(string name, Vector3 pos, int id, string cat){
-        Debug.LogError("Render -> NewShape");
-        //shape already created so just need to get it
-        GameObject new_shape = GameObject.Find(name);
-        if(new_shape!=null){
-            Shape shape_ctrl = new_shape.GetComponent<Shape>();
-            shape_ctrl.Categorize(cat);
-            shape_ctrl.SetSize(new_shape.transform.localScale.x);
-            shape_ctrl.PositionOn(pos);
-            shape_ctrl.AddOwner(id);
-            shapes.Add(name, new_shape);
-            if(!PhotonNetwork.IsMasterClient){
-                Debug.LogError("not MC, sizing shape up");
-                new_shape.transform.localScale *= setup.zoom_ratio;
-            }
-        } else {
-            Debug.LogError("can't get the shape bro");
+
+    public void NewShape(string name, float m_x, float m_y, int id_, string str){
+        //first we simply translate the given (mouse) coords
+        float px = m_x*sw_unity - (sw_unity/2f);
+        float py = (sh_unity/2f) - m_y*sh_unity;
+        float pz = 1f;
+        if(setup.is_vr){
+            //we simply need to adjust the y value because center of wall is (0,2.5)
+            float tmp = py + 2.5f;
+            py = tmp;
+            pz = 4.99f;
         }
-    } */
-    public void NewShape(string name, float x_, float y_, int id_){
-        //must implement
-        return;
+        //then we only have to give the instantiated shape these coords
+        GameObject obj = GameObject.Find(str);
+        Shape obj_ctrl = obj.GetComponent<Shape>();
+        obj_ctrl.AddOwner(id_);
+        obj_ctrl.Categorize("circle");
+        obj_ctrl.SetName("Circle"+shapes.Count);
+        obj_ctrl.SetSize(obj.transform.localScale.x);
+
+        Vector3 start_pos = new Vector3(px, py, pz);
+        obj_ctrl.PositionOn(start_pos);
+
+        shapes.Add(obj_ctrl.title, obj);
     }
 }

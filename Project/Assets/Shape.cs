@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 
 public class Shape : MonoBehaviourPun {
+    public string title { get; private set; }
     public Setup setup { get; set; } 
     public string category { get; set; }
     public float size { get; set; }
@@ -15,6 +16,14 @@ public class Shape : MonoBehaviourPun {
     public List<int> owners { get; private set; } = new List<int>();
 
     //setters
+    public void SetName(string str){
+        gameObject.name = str;
+        title = str;
+    }
+    [PunRPC]
+    public void SetNameRPC(string str){
+        SetName(str);
+    }
     public void Categorize(string cat){
         category  = cat;
     }
@@ -23,6 +32,7 @@ public class Shape : MonoBehaviourPun {
         size = n;
     }
     public void PositionOn(Vector3 pos){
+        gameObject.transform.position = pos;
         position = pos;
     }
     public void Pick(){

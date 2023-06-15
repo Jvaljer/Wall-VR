@@ -1,7 +1,7 @@
 #!/bin/bash
 EXEC="linux_start.x86_64"
 WALL="DESKTOP"
-PART_AMOUNT=5 #4 Wall + 1 VR
+PART_AMOUNT=4
 MASTER_ID="m"
 PART_ID="p"
 MASTER_ONLY=0
@@ -14,7 +14,7 @@ if [ $MASTER_EDITOR == 0 ]; then
 
 	./$EXEC -popupwindow -screen-fullscreen $FS -screen-width 1024 -screen-height 512 -wall $WALL -sw 1024 -sh 512 -r $MASTER_ID -pa $PART_AMOUNT -mo $MASTER_ONLY -logfile logs/log_master.txt &
 
-sleep 5
+sleep 8
 fi
 
 if [ $MASTER_ONLY == 0 ]; then

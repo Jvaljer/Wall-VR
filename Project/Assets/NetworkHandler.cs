@@ -44,8 +44,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
-            shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
+            shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", new Vector3(0f,0f,1f), Quaternion.identity);
             Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
+            sh1_ctrl.SetName("Circle0");
             sh1_ctrl.Categorize("circle");
             sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
             sh1_ctrl.PositionOn(Vector3.zero);
@@ -79,7 +80,10 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
         if(PhotonNetwork.IsMasterClient){
             Debug.Log("OnPlayerEnteredRoom as operator : "+PhotonNetwork.LocalPlayer.ActorNumber);
             //if i'm master then test some stuff
+            Debug.LogError("participants : "+PhotonNetwork.CurrentRoom.PlayerCount+"/"+(setup.part_cnt +1));
             if(PhotonNetwork.CurrentRoom.PlayerCount==(setup.part_cnt +1)){ //all parts + master
+                Debug.LogError("EveryBody Joined !!!");
+                shape1_prefab.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Circle0");
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
             }
         } else {

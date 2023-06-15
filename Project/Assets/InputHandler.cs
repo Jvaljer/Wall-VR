@@ -71,9 +71,8 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
-            if(mouse_pos.current.rightButton.wasPressedThisFrame){
-                Vector3 src_pos = new Vector3(mouse_x, mouse_y, 0f);
-                photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, src_pos, 0);
+            if(Mouse.current.rightButton.wasPressedThisFrame){
+                photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, mouse_x, mouse_y, 0);
             }
 
             //handling cursors
@@ -161,14 +160,15 @@ public class InputHandler : MonoBehaviourPun {
             RegisterDevice("VR",vr_ref); //associating operator as an object
         } else {
             if(setup.is_vr){
-                GameObject.Find("Circle(Clone)").GetComponent<Shape>().SetAsVR();
+                GameObject.Find("Circle0").GetComponent<Shape>().SetAsVR();
             } else {
                 //set the cursors invisible & scale em
                 Cursor.visible = false;
                 cursor_HW = 16*4;
             }
         }
-        GameObject.Find("Circle(Clone)").GetComponent<Shape>().AddOwner(0);
+        Debug.LogError("Circle0 is null : "+(GameObject.Find("Circle0")==null)+" & Circle(Clone) : "+(GameObject.Find("Circle(Clone)")==null));
+        GameObject.Find("Circle0").GetComponent<Shape>().AddOwner(0);
     }
 
     public void ParticipantIsReady(int n =-1){
@@ -191,7 +191,7 @@ public class InputHandler : MonoBehaviourPun {
     public void InputRPC(string str, float x_, float y_, int id_){
         //(x,y) are in (0,0)-(1,1)
         //we wanna send em to each render
-        Debug.Log("Sending an input to the render : ("+x_+","+y_+")");
+        //Debug.Log("Sending an input to the render : ("+x_+","+y_+")");
         render.Input(str, x_, y_, id_);
     }
 
@@ -451,8 +451,8 @@ public class InputHandler : MonoBehaviourPun {
     /******************************************************************************/
     [PunRPC]
     public void NewShapeRPC(float x_, float y_, int id){
-        GameObject obj = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
-        Render.NewShape("circle", x_, y_, id);
+        GameObject new_shape = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
+        render.NewShape("circle", x_, y_, id, new_shape.name);
     }
 
     public void AddVRCursorFromOpe(int n = -1){

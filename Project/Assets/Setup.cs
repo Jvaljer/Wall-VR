@@ -12,6 +12,7 @@ public class Setup : MonoBehaviourPun {
     public bool is_master { get; private set; } = false;
     public bool is_vr { get; private set; } = false;
     public string role_str { get; private set; }
+    public bool smarties { get; private set; } = false;
 
     //master specific attributes
     public int part_cnt { get; private set; } = 1;
@@ -58,6 +59,7 @@ public class Setup : MonoBehaviourPun {
                 case "-r":
                     is_master = (args[i+1]=="m");
                     Debug.Log("Is Master : "+is_master);
+                    smarties = true;
                     break;
 
                 case "-vr":
@@ -80,6 +82,7 @@ public class Setup : MonoBehaviourPun {
                         //yes
                         part_cnt = 1;
                         master_only = true;
+                        smarties = true;
                     }
                     break;
 

@@ -71,10 +71,6 @@ public class InputHandler : MonoBehaviourPun {
                 }
             }
 
-            if(Mouse.current.rightButton.wasPressedThisFrame){
-                photonView.RPC("NewShapeRPC", RpcTarget.AllBuffered, mouse_x, mouse_y, 0);
-            }
-
             //handling cursors
             to_delete_ids.Clear();
             foreach(MDevice dev in m_devices.Values){
@@ -268,7 +264,7 @@ public class InputHandler : MonoBehaviourPun {
         cursor.hidden = hid_;
     }
 
-    public void RemoveCursor(object obj, int id_){
+    public void RemoveMCursor(object obj, int id_){
         MDevice device = GetDevice(obj);
         if(device==null){
             return;
@@ -449,12 +445,6 @@ public class InputHandler : MonoBehaviourPun {
     /******************************************************************************/
     /*                        SHAPES & VR HANDLING METHODS                        */
     /******************************************************************************/
-    [PunRPC]
-    public void NewShapeRPC(float x_, float y_, int id){
-        GameObject new_shape = PhotonNetwork.InstantiateRoomObject("Circle", Vector3.zero, Quaternion.identity);
-        render.NewShape("circle", x_, y_, id, new_shape.name);
-    }
-
     public void AddVRCursorFromOpe(int n = -1){
         Debug.Log("AddVRCursorFromOpe -> IH : "+n);
         CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);

@@ -119,29 +119,4 @@ public class Render : MonoBehaviourPun {
             }
         }
     }
-
-    public void NewShape(string name, float m_x, float m_y, int id_, string str){
-        //first we simply translate the given (mouse) coords
-        float px = m_x*sw_unity - (sw_unity/2f);
-        float py = (sh_unity/2f) - m_y*sh_unity;
-        float pz = 1f;
-        if(setup.is_vr){
-            //we simply need to adjust the y value because center of wall is (0,2.5)
-            float tmp = py + 2.5f;
-            py = tmp;
-            pz = 4.99f;
-        }
-        //then we only have to give the instantiated shape these coords
-        GameObject obj = GameObject.Find(str);
-        Shape obj_ctrl = obj.GetComponent<Shape>();
-        obj_ctrl.AddOwner(id_);
-        obj_ctrl.Categorize("circle");
-        obj_ctrl.SetName("Circle"+shapes.Count);
-        obj_ctrl.SetSize(obj.transform.localScale.x);
-
-        Vector3 start_pos = new Vector3(px, py, pz);
-        obj_ctrl.PositionOn(start_pos);
-
-        shapes.Add(obj_ctrl.title, obj);
-    }
 }

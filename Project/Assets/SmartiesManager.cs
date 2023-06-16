@@ -14,7 +14,6 @@ public class SmartiesManager :  MonoBehaviour {
 
 	Smarties smarties;
 	bool started = false;
-	bool showExpeWidgets = false;
 
 	SmartiesWidget _attach_widget;
 
@@ -26,6 +25,7 @@ public class SmartiesManager :  MonoBehaviour {
 		setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
 
 		if (!setup.smarties){
+			Debug.Log("smarties not enabled for setup");
 			smarties = null;
 			return;
 		}

@@ -28,7 +28,6 @@ public class Shape : MonoBehaviourPun {
         category  = cat;
     }
     public void SetSize(float n){
-        Debug.Log("setting size of shape");
         size = n;
     }
     public void PositionOn(Vector3 pos){
@@ -42,7 +41,6 @@ public class Shape : MonoBehaviourPun {
         dragged = false;
     }
     public void SetAsVR(){
-        Debug.Log("setting the shape as VR");
         vr = true;
     }
     

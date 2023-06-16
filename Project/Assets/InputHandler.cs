@@ -163,15 +163,13 @@ public class InputHandler : MonoBehaviourPun {
                 cursor_HW = 16*4;
             }
         }
-        Debug.LogError("Circle0 is null : "+(GameObject.Find("Circle0")==null)+" & Circle(Clone) : "+(GameObject.Find("Circle(Clone)")==null));
         GameObject.Find("Circle0").GetComponent<Shape>().AddOwner(0);
+        setup.logger.Msg("Initialized from Ope", "V");
     }
 
     public void ParticipantIsReady(int n =-1){
-        if(photonView.IsMine){
-            Debug.Log("ParticipantIsReady from myself");
-        } else {
-            Debug.Log("ParticipantIsReady from other");
+        if(!photonView.IsMine){
+            setup.logger.Msg("Received PartIsReady "+n, "C");
             if(setup.is_vr){
                 if(n!=-1){
                     ope.GetComponent<PhotonView>().RPC("AddVRCursor", RpcTarget.AllBuffered, n);
@@ -179,7 +177,7 @@ public class InputHandler : MonoBehaviourPun {
             }
         }
         initialized = true;
-        Debug.LogError("IH now initialized");
+        setup.logger.Msg("InputHandler has initialized", "V");
         render.InitializeFromIH(ope);
     }
 
@@ -187,7 +185,7 @@ public class InputHandler : MonoBehaviourPun {
     public void InputRPC(string str, float x_, float y_, int id_){
         //(x,y) are in (0,0)-(1,1)
         //we wanna send em to each render
-        //Debug.Log("Sending an input to the render : ("+x_+","+y_+")");
+        //Logs.Msg("InputRPC-->render Input("+str+" on "+x_+","+y_+" from "+id_")", "EDO");
         render.Input(str, x_, y_, id_);
     }
 
@@ -249,8 +247,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void CreateMCursor(object obj, int id_, float x_, float y_, Color c_, bool hid_=false){
-        Debug.Log("Creating a Master Cursor of id "+id_+" from object "+obj);
-        //Debug.Log("first Create Cursor");
+        setup.logger.Msg("New MCursor "+id_+" attached to "+obj, "V");
         MDevice device = GetDevice(obj);
         if(device==null){
             return;
@@ -418,11 +415,9 @@ public class InputHandler : MonoBehaviourPun {
     public MDevice GetDeviceFromName(string name){
         foreach(MDevice device in m_devices.Values){
             if(device.name==name){
-                Debug.Log("Found a device named "+name);
                 return device;
             }
         }
-        Debug.Log("Not any device named "+name);
         return null;
     }
 
@@ -434,11 +429,12 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void RegisterDevice(string str, object obj){
-        Debug.Log("Registering a new device : "+str);
         //if the object is already referrring a device -> nothing to register
         if(GetDevice(obj)!=null){
+            setup.logger.Msg("The device '"+str+"' already exists", "E");
             return;
         }
+        setup.logger.Msg("Registering the device '"+str+"'", "V");
         m_devices.Add(obj, new MDevice(str));
     }
     
@@ -446,7 +442,7 @@ public class InputHandler : MonoBehaviourPun {
     /*                        SHAPES & VR HANDLING METHODS                        */
     /******************************************************************************/
     public void AddVRCursorFromOpe(int n = -1){
-        Debug.Log("AddVRCursorFromOpe -> IH : "+n);
+        setup.logger.Msg("Adding the VR Cursor "+n, "C");
         CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);
     }
 
@@ -454,25 +450,27 @@ public class InputHandler : MonoBehaviourPun {
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
         if(mc==null){
-            Debug.LogError("cursor is null");
+            setup.logger.Msg("cursor is null", "E");
             return;
         }
+        Vector3 mouse_input = CoordOfVRToMouse(input);
         //mc is the cursor we wanna move onto the coord 'input'
         switch (name) {
             case "Move":
-                //to go from vr to mouse we can do the inverse of what we're doing in OnGUI
-                Vector3 dst = CoordOfVRToMouse(input);
                 //because visual pos will be adjusted later on
-                mc.Move(dst.x, dst.y);
+                mc.Move(mouse_input.x, mouse_input.y);
+                render.Input("Move", mouse_input.x, mouse_input.y, id);
                 break;
-
-            //must implement all other asap
             case "TriggerDown":
-                //in this case we wanna pick the potentially hit shape
+                //in this case we do the same as for the mouse press but with the VR id
+                render.Input("Down", mouse_input.x, mouse_input.y, id);
                 break;
             case "TriggerUp":
-                //in this case we wanna drop the potentially held shape
+                //in this case we do the same as for the mouse release but with the VR id
+                render.Input("Up", mouse_input.x, mouse_input.y, id);
                 break;
+            
+            //must implement all other asap
             case "JoyDown":
                 //dunno what to do in this case
                 break;

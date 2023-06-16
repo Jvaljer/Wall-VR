@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Gateway : MonoBehaviour {
     public static string[] arguments;
+    public static Logger logger;
     public bool is_operator = false;
     //public StreamWriter writer;
 
     public void Awake(){
         //string path = "WallVR/Single_WallVR/Assets/Resources/PersonalLogs/my_log.txt";
         //writer = new StreamWriter(path, true);
+        logger = new Logger();
 
 #if UNITY_EDITOR
         arguments = new string[10];

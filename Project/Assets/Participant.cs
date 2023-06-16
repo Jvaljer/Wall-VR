@@ -26,18 +26,13 @@ public class Participant : MonoBehaviourPun {
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
         if(photonView.IsMine && started){
-            if(setup==null){
-                Debug.Log("NO SETUP");
-            }   
             if(setup.is_vr){
                 if(photonView.IsMine){
-                    Debug.Log("I am a VR participant");
+                    setup.logger.Msg("I am VR","EDO");
                     Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
                     if(Physics.Raycast(ray, out hit)){
-                        //Debug.Log("ray is hitting something : "+hit.transform.gameObject.name);
                         if(hit.transform.tag == "Wall" || hit.transform.tag == "Shape"){
                             //we wanna move the cursor to the hit position
-                            //Debug.Log("sending move input to Ope on wall point "+hit.point);
                             ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                         }
                     }
@@ -48,6 +43,7 @@ public class Participant : MonoBehaviourPun {
     public void InitializeFromNetwork(Setup S_){
         Debug.Log("InitializeFromNetwork with Setup : "+(S_==null)+" with potential id : "+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = S_;
+        setup.logger.Msg("Just got the setup, with id n°"+PhotonNetwork.LocalPlayer.ActorNumber, "V");
         if(photonView.IsMine){
             InitializeMyself();
         }
@@ -55,16 +51,15 @@ public class Participant : MonoBehaviourPun {
 
     public void InitializeMyself(){
         id = PhotonNetwork.LocalPlayer.ActorNumber;
-        Debug.Log("assigned id : "+id);
         if(setup.is_vr){
-            Debug.Log("InitializeMyself :: VR");
+            setup.logger.Msg("Starting initialization as VR", "C");
             //wanna fetch all of my VR components
             headset = GameObject.Find("XR Origin");
             right_hand = headset.transform.GetChild(0).GetChild(1).gameObject;
             ray_go = right_hand.transform.GetChild(0).gameObject;
             left_hand = headset.transform.GetChild(0).GetChild(2).gameObject;
         } else {
-            Debug.Log("InitializeMyself :: Wall");
+            setup.logger.Msg("Starting initialization as Wall", "C");
             Screen.fullScreen = setup.full_screen;
             if(Screen.fullScreen){
                 setup.screen_width = Screen.width;
@@ -82,14 +77,16 @@ public class Participant : MonoBehaviourPun {
             Vector3 world_pos = Camera.main.ScreenToWorldPoint(new Vector3(center_x, center_y, screen_pos.z));
             Camera.main.transform.position = world_pos;
         }
+
+        setup.logger.Msg("Finished Initializing", "V");
     }
 
     public GameObject GetRightCtrl(){
-        Debug.Log("GetRightCtrl with Setup : "+(setup!=null));
+        setup.logger.Msg("Getting Right Controler", "C");
         if(setup.is_vr){
             return right_hand;
         } else {
-            Debug.Log("I no do VR boss -> null");
+            setup.logger.Msg("Me VR don do -> null", "E");
             return null;
         }
     }
@@ -99,7 +96,7 @@ public class Participant : MonoBehaviourPun {
         if(photonView.IsMine || PhotonNetwork.IsMasterClient){
             //might have to fetch the one of the Wall Scene ??
             ope = GameObject.Find("Operator(Clone)");
-            Debug.Log("FetchForOperatorRPC -> ParticipantIsReady");
+            setup.logger.Msg("Participant fetched operator -> PartIsReady", "V");
             ope.GetComponent<InputHandler>().ParticipantIsReady(PhotonNetwork.LocalPlayer.ActorNumber);
             started = true;
         }

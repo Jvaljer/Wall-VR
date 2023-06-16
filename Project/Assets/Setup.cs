@@ -8,6 +8,10 @@ using Photon.Realtime;
 public class Setup : MonoBehaviourPun {
     //Gateway collected arguments
     public string[] args;
+
+    //special logger
+    public Logger logger;
+
     //user's condition 
     public bool is_master { get; private set; } = false;
     public bool is_vr { get; private set; } = false;
@@ -37,9 +41,11 @@ public class Setup : MonoBehaviourPun {
     public float zoom_ratio { get; private set; } = 2f;
 
     public void Start(){
-        Debug.LogError("Setup Starting on scene : "+SceneManager.GetActiveScene().name);
+        //setting logger up
+        logger = Gateway.logger;
+
+        logger.Msg("Starting program on scene : "+SceneManager.GetActiveScene().name, "S");
         args = Gateway.arguments;
-        Debug.Log("got args : "+args);
         for(int i=0; i<args.Length; i++){
             Debug.Log(args[i]);
             switch (args[i]){
@@ -58,8 +64,12 @@ public class Setup : MonoBehaviourPun {
 
                 case "-r":
                     is_master = (args[i+1]=="m");
-                    Debug.Log("Is Master : "+is_master);
-                    smarties = true;
+                    if(is_master){
+                        smarties = true;
+                        logger.Msg("Program is set as master", "S");
+                    } else {
+                        logger.Msg("Program is set as participant", "C");
+                    }
                     break;
 
                 case "-vr":
@@ -78,7 +88,7 @@ public class Setup : MonoBehaviourPun {
                     break;
                 case "-mo":
                     if((int.Parse(args[i+1]))==1){
-                        Debug.LogError("master only");
+                        logger.Msg("Running program as Master Alone", "S");
                         //yes
                         part_cnt = 1;
                         master_only = true;
@@ -90,7 +100,7 @@ public class Setup : MonoBehaviourPun {
                     break;
             }
         }
-        Debug.Log("ended parsing");
+
         switch (wall_str){
             case "WILDER":
                 wall = new Wilder();
@@ -103,8 +113,10 @@ public class Setup : MonoBehaviourPun {
         }
         wall_height = wall.Height();
         wall_width = wall.Width();
-        Debug.LogError("wall width : "+wall_width+"  wall height : "+wall_height);
-        Debug.Log("Setup Connects to the Server");
+
+        logger.Msg("Running Wall : "+wall_str+" ( w="+wall_width+", h="+wall_height+")-( row="+wall.RowsAmount()+", col="+wall.ColumnsAmount()+")", "C");
+
+        logger.Msg("Setup Connecting to server", "S");
         //now connecting to the server
         ConnectToServer();
     }

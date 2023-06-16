@@ -37,10 +37,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     public override void OnJoinedRoom(){
         //triggered for the just joining entity only
         base.OnJoinedRoom();
-        Debug.Log("OnJoinedRoom"+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
         if(PhotonNetwork.IsMasterClient){
-            Debug.Log("OnJoinedRoom as Operator : "+PhotonNetwork.LocalPlayer.ActorNumber);
+            setup.logger.Msg("Joining the Photon Room as Operator ("+PhotonNetwork.LocalPlayer.ActorNumber+")", "S");
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
@@ -53,22 +52,19 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
 
             if(setup.master_only){
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
-                Debug.Log("OnJoinedRoom -> master_only -> ParticipantIsReady");
+                setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
                 ope_prefab.GetComponent<InputHandler>().ParticipantIsReady();
             }
 
         } else {
             if(setup.is_vr){
-                Debug.Log("OnJoinedRoom as VR Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
+                setup.logger.Msg("Joining the Photon Room as VR Part ("+PhotonNetwork.LocalPlayer.ActorNumber+")", "S");
                 vr_prefab = PhotonNetwork.Instantiate("VR Participant", transform.position, transform.rotation);
                 vr_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = vr_prefab;
             } else {
-                Debug.Log("OnJoinedRoom as Wall Participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
+                setup.logger.Msg("Joining the Photon Room as Wall Part ("+PhotonNetwork.LocalPlayer.ActorNumber+")", "S");
                 part_prefab = PhotonNetwork.Instantiate("Wall Participant", transform.position, transform.rotation);
-                if(setup==null){
-                    Debug.Log("SETUP IS NULL");
-                }
                 part_prefab.GetComponent<Participant>().InitializeFromNetwork(setup);
                 cur_participant = part_prefab;
             }
@@ -78,16 +74,13 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     public override void OnPlayerEnteredRoom(Player newPlayer){
         base.OnPlayerEnteredRoom(newPlayer);
         if(PhotonNetwork.IsMasterClient){
-            Debug.Log("OnPlayerEnteredRoom as operator : "+PhotonNetwork.LocalPlayer.ActorNumber);
+            setup.logger.Msg("Player entered the room -> "+PhotonNetwork.CurrentRoom.PlayerCount+"/"+(setup.part_cnt +1), "C");
             //if i'm master then test some stuff
-            Debug.LogError("participants : "+PhotonNetwork.CurrentRoom.PlayerCount+"/"+(setup.part_cnt +1));
             if(PhotonNetwork.CurrentRoom.PlayerCount==(setup.part_cnt +1)){ //all parts + master
-                Debug.LogError("EveryBody Joined !!!");
+                setup.logger.Msg("Everyone joined -> now initializing", "V");
                 shape1_prefab.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Circle0");
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
             }
-        } else {
-            Debug.Log("OnPlayerEnteredRoom as participant : "+PhotonNetwork.LocalPlayer.ActorNumber);
         }
         //else I don't give a fuck
     }
@@ -106,7 +99,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     }
 
     public void Connect(){
-        Debug.Log("NetworkHandler -> Connect "+PhotonNetwork.LocalPlayer.ActorNumber);
+        setup.logger.Msg(PhotonNetwork.LocalPlayer.ActorNumber+" connects to the server", "C");
         PhotonNetwork.NickName = System.DateTime.Now.Ticks.ToString();
         PhotonNetwork.ConnectUsingSettings();
     }

@@ -53,7 +53,6 @@ public class Operator : MonoBehaviourPun {
 
     [PunRPC]
     public void AddVRCursor(int n = -1){
-        Debug.Log("AddVRCursorFromOpe (ope PunRPC) : "+n);
         input_handler.AddVRCursorFromOpe(n);
     }
 

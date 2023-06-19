@@ -145,6 +145,7 @@ public class CardsLoading : MonoBehaviour {
             if(obj_ctrl.IsOwnedBy(id)){
                 switch (name){
                     case "Down":
+                        setup.logger.Msg("Input Down is received from "+id+" on "+new Vector2(m_x, m_y), "C");
                         if(obj_ctrl.CoordsInside(new Vector2(px,py))){
                             obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
                         }

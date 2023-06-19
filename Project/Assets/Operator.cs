@@ -58,6 +58,7 @@ public class Operator : MonoBehaviourPun {
 
     [PunRPC]
     public void VRInputRPC(string name, Vector3 coord, int n){
+        setup.logger.Msg("Receiving a VR input : "+name, "C");
         input_handler.VRInput(name,coord,n);
     }
 }

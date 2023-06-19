@@ -463,6 +463,7 @@ public class InputHandler : MonoBehaviourPun {
                 break;
             case "TriggerDown":
                 //in this case we do the same as for the mouse press but with the VR id
+                setup.logger.Msg("Trigger has been pressed by "+id, "C");
                 render.Input("Down", mouse_input.x, mouse_input.y, id);
                 break;
             case "TriggerUp":

@@ -351,7 +351,7 @@ public class InputHandler : MonoBehaviourPun {
             string pc_name = "cursor"+uid;
             pc_go.name = pc_name;
             //translate the coordinates to the wall ones.
-            pc_go.transform.localScale = new Vector3(0.05f, 0.1f, 0.5f);
+            pc_go.transform.localScale = new Vector3(0.1f, 0.1f, 0.5f);
             pc_go.transform.position = new Vector3(0f,2.5f,5f);
             //now positionning correctly the cursor
             vr_cursors.Add(p_cursors[uid], pc_go);

@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.InputSystem;
 
-public class Participant : MonoBehaviourPun {
+public class Participant : MonoBehaviourPun {=
     //referenced setup & operator
     public Setup setup { get; set; }
     public GameObject ope { get; set; }
@@ -14,6 +15,9 @@ public class Participant : MonoBehaviourPun {
     private GameObject right_hand;
     private GameObject left_hand;
     private GameObject headset;
+
+    //XR components
+    private XRController right_ctrl;
 
     //ray attributes
     private GameObject ray_go;
@@ -36,6 +40,9 @@ public class Participant : MonoBehaviourPun {
                             ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                         }
                     }
+
+                    //we wanna fetch for the VR inputs
+
                 }
             }
         }
@@ -58,6 +65,9 @@ public class Participant : MonoBehaviourPun {
             right_hand = headset.transform.GetChild(0).GetChild(1).gameObject;
             ray_go = right_hand.transform.GetChild(0).gameObject;
             left_hand = headset.transform.GetChild(0).GetChild(2).gameObject;
+            //then fetch the xr controller (inputs)
+            right_ctrl = right_hand.GetComponent<XRController>();
+
         } else {
             setup.logger.Msg("Starting initialization as Wall", "C");
             Screen.fullScreen = setup.full_screen;

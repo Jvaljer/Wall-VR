@@ -57,7 +57,7 @@ public class Gateway : MonoBehaviour {
         }
 
   #elif UNITY_EDITOR_LINUX
-        arguments = new string[12];
+        arguments = new string[14];
         Debug.LogError("Linux Editor -> Operator by default");
         //initializing all args
         arguments[0] = "-vr";
@@ -72,6 +72,8 @@ public class Gateway : MonoBehaviour {
         arguments[9] = "DESKTOP";
         arguments[10] = "-mo";
         arguments[11] = "0";
+        arguments[12] = "-pa";
+        arguments[13] = "1";
         Debug.Log("arguments are : "+arguments);
         SceneManager.LoadScene("Wall");
   #else 

@@ -175,7 +175,7 @@ public class CardsLoading : MonoBehaviour {
             pix_to_unit = Camera.main.orthographicSize /(sh/2.0f);
             sw_unity = sw*pix_to_unit;
             sh_unity = sh*pix_to_unit;
-            Debug.LogError("Operator's render has -> cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
+            setup.logger.Msg("Render (Operator) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
             abs = 0.1f;
             ih_scale = ih_scale*abs;
         } else {
@@ -191,7 +191,7 @@ public class CardsLoading : MonoBehaviour {
                 pix_to_unit = (sw/2.0f) / (sh/1.0f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
-                Debug.LogError("VR's render has -> sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
+                setup.logger.Msg("Render (VR) is : sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
             } else {
                 sw = setup.wall_width;
                 sh = setup.wall_height;
@@ -200,7 +200,7 @@ public class CardsLoading : MonoBehaviour {
                 pix_to_unit = (float)setup.wall.RowsAmount() * (float)Camera.main.orthographicSize / (sh/2.0f);
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
-                Debug.LogError("Participant's render has -> cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity);
+                setup.logger.Msg("Render (Wall) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
                 abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?

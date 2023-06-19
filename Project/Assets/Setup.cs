@@ -47,7 +47,6 @@ public class Setup : MonoBehaviourPun {
         logger.Msg("Starting program on scene : "+SceneManager.GetActiveScene().name, "S");
         args = Gateway.arguments;
         for(int i=0; i<args.Length; i++){
-            Debug.Log(args[i]);
             switch (args[i]){
                 case "-wall":
                     wall_str = args[i+1];
@@ -116,7 +115,7 @@ public class Setup : MonoBehaviourPun {
 
         logger.Msg("Running Wall : "+wall_str+" ( w="+wall_width+", h="+wall_height+")-( row="+wall.RowsAmount()+", col="+wall.ColumnsAmount()+")", "C");
 
-        logger.Msg("Setup Connecting to server", "S");
+        logger.Msg("Connecting to server", "S");
         //now connecting to the server
         ConnectToServer();
     }

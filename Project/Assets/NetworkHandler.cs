@@ -26,7 +26,6 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     public GameObject shape1_prefab;
 
     public override void OnConnectedToMaster(){
-        Debug.LogError("OnConnectedToMaster : "+PhotonNetwork.LocalPlayer.ActorNumber);
         base.OnConnectedToMaster();
         current_in_room = 0;
         //creating the room
@@ -99,7 +98,6 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     }
 
     public void Connect(){
-        setup.logger.Msg(PhotonNetwork.LocalPlayer.ActorNumber+" connects to the server", "C");
         PhotonNetwork.NickName = System.DateTime.Now.Ticks.ToString();
         PhotonNetwork.ConnectUsingSettings();
     }

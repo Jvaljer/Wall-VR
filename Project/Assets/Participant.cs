@@ -30,6 +30,7 @@ public class Participant : MonoBehaviourPun {
     //useful predicates
     private bool started = false;
     private bool vr_fetched = false;
+    private bool trigger_down = false;
 
     //update method is used only for VR participant, as they're the only one (yet) to have possible interactions
     private void Update(){
@@ -37,28 +38,37 @@ public class Participant : MonoBehaviourPun {
             if(setup.is_vr){
                 if(photonView.IsMine){
                     setup.logger.Msg("I am VR","EDO");
-                    Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
-                    if(Physics.Raycast(ray, out hit)){
-                        if(hit.transform.tag == "Wall" || hit.transform.tag == "Shape"){
-                            //we wanna move the cursor to the hit position
-                            ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
-                        }
-                    }
-
                     if(!vr_fetched){
                         FetchForVRComponent();
                     }
 
-                    //we wanna fetch for the VR inputs
-                    bool trigger;
-                    if(r_ctrl_device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
-                        setup.logger.Msg("Trigger's been triggered !", "V");
-                        ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                    Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
+                    if(Physics.Raycast(ray, out hit)){
+                        if(hit.transform.tag == "Wall" || hit.transform.tag == "Shape"){
+                            //we wanna move the cursor to the hit position
+                            float input_x = hit.point.x;
+                            float input_y = hit.point.y;
+                            
+                            ope.GetComponent<InputHandler>().InputFromVR("Move", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
+
+                            bool trigger;
+                            if(r_ctrl_device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
+                                setup.logger.Msg("Trigger's been triggered !", "V");
+                                ope.GetComponent<InputHandler>().InputFromVR("Down", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
+                                trigger_down = true;
+                            } else {
+                                if(trigger_down){
+                                    ope.GetComponent<InputHandler>().InputFromVR("Up", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
+                                    trigger_down = false;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
     public void InitializeFromNetwork(Setup S_){
         Debug.Log("InitializeFromNetwork with Setup : "+(S_==null)+" with potential id : "+PhotonNetwork.LocalPlayer.ActorNumber);
         setup = S_;

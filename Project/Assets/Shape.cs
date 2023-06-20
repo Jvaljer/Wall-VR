@@ -90,11 +90,13 @@ public class Shape : MonoBehaviourPun {
 
     [PunRPC]
     public void PickRPC(){
+        Debug.Log("Picking the shape");
         dragged = true;
     }
 
     [PunRPC]
     public void DropRPC(){
+        Debug.Log("Dropping the shape");
         dragged = false;
     }
 
@@ -102,6 +104,7 @@ public class Shape : MonoBehaviourPun {
         //received the correct coords so simply moving the shape
         float z_;
         if(vr){
+            Debug.Log("Moving the shape "+new Vector2(x_,y_));
             z_ = 4.99f;
         } else {
             z_ = 1f;

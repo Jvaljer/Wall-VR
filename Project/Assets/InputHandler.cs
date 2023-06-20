@@ -59,6 +59,7 @@ public class InputHandler : MonoBehaviourPun {
             //handling operator's mouse
             if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
+                setup.logger.Msg("CALLING INPUTRPC.Down", "S");
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Down", mouse_x, mouse_y, 0);
             } else if(Mouse.current.leftButton.wasReleasedThisFrame){
                 StopMoveMCursor(this, 0, mouse_x, mouse_y);
@@ -190,6 +191,7 @@ public class InputHandler : MonoBehaviourPun {
         //(x,y) are in (0,0)-(1,1)
         //we wanna send em to each render
         //Logs.Msg("InputRPC-->render Input("+str+" on "+x_+","+y_+" from "+id_")", "EDO");
+        setup.logger.Msg("FROM InputRPC -> CALLING render.Input", "S");
         render.Input(str, x_, y_, id_);
     }
 
@@ -450,45 +452,25 @@ public class InputHandler : MonoBehaviourPun {
         CreateMCursor(vr_ref, n, 0.5f, 0.5f, Color.green);
     }
 
-    public void VRInput(string name, Vector3 input, int id){
+    public void InputFromVR(string name, float x_, float y_, int id_){
         if(photonView.IsMine){
-        //here we wanna first get the associated cursor
-            MCursor mc = GetMCursor(vr_ref, id);
-            if(mc==null){
-                setup.logger.Msg("cursor is null for id "+id, "E");
-                return;
-            }
-            Vector3 mouse_input = CoordOfVRToMouse(input);
-            //mc is the cursor we wanna move onto the coord 'input'
-            switch (name) {
+            Vector3 mouse = CoordOfVRToMouse(new Vector3(x_, y_, 4.99f));
+            float mouse_x = mouse.x;
+            float mouse_y = mouse.y;
+            switch (name){
+                case "Down":
+                    StartMoveMCursor(vr_ref, id_, mouse_x, mouse_y, true);
+                    break;
                 case "Move":
-                    //because visual pos will be adjusted later on
-                    mc.Move(mouse_input.x, mouse_input.y);
-                    render.Input("Move", mouse_input.x, mouse_input.y, id);
+                    MoveMCursor(vr_ref, id_, mouse_x, mouse_y);
                     break;
-                case "TriggerDown":
-                    //in this case we do the same as for the mouse press but with the VR id
-                    setup.logger.Msg("Trigger has been pressed by "+id, "C");
-                    render.Input("Down", mouse_input.x, mouse_input.y, id);
-                    break;
-                case "TriggerUp":
-                    //in this case we do the same as for the mouse release but with the VR id
-                    render.Input("Up", mouse_input.x, mouse_input.y, id);
-                    break;
-                
-                //must implement all other asap
-                case "JoyDown":
-                    //dunno what to do in this case
-                    break;
-                case "JoyUp":
-                    //dunno what to do in this case
-                    break;
-                case "JoyTouch":
-                    //duno what to do in this case
+                case "Up":
+                    StopMoveMCursor(vr_ref, id_, mouse_x, mouse_y);
                     break;
                 default:
-                    break;
+                    return;
             }
+            photonView.RPC("InputRPC", RpcTarget.AllBuffered, name, mouse_x, mouse_y, id_);
         }
     }
 

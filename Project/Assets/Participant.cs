@@ -53,7 +53,7 @@ public class Participant : MonoBehaviourPun {
                     bool trigger;
                     if(r_ctrl_device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
                         setup.logger.Msg("Trigger's been triggered !", "V");
-                        ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Down", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                        ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                     }
                 }
             }

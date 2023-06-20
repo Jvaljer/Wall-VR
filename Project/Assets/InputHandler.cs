@@ -451,42 +451,44 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void VRInput(string name, Vector3 input, int id){
+        if(photonView.IsMine){
         //here we wanna first get the associated cursor
-        MCursor mc = GetMCursor(vr_ref, id);
-        if(mc==null){
-            setup.logger.Msg("cursor is null for id "+id, "E");
-            return;
-        }
-        Vector3 mouse_input = CoordOfVRToMouse(input);
-        //mc is the cursor we wanna move onto the coord 'input'
-        switch (name) {
-            case "Move":
-                //because visual pos will be adjusted later on
-                mc.Move(mouse_input.x, mouse_input.y);
-                render.Input("Move", mouse_input.x, mouse_input.y, id);
-                break;
-            case "TriggerDown":
-                //in this case we do the same as for the mouse press but with the VR id
-                setup.logger.Msg("Trigger has been pressed by "+id, "C");
-                render.Input("Down", mouse_input.x, mouse_input.y, id);
-                break;
-            case "TriggerUp":
-                //in this case we do the same as for the mouse release but with the VR id
-                render.Input("Up", mouse_input.x, mouse_input.y, id);
-                break;
-            
-            //must implement all other asap
-            case "JoyDown":
-                //dunno what to do in this case
-                break;
-            case "JoyUp":
-                //dunno what to do in this case
-                break;
-            case "JoyTouch":
-                //duno what to do in this case
-                break;
-            default:
-                break;
+            MCursor mc = GetMCursor(vr_ref, id);
+            if(mc==null){
+                setup.logger.Msg("cursor is null for id "+id, "E");
+                return;
+            }
+            Vector3 mouse_input = CoordOfVRToMouse(input);
+            //mc is the cursor we wanna move onto the coord 'input'
+            switch (name) {
+                case "Move":
+                    //because visual pos will be adjusted later on
+                    mc.Move(mouse_input.x, mouse_input.y);
+                    render.Input("Move", mouse_input.x, mouse_input.y, id);
+                    break;
+                case "TriggerDown":
+                    //in this case we do the same as for the mouse press but with the VR id
+                    setup.logger.Msg("Trigger has been pressed by "+id, "C");
+                    render.Input("Down", mouse_input.x, mouse_input.y, id);
+                    break;
+                case "TriggerUp":
+                    //in this case we do the same as for the mouse release but with the VR id
+                    render.Input("Up", mouse_input.x, mouse_input.y, id);
+                    break;
+                
+                //must implement all other asap
+                case "JoyDown":
+                    //dunno what to do in this case
+                    break;
+                case "JoyUp":
+                    //dunno what to do in this case
+                    break;
+                case "JoyTouch":
+                    //duno what to do in this case
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

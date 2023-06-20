@@ -142,7 +142,7 @@ public class CardsLoading : MonoBehaviour {
         //and now does input on these coords
         foreach(GameObject obj in shapes.Values){
             Shape obj_ctrl = obj.GetComponent<Shape>();
-            if(obj_ctrl.IsOwnedBy(id)){
+            /*if(obj_ctrl.IsOwnedBy(id)){
                 switch (name){
                     case "Down":
                         setup.logger.Msg("Input Down is received from "+id+" on "+new Vector2(m_x, m_y), "C");
@@ -159,6 +159,22 @@ public class CardsLoading : MonoBehaviour {
                         obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
                         break;
                 }
+            }*/
+            switch (name){
+                case "Down":
+                    setup.logger.Msg("Input Down is received from "+id+" on "+new Vector2(m_x, m_y), "C");
+                    if(obj_ctrl.CoordsInside(new Vector2(px,py))){
+                        obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
+                    }
+                    break;
+                case "Move":
+                    if(obj_ctrl.IsDragged()){
+                        obj_ctrl.Move(px, py, setup.zoom_ratio);
+                    }
+                    break;
+                case "Up":
+                    obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
+                    break;
             }
         }
     }

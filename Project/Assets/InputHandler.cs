@@ -178,6 +178,8 @@ public class InputHandler : MonoBehaviourPun {
         }
         initialized = true;
         setup.logger.Msg("InputHandler has initialized", "V");
+        setup.logger.Msg("SMARTIESMANAGER FROM IH", "S");
+        GameObject.Find("ScriptManager").GetComponent<SmartiesManager>().StartFromOpe(setup, ope);
         render.InitializeFromIH(ope);
     }
 

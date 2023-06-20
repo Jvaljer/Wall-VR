@@ -52,7 +52,6 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             if(setup.master_only){
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
                 setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
-                ope_prefab.GetComponent<InputHandler>().ParticipantIsReady();
             }
 
         } else {

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.InputSystem;
 
-public class Participant : MonoBehaviourPun {=
+public class Participant : MonoBehaviourPun {
     //referenced setup & operator
     public Setup setup { get; set; }
     public GameObject ope { get; set; }
@@ -18,6 +18,7 @@ public class Participant : MonoBehaviourPun {=
 
     //XR components
     private XRController right_ctrl;
+    UnityEngine.XR.InputDevice device;
 
     //ray attributes
     private GameObject ray_go;
@@ -42,7 +43,10 @@ public class Participant : MonoBehaviourPun {=
                     }
 
                     //we wanna fetch for the VR inputs
-
+                    bool trigger;
+                    if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
+                        setup.logger.Msg("Trigger's been triggered !", "V");
+                    }
                 }
             }
         }
@@ -67,7 +71,14 @@ public class Participant : MonoBehaviourPun {=
             left_hand = headset.transform.GetChild(0).GetChild(2).gameObject;
             //then fetch the xr controller (inputs)
             right_ctrl = right_hand.GetComponent<XRController>();
-
+            var r_ctrl = new List<UnityEngine.XR.InputDevice>();
+            UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, r_ctrl);
+            if(r_ctrl.Count==1){
+                device = r_ctrl[0];
+                setup.logger.Msg("Found only one right hand device -> Device name '"+device.name+"' with role '"+device.role.ToString()+"'", "V");
+            } else {
+                setup.logger.Msg("Found "+r_ctrl.Count+" right hand device", "E");
+            }
         } else {
             setup.logger.Msg("Starting initialization as Wall", "C");
             Screen.fullScreen = setup.full_screen;

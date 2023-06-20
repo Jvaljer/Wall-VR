@@ -179,7 +179,9 @@ public class InputHandler : MonoBehaviourPun {
         initialized = true;
         setup.logger.Msg("InputHandler has initialized", "V");
         setup.logger.Msg("SMARTIESMANAGER FROM IH", "S");
-        GameObject.Find("ScriptManager").GetComponent<SmartiesManager>().StartFromOpe(setup, ope);
+        if(setup.is_master){
+            GameObject.Find("ScriptManager").GetComponent<SmartiesManager>().StartFromOpe(setup, ope);
+        }
         render.InitializeFromIH(ope);
     }
 
@@ -445,14 +447,14 @@ public class InputHandler : MonoBehaviourPun {
     /******************************************************************************/
     public void AddVRCursorFromOpe(int n = -1){
         setup.logger.Msg("Adding the VR Cursor "+n, "C");
-        CreateMCursor(gameObject.GetComponent<Operator>(), n, 0.5f, 0.5f, Color.green);
+        CreateMCursor(vr_ref, n, 0.5f, 0.5f, Color.green);
     }
 
     public void VRInput(string name, Vector3 input, int id){
         //here we wanna first get the associated cursor
         MCursor mc = GetMCursor(vr_ref, id);
         if(mc==null){
-            setup.logger.Msg("cursor is null", "E");
+            setup.logger.Msg("cursor is null for id "+id, "E");
             return;
         }
         Vector3 mouse_input = CoordOfVRToMouse(input);

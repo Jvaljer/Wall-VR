@@ -8,6 +8,7 @@ using System.Collections;
 
 public class SmartiesManager :  MonoBehaviour {
 
+	Operator ope;
 	Setup setup;
 	InputHandler input_handler;
 	Wall wall;
@@ -19,10 +20,12 @@ public class SmartiesManager :  MonoBehaviour {
 
 	List<SmartiesWidget> expeWidgets;
 	List<SmartiesWidget> interfaceWidgets;
-
-	void Start() {
+	
+	public void StartFromOpe(Setup S_, Operator O_){
 		Debug.Log("Start SmartiesManager");
-		setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
+		ope = O_;
+		input_handler = ope.gameObject.GetComponent<InputHandler>();
+		setup = S_;
 
 		if (!setup.smarties){
 			Debug.Log("smarties not enabled for setup");
@@ -54,12 +57,52 @@ public class SmartiesManager :  MonoBehaviour {
 		smarties.SmartiesUpdate += OnSmartiesUpdate;
 		smarties.Run();
 
-		input_handler = GameObject.Find("Operator(Clone)").GetComponent<InputHandler>();
 		input_handler.RegisterDevice("Smarties", this);
 
 		Debug.Log ("Smarties started");
 		started = true;
 	}
+
+	/*void Start() {
+		Debug.Log("Start SmartiesManager");
+		setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
+
+		if (!setup.smarties){
+			Debug.Log("smarties not enabled for setup");
+			smarties = null;
+			return;
+		}
+		wall = setup.wall;
+
+		// see the Smarties javadoc
+		smarties = new Smarties(
+			(int)wall.Width(), (int)wall.Height(), wall.ColumnsAmount(), wall.RowsAmount()
+		);
+	
+		/*
+		//to add a widget : 
+			//first set up the grid
+		smarties.initWidgets(4,3);
+			//then initialize the container variable
+		SmartiesWidget wid;
+			//then add the wanted widget
+		wid = smarties.addWidget(SmartiesWidget.SMARTIES_WIDGET_TYPE_*, "text', x_pos, y_pos, x_size, y_size);
+			//then some stuff I must check for utilities
+		wid.handler = letterHHandler; //might modify
+		wid_list.Add(wid); //optional ?
+		* /
+
+		
+		// banzai
+		smarties.SmartiesUpdate += OnSmartiesUpdate;
+		smarties.Run();
+
+		input_handler = GameObject.Find("Operator(Clone)").GetComponent<InputHandler>();
+		input_handler.RegisterDevice("Smarties", this);
+
+		Debug.Log ("Smarties started");
+		started = true;
+	} */
 
 	void OnSmartiesUpdate(Smarties s, SmartiesEvent e) {
 		switch (e.type) {

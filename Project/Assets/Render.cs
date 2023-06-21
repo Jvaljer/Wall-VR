@@ -142,9 +142,9 @@ public class CardsLoading : MonoBehaviour {
             Shape obj_ctrl = obj.GetComponent<Shape>();
             switch (name){
                 case "Down":
-                    setup.logger.Msg("Input Down is received from "+id+" on "+new Vector2(m_x, m_y), "C");
+                    setup.logger.Msg("Input Down is received by Render from "+id+" on "+new Vector2(m_x, m_y), "C");
                     if(obj_ctrl.CoordsInside(new Vector2(px,py))){
-                        setup.logger.Msg("Click is inside !", "V");
+                        setup.logger.Msg("The Down Input is inside the shape", "V");
                         obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
                     }
                     break;

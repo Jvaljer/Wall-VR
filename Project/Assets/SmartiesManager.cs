@@ -21,10 +21,11 @@ public class SmartiesManager :  MonoBehaviour {
 	List<SmartiesWidget> interfaceWidgets;
 
 	public void StartFromOpe(Setup S_, Operator O_){
+		setup = S_;
 		setup.logger.Msg("Smarties Manager starts", "C");
+		
 		ope = O_;
 		input_handler = ope.gameObject.GetComponent<InputHandler>();
-		setup = S_;
 
 		if (!setup.smarties){
 			setup.logger.Msg("Smarties not enabled for this setup", "S");

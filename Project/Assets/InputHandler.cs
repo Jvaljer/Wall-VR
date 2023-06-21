@@ -453,6 +453,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void InputFromVR(string name, Vector3 input, int id){
+
         //here we wanna first get the associated cursor
         if(photonView.IsMine){
             MCursor mc = GetMCursor(vr_ref, id);
@@ -468,12 +469,12 @@ public class InputHandler : MonoBehaviourPun {
                     mc.Move(mouse_input.x, mouse_input.y);
                     render.Input("Move", mouse_input.x, mouse_input.y, id);
                     break;
-                case "TriggerDown":
+                case "Down":
                     //in this case we do the same as for the mouse press but with the VR id
                     setup.logger.Msg("Trigger has been pressed by "+id, "C");
                     render.Input("Down", mouse_input.x, mouse_input.y, id);
                     break;
-                case "TriggerUp":
+                case "Up":
                     //in this case we do the same as for the mouse release but with the VR id
                     render.Input("Up", mouse_input.x, mouse_input.y, id);
                     break;

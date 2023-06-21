@@ -59,7 +59,7 @@ public class InputHandler : MonoBehaviourPun {
             //handling operator's mouse
             if(Mouse.current.leftButton.wasPressedThisFrame){
                 StartMoveMCursor(this, 0, mouse_x, mouse_y, true);
-                setup.logger.Msg("CALLING INPUTRPC.Down", "S");
+                setup.logger.Msg("Mouse Down -> sending a simple input via RPC", "S");
                 photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Down", mouse_x, mouse_y, 0);
             } else if(Mouse.current.leftButton.wasReleasedThisFrame){
                 StopMoveMCursor(this, 0, mouse_x, mouse_y);
@@ -179,7 +179,6 @@ public class InputHandler : MonoBehaviourPun {
         }
         initialized = true;
         setup.logger.Msg("InputHandler has initialized", "V");
-        setup.logger.Msg("SMARTIESMANAGER FROM IH", "S");
         if(setup.is_master){
             GameObject.Find("ScriptManager").GetComponent<SmartiesManager>().StartFromOpe(setup, ope);
         }
@@ -453,7 +452,6 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void InputFromVR(string name, Vector3 input, int id){
-
         //here we wanna first get the associated cursor
         if(photonView.IsMine){
             MCursor mc = GetMCursor(vr_ref, id);
@@ -494,8 +492,9 @@ public class InputHandler : MonoBehaviourPun {
 
     [PunRPC]
     public void InputFromVRRPC(string name, Vector3 input, int id){
-        //must implement
-        return;
+        if(photonView.IsMine){
+
+        }
     }
 
     /******************************************************************************/

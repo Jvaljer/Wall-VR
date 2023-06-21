@@ -54,8 +54,8 @@ public class Participant : MonoBehaviourPun {
 
                             bool trigger;
                             if(r_ctrl_device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
-                                setup.logger.Msg("Trigger's been triggered !", "V");
                                 if(!trigger_down){
+                                    setup.logger.Msg("Trigger Down -> sending a VR input via RPC to operator","S");
                                     ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                                     //ope.GetComponent<Operator>().VRInput("TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                                     trigger_down = true;

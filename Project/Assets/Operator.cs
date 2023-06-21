@@ -58,7 +58,7 @@ public class Operator : MonoBehaviourPun {
 
     [PunRPC]
     public void VRInputRPC(string str, Vector3 coord, int n){
-        setup.logger.Msg("Receiving a VR input : "+str, "C");
+        setup.logger.Msg("Receiving a VR input via RPC : "+str, "C");
         string name = "";
         switch (str){
             case "RayMove":

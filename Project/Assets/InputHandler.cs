@@ -453,7 +453,8 @@ public class InputHandler : MonoBehaviourPun {
 
     public void InputFromVR(string name, Vector3 input, int id){
         //here we wanna first get the associated cursor
-        if(photonView.IsMine){
+        /* if(photonView.IsMine){
+            setup.logger.Msg("Input Handler is receiving the VR Input","V");
             MCursor mc = GetMCursor(vr_ref, id);
             if(mc==null){
                 setup.logger.Msg("cursor is null for id "+id, "E");
@@ -469,7 +470,7 @@ public class InputHandler : MonoBehaviourPun {
                     break;
                 case "Down":
                     //in this case we do the same as for the mouse press but with the VR id
-                    setup.logger.Msg("Trigger has been pressed by "+id, "C");
+                    setup.logger.Msg("The received input is "+name+" from "+id, "C");
                     render.Input("Down", mouse_input.x, mouse_input.y, id);
                     break;
                 case "Up":
@@ -487,6 +488,42 @@ public class InputHandler : MonoBehaviourPun {
                 default:
                     break;
             }
+        } else {
+            setup.logger.Msg("Input Handler doesn't receive the VR Input","E");
+        } */
+        setup.logger.Msg("Input Handler is receiving the VR Input","V");
+        MCursor mc = GetMCursor(vr_ref, id);
+        if(mc==null){
+            setup.logger.Msg("cursor is null for id "+id, "E");
+            return;
+        }
+        Vector3 mouse_input = CoordOfVRToMouse(input);
+        //mc is the cursor we wanna move onto the coord 'input'
+        switch (name) {
+            case "Move":
+                //because visual pos will be adjusted later on
+                mc.Move(mouse_input.x, mouse_input.y);
+                render.Input("Move", mouse_input.x, mouse_input.y, id);
+                break;
+            case "Down":
+                //in this case we do the same as for the mouse press but with the VR id
+                setup.logger.Msg("The received input is "+name+" from "+id, "C");
+                render.Input("Down", mouse_input.x, mouse_input.y, id);
+                break;
+            case "Up":
+                //in this case we do the same as for the mouse release but with the VR id
+                render.Input("Up", mouse_input.x, mouse_input.y, id);
+                break;
+                
+            //must implement all other asap
+            case "JoyDown":
+                //dunno what to do in this case
+                break;
+            case "JoyUp":
+                //dunno what to do in this case
+                break;
+            default:
+                break;
         }
     }
 

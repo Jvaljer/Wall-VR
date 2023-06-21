@@ -57,8 +57,30 @@ public class Operator : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void VRInputRPC(string name, Vector3 coord, int n){
-        setup.logger.Msg("Receiving a VR input : "+name, "C");
+    public void VRInputRPC(string str, Vector3 coord, int n){
+        setup.logger.Msg("Receiving a VR input : "+str, "C");
+        string name = "";
+        switch (str){
+            case "RayMove":
+                name = "Move";
+                break;
+            case "TriggerDown":
+                name = "Down";
+                break;
+            case "TriggerUp":
+                name = "Up";
+                break;
+            default:
+                break;
+        }
+        setup.logger.Msg("Sending the VR Input : "+name, "C");
         input_handler.InputFromVR(name,coord,n);
+    }
+
+    public void VRInput(string str, Vector3 coord, int n){
+        if(photonView.IsMine){
+            //must implement
+        }
+        return;
     }
 }

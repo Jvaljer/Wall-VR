@@ -22,7 +22,7 @@ public class Logger : MonoBehaviour {
 #endif
     }
     
-    public void Msg(string message, string category){
+    public void Msg(string message, string category = ""){
         switch (category){
             case "E":
                 //display an error

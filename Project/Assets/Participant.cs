@@ -49,19 +49,21 @@ public class Participant : MonoBehaviourPun {
                             float input_x = hit.point.x;
                             float input_y = hit.point.y;
                             
-                            //ope.GetComponent<InputHandler>().InputFromVR("Move", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
-                            ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Move", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                            ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "RayMove", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                            //ope.GetComponent<Operator>().VRInput("RayMove", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
 
                             bool trigger;
                             if(r_ctrl_device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out trigger) && trigger){
                                 setup.logger.Msg("Trigger's been triggered !", "V");
-                                //ope.GetComponent<InputHandler>().InputFromVR("Down", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
-                                ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Down", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
-                                trigger_down = true;
+                                if(!trigger_down){
+                                    ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                                    //ope.GetComponent<Operator>().VRInput("TriggerDown", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                                    trigger_down = true;
+                                }
                             } else {
                                 if(trigger_down){
-                                    //ope.GetComponent<InputHandler>().InputFromVR("Up", input_x, input_y, PhotonNetwork.LocalPlayer.ActorNumber);
-                                    ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "Up", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                                    ope.GetComponent<PhotonView>().RPC("VRInputRPC", RpcTarget.AllBuffered, "TriggerUp", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
+                                    //ope.GetComponent<Operator>().VRInput("TriggerUp", hit.point, PhotonNetwork.LocalPlayer.ActorNumber);
                                     trigger_down = false;
                                 }
                             }

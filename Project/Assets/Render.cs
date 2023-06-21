@@ -110,8 +110,6 @@ public class CardsLoading : MonoBehaviour {
     private float sh;
     private float sw_unity;
     private float sh_unity;
-    private float abs = 1.0f;
-    private float ih_scale = 1.5f;
     private float ortho_size = 5f;
 
     //private float pixel_in_mm = 0.264275256f; //abel's laptop
@@ -176,8 +174,6 @@ public class CardsLoading : MonoBehaviour {
             sw_unity = sw*pix_to_unit;
             sh_unity = sh*pix_to_unit;
             setup.logger.Msg("Render (Operator) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
-            abs = 0.1f;
-            ih_scale = ih_scale*abs;
         } else {
             if(setup.is_vr){
                 //simply replacing the shape on the wall ?
@@ -201,7 +197,6 @@ public class CardsLoading : MonoBehaviour {
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
                 setup.logger.Msg("Render (Wall) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
-                abs = 1.0f;
                 foreach(GameObject shape in shapes.Values){
                     //zoom value = amount of division ?
                     shape.transform.localScale *= setup.zoom_ratio;

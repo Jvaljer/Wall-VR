@@ -492,17 +492,23 @@ public class InputHandler : MonoBehaviourPun {
             setup.logger.Msg("Input Handler doesn't receive the VR Input","E");
         } */
         setup.logger.Msg("Input Handler is receiving the VR Input","V");
-        MCursor mc = GetMCursor(vr_ref, id);
-        if(mc==null){
-            setup.logger.Msg("cursor is null for id "+id, "E");
-            return;
-        }
         Vector3 mouse_input = CoordOfVRToMouse(input);
+
+        if(photonView.IsMine){ //only needed for operator
+            MCursor mc = GetMCursor(vr_ref, id);
+            if(mc==null){
+                setup.logger.Msg("cursor is null for id "+id, "E");
+                return;
+            }
+            if(name=="Move"){
+                mc.Move(mouse_input.x, mouse_input.y);
+            }
+        }
+
         //mc is the cursor we wanna move onto the coord 'input'
         switch (name) {
             case "Move":
                 //because visual pos will be adjusted later on
-                mc.Move(mouse_input.x, mouse_input.y);
                 render.Input("Move", mouse_input.x, mouse_input.y, id);
                 break;
             case "Down":
@@ -524,13 +530,6 @@ public class InputHandler : MonoBehaviourPun {
                 break;
             default:
                 break;
-        }
-    }
-
-    [PunRPC]
-    public void InputFromVRRPC(string name, Vector3 input, int id){
-        if(photonView.IsMine){
-
         }
     }
 

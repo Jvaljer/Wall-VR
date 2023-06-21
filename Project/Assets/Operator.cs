@@ -76,11 +76,4 @@ public class Operator : MonoBehaviourPun {
         setup.logger.Msg("Sending the VR Input : "+name, "C");
         input_handler.InputFromVR(name,coord,n);
     }
-
-    public void VRInput(string str, Vector3 coord, int n){
-        if(photonView.IsMine){
-            //must implement
-        }
-        return;
-    }
 }

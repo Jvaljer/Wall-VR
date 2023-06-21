@@ -9,95 +9,21 @@ using Photon.Pun;
 using Photon.Realtime;
 public class Render : MonoBehaviourPun {
 
-    //internal class : Dixit 
-    /* //SHALL ADAPT ALL THE SCRIPTS BELOW AND SUPPRESS SHAPES !!!
-    //must have the internal class : 
-public class MyCard : MonoBehaviour {
-    // Creation of the card 
-    public GameObject goCard = null;
-    public string pos_tag = "";
-    public PhotonView pv;
-    public Transform parent;
-    public int id_on_wall;
-    public MyCard(Texture2D tex, Transform mur , int i) {
-        GameObject goCard = PhotonNetwork.InstantiateRoomObject("Card", mur.position, mur.rotation, 0, null);
-        goCard.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-        parent = mur;
-        pv = goCard.GetPhotonView();
-        //Debug.Log("MyCard created on Mur : " + parent);
-        id_on_wall = i;
-        pos_tag = "onWall";
-    }
-}
+    //internal class : Dixit (representing one of all the dixit cards)
+    public class DixitCard : MonoBehaviour {
+        private GameObject card_go; //CardGO in scene
+        private PhotonView pv;
+        private Transform parent; //WallGO
+        private int wall_id;
 
-public class MyCard : MonoBehaviour {
-    //specific card attributes
-    private GameObject go_card = null;
-    private string pos_tag = "";
-    public PhotonView pv;
-    private Transform parent;
-    public MyCard(Texture2D tex, Transform wall){
-        GameObject go_card = PhotonNetwork.InstantiateRoomObject("Card", wall.position, wall.rotation, 0, null);
-        go_card.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-        parent = wall;
-        pv = go_card.GetPhotonView();
-        pos_tag = "onWall";
-    }
-}
-
-    //must have a LoadingCard class like this: 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Photon.Pun;
-
-public class CardsLoading : MonoBehaviour {
-    //all cards' textures
-    object[] textures;
-
-    //size of cards
-    private static float width = 0.033f;
-    private static float height = 0.239f;
-
-    //cards dispositions values
-    private static int card_per_line = Mathf.RoundToInt(Rendering.card_per_wall/2);
-    private float card_spacing;
-    private float min_card_x = -0.35f - width;
-
-    //card loading method
-    [PunRPC]
-    private void LoadCards(int card_pv_id, int wall_pv_id, int pos, int card_index){
-        //loading textures
-        if(textures==null){
-            textures = Resources.LoadAll("dixit_all/", typeof(Texture2D));
-        }
-        //defining spacing attribute
-        card_spacing = 0.7f / (card_per_line - ((int)(Rendering.card_per_wall%2)));
-
-        //getting the concerned wall & card
-        Transform wall = PhotonView.Find(wall_pv_id).transform;
-        GameObject card = PhotonView.Find(card_pv_id).gameObject;
-
-        //setting the texture
-        Texture2D tex = (Texture2D)textures[card_index];
-        card.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-
-        //setting the card's attributes 
-        card.transform.parent = wall;
-        card.transform.rotation = wall.rotation;
-        card.name = "Card " + card_index;
-        card.transform.localScale = new Vector3(width, height, 1.0f);
-
-        //setting card's position
-        if(pos < card_per_line){
-            card.transform.localPosition = new Vector3(min_card_x + width + card_spacing * pos, -height, -0.01f);
-        } else {
-            pos = pos - card_per_line;
-            card.transform.localPosition = new Vector3(min_card_x + width + card_spacing * pos, height, -0.01f);
+        public DixitCard(Texture2D tex, Transform wall, int id){
+            card_go = PhotonNetwork.InstantiateRoomObject("Dixit Card", wall.position, wall.rotation);
+            card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
+            parent = wall;
+            pv = card_go.GetPhotonView();
+            wall_id = id;
         }
     }
-}
-    */
     //unity attributes
     private Setup setup;
     private NetworkHandler network_handler;

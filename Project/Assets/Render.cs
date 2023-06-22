@@ -24,6 +24,7 @@ public class Render : MonoBehaviourPun {
             wall_id = id;
         }
     }
+
     //unity attributes
     private Setup setup;
     private NetworkHandler network_handler;
@@ -40,8 +41,10 @@ public class Render : MonoBehaviourPun {
 
     //private float pixel_in_mm = 0.264275256f; //abel's laptop
 
+    //dixits attributes
+    private object[] dixits_tex;
+
     //shapes attributes
-    //all shapes
     private Dictionary<string, GameObject> shapes;
 
     public void Start(){
@@ -129,5 +132,51 @@ public class Render : MonoBehaviourPun {
                 }
             }
         }
+    }
+
+    public void LoadDixits(){
+        dixits_tex = Resources.LoadAll("dixit_cards_all/", typeof(Texture2D));
+        if(dixits_tex!=null){
+            setup.logger.Msg("Loaded all dixits from dixit_cards_all/ : "+dixits_tex.Length, "V");
+        } else {
+            setup.logger.Msg("Failed to load all dixits from dixit_cards_all/", "E");
+        }
+    }
+
+    public void CreateDixits(){
+        setup.logger.Msg("Render starts creating All Dixits", "C");
+        LoadDixits();
+        if(dixits_tex.Length>0){
+            //setting up cards variables & containers
+            Texture2D tex;
+            GameObject wall;
+            for(int i=0; i<dixits_tex; i++){
+                //dixits repartition on the wall (20 dixits)
+                /*
+                   0 0 0 0 0 0 0
+                    0 0 0 0 0 0 
+                   0 0 0 0 0 0 0
+                */
+                if(i<7){
+                    //first line
+
+                } else if(i<13){
+                    //second line
+                } else {
+                    //third line
+                }
+            }
+
+            DixitCard dc = new DixitCard(tex, wall, i);
+        } else {
+            setup.logger.Msg("Dixits aren't loaded ...", "E");
+        }
+    }
+
+    public void CreateSingleDixit(int n){
+        Transform wall = GameObject.Find("WallGO").transform;
+        Texture2D tex = dixits_tex[n];
+        DixitCard card = new DixitCard(tex, wall, n);
+        card.pv.RPC("LoadCard", Photon.Pun.RpcTarget.AllBuffered,card.pv.ViewID, wall.GetComponent<PhotonView>().ViewID, n);
     }
 }

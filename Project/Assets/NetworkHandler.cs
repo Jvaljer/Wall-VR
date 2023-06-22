@@ -42,12 +42,17 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
-            shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", new Vector3(0f,0f,1f), Quaternion.identity);
-            Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
-            sh1_ctrl.SetName("Circle0");
-            sh1_ctrl.Categorize("circle");
-            sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
-            sh1_ctrl.PositionOn(Vector3.zero);
+            if(setup.dixits){
+                //first trying to create only one dixit
+                NetworkCreateSingleDixit();
+            } else {
+                shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", new Vector3(0f,0f,1f), Quaternion.identity);
+                Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
+                sh1_ctrl.SetName("Circle0");
+                sh1_ctrl.Categorize("circle");
+                sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
+                sh1_ctrl.PositionOn(Vector3.zero);
+            }
 
             if(setup.master_only){
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
@@ -99,6 +104,11 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     public void Connect(){
         PhotonNetwork.NickName = System.DateTime.Now.Ticks.ToString();
         PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public void NetworkCreateSingleDixit(){
+        //must implement
+        return;
     }
 }
 

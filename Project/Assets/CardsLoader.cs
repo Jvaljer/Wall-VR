@@ -45,8 +45,24 @@ public class CardsLoader : MonoBehaviour {
     } */
 
     [PunRPC]
-    public void LoadDixit(){
-        //must implement
+    public void LoadDixit(int card_pv, int wall_pv, int i){
+        if(textures==null){
+            textures = Resources.LoadAll("dixit_cards_all/", typeof(Texture2D));
+        }
+
+        //we have 2 possibilities
+        //first of all we are in 2D -> dixit are simply created onto the scene
+        //second case we are in VR -> dixit are attached to the wallGO
+        if(setup.is_master){
+            //must implement
+        } else {
+            if(setup.is_vr){
+                //must implement
+            } else {
+                //must implement
+            }
+        }
+
         return;
     }
 }

@@ -42,6 +42,11 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             ope_prefab = PhotonNetwork.Instantiate("Operator", transform.position, transform.rotation);
             PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
 
+            if(setup.master_only){
+                ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
+                setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
+            }
+
             if(setup.dixits){
                 //first trying to create only one dixit
                 NetworkCreateSingleDixit();
@@ -52,11 +57,6 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
                 sh1_ctrl.Categorize("circle");
                 sh1_ctrl.SetSize(shape1_prefab.transform.localScale.x);
                 sh1_ctrl.PositionOn(Vector3.zero);
-            }
-
-            if(setup.master_only){
-                ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
-                setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
             }
 
         } else {
@@ -108,7 +108,8 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
 
     public void NetworkCreateSingleDixit(){
         Render render = GameObject.Find("ScriptManager").GetComponent<Render>();
-        render.InitializeSingleDixits(0);
+        //render.CreateSingleDixits(0);
+        render.CreateAllDixits();
     }
 }
 

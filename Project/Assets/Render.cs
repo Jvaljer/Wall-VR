@@ -11,7 +11,7 @@ public class Render : MonoBehaviourPun {
 
     //internal class : Dixit (representing one of all the dixit cards)
     public class DixitCard : MonoBehaviour {
-        public GameObject card_go { get; set; } //CardGO in scene
+        public GameObject go { get; set; } //CardGO in scene
         public PhotonView pv { get; set; }
         private int id;
 
@@ -27,9 +27,9 @@ public class Render : MonoBehaviourPun {
                 card_pos = wall.position;
                 card_rota = wall.rotation;
             }
-            card_go = PhotonNetwork.InstantiateRoomObject("Dixit Card", card_pos, card_rota);
-            card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-            pv = card_go.GetPhotonView();
+            go = PhotonNetwork.InstantiateRoomObject("Dixit Card", card_pos, card_rota);
+            go.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
+            pv = go.GetPhotonView();
             id = id_;
         }
     }
@@ -44,8 +44,8 @@ public class Render : MonoBehaviourPun {
     private float pix_to_unit = 1f;
     private float sw;
     private float sh;
-    private float sw_unity;
-    private float sh_unity;
+    public float sw_unity { get; private set; }
+    public float sh_unity { get; private set; }
     private float ortho_size = 5f;
 
     //private float pixel_in_mm = 0.264275256f; //abel's laptop
@@ -156,7 +156,7 @@ public class Render : MonoBehaviourPun {
                 setup.logger.Msg("Render (Wall) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
 
                 if(setup.dixits){
-
+                    //must implement
                 } else {
                     foreach(GameObject shape in shapes.Values){
                         //zoom value = amount of division ?
@@ -176,39 +176,34 @@ public class Render : MonoBehaviourPun {
         }
     }
 
-    public void CreateDixits(){
+    public void CreateAllDixits(){
         setup.logger.Msg("Render starts creating All Dixits", "C");
         LoadDixits();
+
         if(dixits_tex.Length>0){
             //setting up cards variables & containers
             Texture2D tex;
             GameObject wall = GameObject.Find("WallGO"); //will return null if in 2D
             for(int i=0; i<dixits_tex.Length; i++){
                 tex = (Texture2D)dixits_tex[i];
-                //dixits repartition on the wall (20 dixits)
-                /*
-                   0 0 0 0 0 0 0
-                    0 0 0 0 0 0 
-                   0 0 0 0 0 0 0
-                */
-                if(i<7){
-                    //first line
-
-                } else if(i<13){
-                    //second line
-                } else {
-                    //third line
-                }
-
                 //Card initialization
-                DixitCard dc = new DixitCard(tex, i, wall.transform);
+                DixitCard card;
+                if(wall==null){
+                    card = new DixitCard(tex, i, null);
+                } else {
+                    card = new DixitCard(tex, i, wall.transform);
+                }
+                //giving x_ & y_ in real coordinates -> translation has already been done
+                card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, i, setup.is_vr, sw_unity, sh_unity);
+                setup.logger.Msg(card.go.name+" is placed on : "+card.go.transform.position, "C");
+                dixits.Add("Dixit"+i, card.go);
             }
         } else {
             setup.logger.Msg("Dixits aren't loaded ...", "E");
         }
     }
 
-    public void InitializeSingleDixits(int index){
+    public void CreateSingleDixits(int index){
         setup.logger.Msg("Initializing One Dixit (test)", "S");
         if(dixits_tex==null){
             setup.logger.Msg("Loading textures", "C");
@@ -227,12 +222,6 @@ public class Render : MonoBehaviourPun {
 
         setup.logger.Msg("objects are null : card_pv_id-> "+(card.pv.ViewID==null)+" index-> "+index+" setup.is_master-> "+(setup.is_master==null)+" setup.is_vr-> "+(setup.is_vr==null), "C");
         card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, index, setup.is_master, setup.is_vr); //same as card.gameobject.GetComponent<PhotonView>().RPC("LoadCard");
-        //photonView.RPC("AddDixitToList", RpcTarget.AllBuffered, card.pv.ViewID);
-    }
-
-    [PunRPC]
-    public void AddDixitToList(int card_pv_id){
-        //must implement
-        return;
+        dixits.Add("Dixit"+index, card.go);
     }
 }

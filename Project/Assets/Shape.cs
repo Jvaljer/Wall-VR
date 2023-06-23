@@ -7,7 +7,6 @@ using Photon.Realtime;
 
 public class Shape : MonoBehaviourPun {
     public string title { get; private set; }
-    public Setup setup { get; set; } 
     public string category { get; set; }
     public float size { get; set; }
     public Vector3 position { get; set; }

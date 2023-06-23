@@ -184,7 +184,7 @@ public class Render : MonoBehaviourPun {
             //setting up cards variables & containers
             Texture2D tex;
             GameObject wall = GameObject.Find("WallGO"); //will return null if in 2D
-            for(int i=0; i<dixits_tex.Length; i++){
+            for(int i=0; i<45; i++){ //only loading the 45 first dixits
                 tex = (Texture2D)dixits_tex[i];
                 //Card initialization
                 DixitCard card;

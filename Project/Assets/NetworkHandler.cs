@@ -107,8 +107,8 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
     }
 
     public void NetworkCreateSingleDixit(){
-        //must implement
-        return;
+        Render render = GameObject.Find("ScriptManager").GetComponent<Render>();
+        render.InitializeSingleDixits(0);
     }
 }
 

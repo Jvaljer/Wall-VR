@@ -1,1237 +1,349 @@
 Using pre-set license
-Built from '2020.3/release' branch; Version is '2020.3.7f1 (dd97f2c94397) revision 14522354'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 22621.1848; Version 2009; 64bit' Language: 'fr' Physical Memory: 65327 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+Desktop is 1366 x 768 @ 60 Hz
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.7f1\Editor\Unity.exe
+Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/cygwin64/home/abel/Wall-VR/Project
+/home/abel/JvaljerGit/Wall-VR/Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60163
-Successfully changed project path to: C:/cygwin64/home/abel/Wall-VR/Project
-C:/cygwin64/home/abel/Wall-VR/Project
+42723
+Successfully changed project path to: /home/abel/JvaljerGit/Wall-VR/Project
+/home/abel/JvaljerGit/Wall-VR/Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 412.70 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 104,98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/cygwin64/home/abel/Wall-VR/Project/Assets
-GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
-    Vendor:   
-    VRAM:     10078 MB
-    Driver:   31.0.15.1694
+[Subsystems] Discovering subsystems at path /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/abel/JvaljerGit/Wall-VR/Project/Assets
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_swap_method GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Renderer: Mesa Intel(R) UHD Graphics 605 (GLK 3)
+Vendor:   Intel
+Version:  4.6 (Core Profile) Mesa 22.2.5-0ubuntu0.1~22.04.3
+GLES:     0
+ GL_3DFX_texture_compression_FXT1 GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_d
+erivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_pol
+ygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_buffer_
+object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_
+equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_t
+exture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -966502016
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
+Mono path[0] = '/home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
+Mono path[1] = '/home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56706
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.001863 seconds.
+Register platform support module: /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0,004143 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.49 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 99,40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.639 seconds
+- Completed reload, in  2,935 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.308206 seconds.
+Registered in 0,010910 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 38.66 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 103,29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.976 seconds
+- Completed reload, in  2,663 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.70 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1,40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 2516 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.3 MB.
-System memory in use after: 115.3 MB.
+System memory in use before: 107,3 MB.
+System memory in use after: 107,3 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2955.
-Total: 2.910200 ms (FindLiveObjects: 0.365600 ms CreateObjectMapping: 0.153500 ms MarkObjects: 2.306000 ms  DeleteObjects: 0.084000 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Resources/New Prefab.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/New Prefab.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d42230238cd9a16459987991359429') in 0.062957 seconds
-  Import took 0.067193 seconds .
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2955.
+Total: 7,195260 ms (FindLiveObjects: 0,861198 ms CreateObjectMapping: 0,210095 ms MarkObjects: 5,572346 ms  DeleteObjects: 0,547132 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.433284 seconds.
+  path: Assets/Resources/Circle.prefab
+  artifactKey: Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Circle.prefab using Guid(3affb4c37f93b4b43890e64e51d5af55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78fcdc80c3e898d4a06c565ef73a5595') in 0,224645 seconds
+  Import took 0,235329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000441 seconds.
+  path: Assets/Resources/Wall Participant.prefab
+  artifactKey: Guid(534d7ea80c29878559764aad452e4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Wall Participant.prefab using Guid(534d7ea80c29878559764aad452e4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26562f804d85fdfd146fb090a292ea36') in 0,005710 seconds
+  Import took 0,013838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000366 seconds.
+  path: Assets/Resources/VR Participant.prefab
+  artifactKey: Guid(bb808d0289d00d2ec82e0b710e4cffcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/VR Participant.prefab using Guid(bb808d0289d00d2ec82e0b710e4cffcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd89b0d7dbcf5034299cbfa469a1d7f2') in 0,004972 seconds
+  Import took 0,015794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000521 seconds.
+  path: Assets/Resources/Cursor Prefab.prefab
+  artifactKey: Guid(002a10e7c2c05134a82fb5aeb8d024d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Cursor Prefab.prefab using Guid(002a10e7c2c05134a82fb5aeb8d024d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea202338c3e9a50e4e5ad3e76605712c') in 0,014200 seconds
+  Import took 0,022476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000326 seconds.
+  path: Assets/Resources/Controler Model.prefab
+  artifactKey: Guid(ed99e503de14a9241ba31fb23524c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Controler Model.prefab using Guid(ed99e503de14a9241ba31fb23524c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e34c227e5186b5d0774c1e10a2dab1e') in 0,017116 seconds
+  Import took 0,024343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000388 seconds.
+  path: Assets/Resources/Operator.prefab
+  artifactKey: Guid(2b9b0561d51300d8b815b03cd9a18f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Operator.prefab using Guid(2b9b0561d51300d8b815b03cd9a18f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d29cb5cafd80718c4378b50c98188bd') in 0,008071 seconds
+  Import took 0,017630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,001095 seconds.
   path: Assets/Resources/Dixit Card.prefab
   artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e1631c83a931af15f6846b7bfc61379') in 0.009307 seconds
-  Import took 0.013452 seconds .
+Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90147630c6080c8fdef977cda973c8bd') in 0,028043 seconds
+  Import took 0,041098 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 125.571165 seconds.
+  Time since last request: 0,717646 seconds.
   path: Assets/Resources/Dixit Card.prefab
   artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1865acb796bc850babc545a7b445517') in 0.006700 seconds
-  Import took 0.011000 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.744264 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f8bae37185287403159f278c6ab11b6') in 0.041061 seconds
-  Import took 0.045538 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.459723 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f2617932cfa41392a64d27741318be8') in 0.009873 seconds
-  Import took 0.014039 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.068154 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe4588c6fe7bb1109ce1275a7884351') in 0.009146 seconds
-  Import took 0.013403 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.464527 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c14806428b7efe16c6f785751931102') in 0.009604 seconds
-  Import took 0.013744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.206332 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c30ecf24e698676d47b9fec88b641c') in 0.011376 seconds
-  Import took 0.015581 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.408515 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74adf4be6fa59b17d0d253893e23d01d') in 0.011182 seconds
-  Import took 0.015498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.413650 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e30a8cff338f1611741ef1b5ebb140') in 0.011431 seconds
-  Import took 0.015631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.260265 seconds.
-  path: Assets/Resources/dixit_cards_all
-  artifactKey: Guid(ad75128726750d545bf90bb6a24c507c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all using Guid(ad75128726750d545bf90bb6a24c507c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec6cf556eb044c3f748428c086e7ecb1') in 0.008608 seconds
-  Import took 0.012796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.077685 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_01.png
-  artifactKey: Guid(02b38e660a89f8743bcaff72cb16868c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_01.png using Guid(02b38e660a89f8743bcaff72cb16868c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac650d3b39c6dc8040380c67b0bf7ad') in 0.061812 seconds
-  Import took 0.066253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_03.png
-  artifactKey: Guid(453e93d6e9c339a4bb0be5e8b7f58b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_03.png using Guid(453e93d6e9c339a4bb0be5e8b7f58b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b336f780680b162ca2384c778786ae6f') in 0.012109 seconds
-  Import took 0.016233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_06.png
-  artifactKey: Guid(0fa51c647be12b04293039879f580246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_06.png using Guid(0fa51c647be12b04293039879f580246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0220b0bac3c5dd88bf0206ba06a75c') in 0.011069 seconds
-  Import took 0.015005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_05.png
-  artifactKey: Guid(cfdbf095cfc1b084c9dd7d1ea13abcc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_05.png using Guid(cfdbf095cfc1b084c9dd7d1ea13abcc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f03fc4eeab10ac17db7ad12d9fb8d5') in 0.012640 seconds
-  Import took 0.016720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_03.png
-  artifactKey: Guid(b69dc97aa827938479fa97f300b22c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_03.png using Guid(b69dc97aa827938479fa97f300b22c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '753d8847dd1a637983c3b5afd59edcb5') in 0.010923 seconds
-  Import took 0.015068 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_03.png
-  artifactKey: Guid(a1e48d789b580e748961918c8ee6bf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_03.png using Guid(a1e48d789b580e748961918c8ee6bf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329e69599c5de4630354a20552312213') in 0.011961 seconds
-  Import took 0.016033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_08.png
-  artifactKey: Guid(e87cf067cbc015441b31743f110512ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_08.png using Guid(e87cf067cbc015441b31743f110512ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7544f82dfd8e9506d308152ee26116c3') in 0.011393 seconds
-  Import took 0.015514 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_02.png
-  artifactKey: Guid(a1817b59f63bce44486ca3aa1035759a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_02.png using Guid(a1817b59f63bce44486ca3aa1035759a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ef6394a0fc269e23ff6873dd2070b2') in 0.011384 seconds
-  Import took 0.015532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000174 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_03.png
-  artifactKey: Guid(9e8ca36f35d589842ae58a04fd5d2fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_03.png using Guid(9e8ca36f35d589842ae58a04fd5d2fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460ad2b193126f7dda666463897a9785') in 0.011075 seconds
-  Import took 0.015197 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_03.png
-  artifactKey: Guid(4f4308e4df1d66343951c3b37dc11db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_03.png using Guid(4f4308e4df1d66343951c3b37dc11db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f378354151857ccb6e9ed1c007582e4') in 0.011211 seconds
-  Import took 0.015301 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_04.png
-  artifactKey: Guid(85e500abc88bd1b4aa06136deb926453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_04.png using Guid(85e500abc88bd1b4aa06136deb926453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616242af6a45f3ce480c1ab4eba636c6') in 0.011278 seconds
-  Import took 0.015465 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_01.png
-  artifactKey: Guid(dfb08fc45a4995540802a5aa43c742c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_01.png using Guid(dfb08fc45a4995540802a5aa43c742c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8183a7084006ae0941bac1e0fba4d400') in 0.011577 seconds
-  Import took 0.015700 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_08.png
-  artifactKey: Guid(426e023ef898b70439fade24807e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_08.png using Guid(426e023ef898b70439fade24807e9e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd9ef9bd42ee0b47e5db06835c4df29') in 0.011323 seconds
-  Import took 0.015450 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_07.png
-  artifactKey: Guid(2ecf31b988408b1419f6cf0870fa9693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_07.png using Guid(2ecf31b988408b1419f6cf0870fa9693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '868a4bd8089ff69ef89b6ec6c3376c92') in 0.011995 seconds
-  Import took 0.016244 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_01.png
-  artifactKey: Guid(f291fc2c8da3c0244a3119206a3f66be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_01.png using Guid(f291fc2c8da3c0244a3119206a3f66be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7f57fb4ca85426494d0d2bbad49659') in 0.011168 seconds
-  Import took 0.015240 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_04.png
-  artifactKey: Guid(73e87331a8786bc4c99388b3e7d95840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_04.png using Guid(73e87331a8786bc4c99388b3e7d95840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '649447f9189f67641eba8837eed60758') in 0.011903 seconds
-  Import took 0.016394 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_01.png
-  artifactKey: Guid(e8e1120a7ac6c5b42a411fb43dab5e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_01.png using Guid(e8e1120a7ac6c5b42a411fb43dab5e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '753dada17b068987c9041cc129f0a8bf') in 0.011598 seconds
-  Import took 0.015745 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_03.png
-  artifactKey: Guid(b6fc92d2a5285bc46a2c2924267e3dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_03.png using Guid(b6fc92d2a5285bc46a2c2924267e3dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88f64709833e0dce4339cf8a0ebf97c1') in 0.011098 seconds
-  Import took 0.015188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_03.png
-  artifactKey: Guid(5f6a5d51ebca39e4bb6f0af6e8a3c2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_03.png using Guid(5f6a5d51ebca39e4bb6f0af6e8a3c2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21424b288399a234de29c5f09384e9c') in 0.010780 seconds
-  Import took 0.014838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_09.png
-  artifactKey: Guid(d502d88c81f650048b2136162d9fa6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_09.png using Guid(d502d88c81f650048b2136162d9fa6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b623239cc2fbc9532bb9a1821e28d244') in 0.012155 seconds
-  Import took 0.016345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_08.png
-  artifactKey: Guid(8f2266eb2a0598a44ad2882e00aa9ba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_08.png using Guid(8f2266eb2a0598a44ad2882e00aa9ba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b17b00788c7771b0134d03c48677f95') in 0.013142 seconds
-  Import took 0.018053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_05.png
-  artifactKey: Guid(46b880c8412e987418c8911fc1ab5d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_05.png using Guid(46b880c8412e987418c8911fc1ab5d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8855ee3059d5a65b573a9f3c9c7b0a4e') in 0.011950 seconds
-  Import took 0.015945 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_06.png
-  artifactKey: Guid(eeea58c26bb433f4d883903bb9f94f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_06.png using Guid(eeea58c26bb433f4d883903bb9f94f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b71a02036c25f0a16eb6eb22fffaf4') in 0.010785 seconds
-  Import took 0.014870 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_04.png
-  artifactKey: Guid(5c00421504f95d3498105a28253b58d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_04.png using Guid(5c00421504f95d3498105a28253b58d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9bca9650ab4f9352b086abfe83abc5') in 0.011134 seconds
-  Import took 0.015499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_09.png
-  artifactKey: Guid(f0728a342ddbb1a4e9197c365358e680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_09.png using Guid(f0728a342ddbb1a4e9197c365358e680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1992b709e40e4f973cd81d3fb19e2caa') in 0.011323 seconds
-  Import took 0.015714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_04.png
-  artifactKey: Guid(e2835b8f6f66d6040acb1b742ca9442e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_04.png using Guid(e2835b8f6f66d6040acb1b742ca9442e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2f265fe8545a8704dcb9289b64a0299') in 0.011329 seconds
-  Import took 0.015364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_08.png
-  artifactKey: Guid(066581e44090c064485b883aa124e074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_08.png using Guid(066581e44090c064485b883aa124e074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1b739f7d7e82567b785a85b1e1d299') in 0.010998 seconds
-  Import took 0.015317 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_06.png
-  artifactKey: Guid(581c82e23b0b8304a8aacdd4f398a0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_06.png using Guid(581c82e23b0b8304a8aacdd4f398a0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e84827d90479fcb080ac3665e2b9b6') in 0.011261 seconds
-  Import took 0.015294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_05.png
-  artifactKey: Guid(b498380ad155d844a9330acedf93b9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_05.png using Guid(b498380ad155d844a9330acedf93b9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688c21aadaa102723c98c528a324dbd9') in 0.011460 seconds
-  Import took 0.015733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_07.png
-  artifactKey: Guid(bfaaed42647c75e4281f81d35ce6c41f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_07.png using Guid(bfaaed42647c75e4281f81d35ce6c41f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4b60c942519b06aa020ef9174bd068') in 0.011525 seconds
-  Import took 0.015663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_01.png
-  artifactKey: Guid(b453ba5c698885d48b041e3b90673e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_01.png using Guid(b453ba5c698885d48b041e3b90673e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07627f934d7b00e9bd47144d898a0c3') in 0.010718 seconds
-  Import took 0.015027 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_08.png
-  artifactKey: Guid(08ea76b5a84b9954da1afc1d9087acdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_08.png using Guid(08ea76b5a84b9954da1afc1d9087acdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f787da6bd527558efb4f84c49697804') in 0.011066 seconds
-  Import took 0.015111 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_02.png
-  artifactKey: Guid(a88f639f3abe105498a0d48ed0dc3881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_02.png using Guid(a88f639f3abe105498a0d48ed0dc3881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '018df6fb2e2592d87542ff63ab6db174') in 0.011583 seconds
-  Import took 0.015916 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_06.png
-  artifactKey: Guid(87bc0c8f5093158449f21519531ae602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_06.png using Guid(87bc0c8f5093158449f21519531ae602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b4202c96691a153b5a8b054f08f07c') in 0.011764 seconds
-  Import took 0.015885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_06.png
-  artifactKey: Guid(6073fe3ca19c2614484af7aa2467b6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_06.png using Guid(6073fe3ca19c2614484af7aa2467b6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3076c6e73d080c331574c8b1443c1fb2') in 0.010986 seconds
-  Import took 0.015202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_04.png
-  artifactKey: Guid(54c839045bfea7e4f85b057561807cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_04.png using Guid(54c839045bfea7e4f85b057561807cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fbac492eb46be852e8ae3a434dcc6fa') in 0.011006 seconds
-  Import took 0.015569 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_09.png
-  artifactKey: Guid(6f94380f3a0a62a4b8c3366600e3fbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_09.png using Guid(6f94380f3a0a62a4b8c3366600e3fbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698ddeee6ea6095d27b7fb1c12c99e78') in 0.010867 seconds
-  Import took 0.014846 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_08.png
-  artifactKey: Guid(9a1a7db6674efd74f95b1a5878c9de61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_08.png using Guid(9a1a7db6674efd74f95b1a5878c9de61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbf66d22935ce83fa43783ecd8d8ab9') in 0.012079 seconds
-  Import took 0.015938 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_01.png
-  artifactKey: Guid(918d426c1c96b8548bd47db6f60ddcee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_01.png using Guid(918d426c1c96b8548bd47db6f60ddcee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '902d175113371d67629db2b26f642410') in 0.011718 seconds
-  Import took 0.015832 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_07.png
-  artifactKey: Guid(6cec2846dc6f71a4b9c7d9667878d6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_07.png using Guid(6cec2846dc6f71a4b9c7d9667878d6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd984c5ccc5ca8e37ffac904cf6725c43') in 0.011538 seconds
-  Import took 0.015737 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_06.png
-  artifactKey: Guid(7ae5e2758bd65a64d800c67bb9cda8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_06.png using Guid(7ae5e2758bd65a64d800c67bb9cda8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20cb6b53a978fa7acc4a065bb8ab4618') in 0.011277 seconds
-  Import took 0.015429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_09.png
-  artifactKey: Guid(77963c015bf65db49bdf5f7c0c83a794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_09.png using Guid(77963c015bf65db49bdf5f7c0c83a794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cb37d58e3b1c1c25b69c87983f8a5d4') in 0.011197 seconds
-  Import took 0.015354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_01.png
-  artifactKey: Guid(9112adde988f92f499828564c65bd276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_01.png using Guid(9112adde988f92f499828564c65bd276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '181df2a065c0a0bfdd92ba8619e4cd1a') in 0.011551 seconds
-  Import took 0.015887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_03.png
-  artifactKey: Guid(639baff0e24bca940884da9e4f9d21b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_03.png using Guid(639baff0e24bca940884da9e4f9d21b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05e9b25e20a3a55752a1cb7f85cc042b') in 0.011140 seconds
-  Import took 0.015106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_02.png
-  artifactKey: Guid(7400646148d8a3642ba696cb7a601af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_02.png using Guid(7400646148d8a3642ba696cb7a601af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc2bb58f0ba1f45516bce7bd2a3762a5') in 0.011108 seconds
-  Import took 0.015230 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_07.png
-  artifactKey: Guid(6abb0d85fe7faf248bcf3f4765a44dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_07.png using Guid(6abb0d85fe7faf248bcf3f4765a44dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '437f8de47fa43508636c195485830527') in 0.011209 seconds
-  Import took 0.015296 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_08.png
-  artifactKey: Guid(af56865f955533748816747726bca671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_08.png using Guid(af56865f955533748816747726bca671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1717133d29f3d7e380118d6d303df1ea') in 0.012140 seconds
-  Import took 0.016289 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_03.png
-  artifactKey: Guid(ceb6439377615064eb3e3d321081accc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_03.png using Guid(ceb6439377615064eb3e3d321081accc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376f1cbdedba051a58c25846669009fe') in 0.011572 seconds
-  Import took 0.015785 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_07.png
-  artifactKey: Guid(11a9078c7f47fa143ba8a707ff715c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_07.png using Guid(11a9078c7f47fa143ba8a707ff715c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3053d27a9e22e4e0d7eb286f6467ad79') in 0.011003 seconds
-  Import took 0.015060 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_04.png
-  artifactKey: Guid(ab0d4673ab48b934d89743e33f1ec8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_04.png using Guid(ab0d4673ab48b934d89743e33f1ec8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3090317d44dbe02ef01b973340e85e29') in 0.011114 seconds
-  Import took 0.015226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_08.png
-  artifactKey: Guid(0096e4dacb21b7f4c9d27853a0965315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_08.png using Guid(0096e4dacb21b7f4c9d27853a0965315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02351da65a91c567a491fb6257aa71d1') in 0.011323 seconds
-  Import took 0.015369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_05.png
-  artifactKey: Guid(4f5a0cd53fabc2048970167b88b36e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_05.png using Guid(4f5a0cd53fabc2048970167b88b36e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbe8780a939589e5bd4009e31aca7d7c') in 0.012292 seconds
-  Import took 0.016510 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_09.png
-  artifactKey: Guid(ccf7d29470aff0b489d4cf53a15b491e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_09.png using Guid(ccf7d29470aff0b489d4cf53a15b491e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd623e252ba4f524b56a59bdf234e84b6') in 0.011761 seconds
-  Import took 0.015891 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_08.png
-  artifactKey: Guid(b2c676f6f7afe1f45b07f15e59e2198d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_08.png using Guid(b2c676f6f7afe1f45b07f15e59e2198d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308f4590b07d4a59643652c522d167b6') in 0.011128 seconds
-  Import took 0.015409 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_07.png
-  artifactKey: Guid(72e5ee545633e994091f0fa5da13b560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_07.png using Guid(72e5ee545633e994091f0fa5da13b560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ea3e7701689284420fae3119256ffc') in 0.011263 seconds
-  Import took 0.015188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_01.png
-  artifactKey: Guid(a85635150103bdd4ea554379e6309b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_01.png using Guid(a85635150103bdd4ea554379e6309b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb4d4356791bce1578999cce5c4cc8e7') in 0.011886 seconds
-  Import took 0.016248 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_04.png
-  artifactKey: Guid(505c785e00d734d4ba5b22fd83f7bbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_04.png using Guid(505c785e00d734d4ba5b22fd83f7bbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '580fcf3b388aa3a094354ea6e3f437a4') in 0.011599 seconds
-  Import took 0.015825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_05.png
-  artifactKey: Guid(83e3b38bacd17d1478fce8ad76c533df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_05.png using Guid(83e3b38bacd17d1478fce8ad76c533df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcd469dbd8a7f3db6e7d7b42f131b10b') in 0.011823 seconds
-  Import took 0.016026 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_08.png
-  artifactKey: Guid(70f9b5fb856726a42a1761a507e78ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_08.png using Guid(70f9b5fb856726a42a1761a507e78ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b15c6bedecad412a7d1d14e678c520') in 0.011321 seconds
-  Import took 0.015354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_04.png
-  artifactKey: Guid(88173c071edbd0f43a06949cc423b416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_04.png using Guid(88173c071edbd0f43a06949cc423b416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd88b9bbcc5570b7f49eef5f2c7bee46') in 0.011564 seconds
-  Import took 0.015811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_02.png
-  artifactKey: Guid(8b136c7481a5daa4fa1520e497a3a070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_02.png using Guid(8b136c7481a5daa4fa1520e497a3a070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4550005c065eed0b4dc5fafb14c53026') in 0.011451 seconds
-  Import took 0.015544 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_07.png
-  artifactKey: Guid(6e8c58b85fc17fd498bd36ca4e4726b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_07.png using Guid(6e8c58b85fc17fd498bd36ca4e4726b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813c99a9c01d311df87ff9547e2c6626') in 0.011326 seconds
-  Import took 0.015810 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_05.png
-  artifactKey: Guid(562a9ea2ee0fed44998f074d18490acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_05.png using Guid(562a9ea2ee0fed44998f074d18490acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7739d304e0fbd5f61fe34fdf149c5663') in 0.010942 seconds
-  Import took 0.015059 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_08.png
-  artifactKey: Guid(68b1033581db0f64a90dc3f10e2bf1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_08.png using Guid(68b1033581db0f64a90dc3f10e2bf1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bcfe2f1365540a57c7b28e78190d6dc') in 0.010956 seconds
-  Import took 0.015143 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_06.png
-  artifactKey: Guid(0ed586fa0b1b6ea489b51544cab826b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_06.png using Guid(0ed586fa0b1b6ea489b51544cab826b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a8166f9f999bc199715d07dd7e1b1bb') in 0.011351 seconds
-  Import took 0.015649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_05.png
-  artifactKey: Guid(30ea19d992eaaaf4ea7cb03e62f67e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_05.png using Guid(30ea19d992eaaaf4ea7cb03e62f67e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6167c8c2712e59cc4470c30d417bb05f') in 0.010901 seconds
-  Import took 0.015105 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_02.png
-  artifactKey: Guid(f28fcfad7d21cc94798577be0a97490e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_02.png using Guid(f28fcfad7d21cc94798577be0a97490e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b4dd6cb4be001486418b781e666c1c') in 0.011035 seconds
-  Import took 0.015225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_04.png
-  artifactKey: Guid(bafa82657bee92c449014ed454ee7b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_04.png using Guid(bafa82657bee92c449014ed454ee7b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db46e47eb33147db52835d26ed9d50d8') in 0.011419 seconds
-  Import took 0.015502 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_09.png
-  artifactKey: Guid(72faede8ebaf8bf4cb5787a553cbbf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_09.png using Guid(72faede8ebaf8bf4cb5787a553cbbf21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6396f3257ac2a4fd72eb8f34df62533') in 0.011587 seconds
-  Import took 0.015847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_09.png
-  artifactKey: Guid(c059fe924b6afa64d97532830165cd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_09.png using Guid(c059fe924b6afa64d97532830165cd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b2252b1b2ee6d4bbe81fc4ec709c8e') in 0.011047 seconds
-  Import took 0.015070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_08.png
-  artifactKey: Guid(e87b4e7ed4cc5e649a45367d98790965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_08.png using Guid(e87b4e7ed4cc5e649a45367d98790965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6495ad63a0317044f81a09a1410acf5e') in 0.010933 seconds
-  Import took 0.014954 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_02.png
-  artifactKey: Guid(669f564cf4be39441900480b60668f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_02.png using Guid(669f564cf4be39441900480b60668f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8543cd9b47769b100f33aea9f5b26e') in 0.011144 seconds
-  Import took 0.015190 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_01.png
-  artifactKey: Guid(23d682b906d055b43b200ff4ea4298c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_01.png using Guid(23d682b906d055b43b200ff4ea4298c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4090a1cd6167d1f04f35ffe732bca126') in 0.012297 seconds
-  Import took 0.016677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_01.png
-  artifactKey: Guid(f48de34c2b39c5a4fa846965979ba8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_01.png using Guid(f48de34c2b39c5a4fa846965979ba8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377313ca81c6a03f327c574a5c3cfcab') in 0.011333 seconds
-  Import took 0.015378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_09.png
-  artifactKey: Guid(d05ddb305b11a2e449731557c6e34279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_09.png using Guid(d05ddb305b11a2e449731557c6e34279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2166f51893fe830bb04155b681dd9298') in 0.011075 seconds
-  Import took 0.015529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_01.png
-  artifactKey: Guid(8e4022645b1ad9642873bc6833ba888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_01.png using Guid(8e4022645b1ad9642873bc6833ba888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '195de5b1435386b8fbfe724e8223dcbb') in 0.010703 seconds
-  Import took 0.014728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_04.png
-  artifactKey: Guid(98a104c6f2aee2248bdac96f0ef26f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_04.png using Guid(98a104c6f2aee2248bdac96f0ef26f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a3e8b8ab1068efb0c036fd532428b4') in 0.012038 seconds
-  Import took 0.016297 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_09.png
-  artifactKey: Guid(53059557c881ea64da55cd0fbf48a3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_09.png using Guid(53059557c881ea64da55cd0fbf48a3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a78d0b4eb81f87586e73cbdbf2f2180') in 0.011312 seconds
-  Import took 0.015312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_09.png
-  artifactKey: Guid(4de9dd89b81dd5c4489f7214fbb33cd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_09.png using Guid(4de9dd89b81dd5c4489f7214fbb33cd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc794f1717fc84c3784624dbea76b10') in 0.010941 seconds
-  Import took 0.015235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_05.png
-  artifactKey: Guid(a57bafdae46c8284fa97c0c3da9925ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_05.png using Guid(a57bafdae46c8284fa97c0c3da9925ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b274a7c704d0ba6b7de2bb0d1ede74') in 0.010981 seconds
-  Import took 0.014980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_02.png
-  artifactKey: Guid(9eb1eb82e759554468ffafd871412437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_02.png using Guid(9eb1eb82e759554468ffafd871412437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e761c748d50401dc85749fc75c0357a') in 0.010958 seconds
-  Import took 0.015089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_03.png
-  artifactKey: Guid(c4fbcd1c66483c344b3a9f27989f6ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_03.png using Guid(c4fbcd1c66483c344b3a9f27989f6ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9168ce1409d80df2cd64fe037aafba44') in 0.011962 seconds
-  Import took 0.016040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_02.png
-  artifactKey: Guid(49529e47c406548498296981d3ca79a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_02.png using Guid(49529e47c406548498296981d3ca79a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8345cdf5851f35adefb731e0739420c5') in 0.011300 seconds
-  Import took 0.015439 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_03.png
-  artifactKey: Guid(4780dbe3ed7ffcc4fafa4d347f67dabd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_03.png using Guid(4780dbe3ed7ffcc4fafa4d347f67dabd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c55a07a15e3121f3c9dd9b3a2d9ade0') in 0.011127 seconds
-  Import took 0.015193 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_07.png
-  artifactKey: Guid(acaf1ddffb5115d4d9a34ed400e7ab39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_07.png using Guid(acaf1ddffb5115d4d9a34ed400e7ab39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ebd299f4b9b489784466fdf20707f5d') in 0.010956 seconds
-  Import took 0.015300 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_04.png
-  artifactKey: Guid(6e67561d954072443abb75abb7dc7c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_04.png using Guid(6e67561d954072443abb75abb7dc7c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50cb47ac74d2d7a6825ad29b97e50927') in 0.010704 seconds
-  Import took 0.014860 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_05.png
-  artifactKey: Guid(f15b0f14231ea0a44b95f66069313eaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_05.png using Guid(f15b0f14231ea0a44b95f66069313eaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0c2fa62a49f3d141da1e97e125321c') in 0.012497 seconds
-  Import took 0.016732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_1_07.png
-  artifactKey: Guid(b13803b00095b1447b1725e17f243586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_1_07.png using Guid(b13803b00095b1447b1725e17f243586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a502af6ab859568c53aadf41d0121e6a') in 0.011286 seconds
-  Import took 0.015521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_09.png
-  artifactKey: Guid(0d0ebaf1a315aab47951f3800237a369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_09.png using Guid(0d0ebaf1a315aab47951f3800237a369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e3a4531f85db0649cb1226978f710d') in 0.011566 seconds
-  Import took 0.015752 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_05.png
-  artifactKey: Guid(52f00c71b88c2d240adb85d28948ba8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_05.png using Guid(52f00c71b88c2d240adb85d28948ba8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c2889f0dc877afe88e41d8d9ae6568c') in 0.010907 seconds
-  Import took 0.015002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_07.png
-  artifactKey: Guid(a4e5acf77f9977040b261a030a220958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_07.png using Guid(a4e5acf77f9977040b261a030a220958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21564ca75197589efde9533eadb38948') in 0.011712 seconds
-  Import took 0.015908 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_01.png
-  artifactKey: Guid(58092931292df9d4c916f546cdc46035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_01.png using Guid(58092931292df9d4c916f546cdc46035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11432f45d89fb9d47557501b9fcdc08c') in 0.012535 seconds
-  Import took 0.016732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_2_02.png
-  artifactKey: Guid(309d5ee45b3a82046ace6800b7d33bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_2_02.png using Guid(309d5ee45b3a82046ace6800b7d33bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d5ce863624f5f0ddb97ee7bc177ed1') in 0.012146 seconds
-  Import took 0.016359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_7_06.png
-  artifactKey: Guid(91c2638a1af728445ae43366f2aaf9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_7_06.png using Guid(91c2638a1af728445ae43366f2aaf9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa3ab8b76706c09e1ce5687013965b41') in 0.011621 seconds
-  Import took 0.015947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_07.png
-  artifactKey: Guid(693556a1d00dae841bd2ad88020b0a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_07.png using Guid(693556a1d00dae841bd2ad88020b0a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abaeeab4b3072b3f64ad4079810712a0') in 0.011839 seconds
-  Import took 0.015978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_12_06.png
-  artifactKey: Guid(9e38a2a89c34f564f9e29b90865587fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_12_06.png using Guid(9e38a2a89c34f564f9e29b90865587fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cc22f53c64de8843f4583bcf8dac0d4') in 0.011617 seconds
-  Import took 0.015671 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_05.png
-  artifactKey: Guid(2d1e5c21c761b644880873d9f0e710cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_05.png using Guid(2d1e5c21c761b644880873d9f0e710cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '219f83e3bf8fb86bf3a74af810802de5') in 0.010967 seconds
-  Import took 0.014968 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_06.png
-  artifactKey: Guid(a86b1d2b030ae694ca594df160b643d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_06.png using Guid(a86b1d2b030ae694ca594df160b643d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '633568f08f795906a55b5deedcb2f6fd') in 0.011256 seconds
-  Import took 0.015365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_04.png
-  artifactKey: Guid(4915a561062e90145a771cd0d7761194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_04.png using Guid(4915a561062e90145a771cd0d7761194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20cba22033ac016d1d5bd6d06cad753') in 0.011031 seconds
-  Import took 0.015099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_8_02.png
-  artifactKey: Guid(b6f86a89901b9fc4cba4494bfc028f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_8_02.png using Guid(b6f86a89901b9fc4cba4494bfc028f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b20611d4b71b7faf711091ccc2c8772c') in 0.011608 seconds
-  Import took 0.015763 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_05.png
-  artifactKey: Guid(a92e0e60c7d135d4db44847dde6ceacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_05.png using Guid(a92e0e60c7d135d4db44847dde6ceacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e66b3aabf4e2721777c058ae9772285') in 0.011173 seconds
-  Import took 0.015613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_11_02.png
-  artifactKey: Guid(db01e60fee17d9e4cacd5a539c9550f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_11_02.png using Guid(db01e60fee17d9e4cacd5a539c9550f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c56e4d3a542db8dc3406997f02321ca4') in 0.011564 seconds
-  Import took 0.015660 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_5_07.png
-  artifactKey: Guid(802606cdb6ee6874082ee3c73b034b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_5_07.png using Guid(802606cdb6ee6874082ee3c73b034b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f698db8b15143daa550b4031e9a968') in 0.010621 seconds
-  Import took 0.014857 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_02.png
-  artifactKey: Guid(72d21c9899eb1014ea0d9cc474938a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_02.png using Guid(72d21c9899eb1014ea0d9cc474938a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15aec12dfa967de5bdaea52be1d2c39') in 0.011555 seconds
-  Import took 0.015550 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_9_06.png
-  artifactKey: Guid(d0f650ae5bfa87b40a453f9a9c134dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_9_06.png using Guid(d0f650ae5bfa87b40a453f9a9c134dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6479675af44c0b5f23cc8ba6f782ae74') in 0.011451 seconds
-  Import took 0.015575 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_6_06.png
-  artifactKey: Guid(ac6c6c0fa86c2694fb7e82a5d8baed74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_6_06.png using Guid(ac6c6c0fa86c2694fb7e82a5d8baed74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0655c9ab817d7705381031a1976dd85b') in 0.010830 seconds
-  Import took 0.014988 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_10_09.png
-  artifactKey: Guid(5641b722b54db1140ad19e867fe9e96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_10_09.png using Guid(5641b722b54db1140ad19e867fe9e96c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92b8ddcb921c0bf1aca3ae838d187aa') in 0.016737 seconds
-  Import took 0.020768 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_3_03.png
-  artifactKey: Guid(4d59b04ade2c79e4d826bc08d42ae065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_3_03.png using Guid(4d59b04ade2c79e4d826bc08d42ae065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03950603e91e5f9c53f3b7094bf90fac') in 0.012419 seconds
-  Import took 0.016575 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Resources/dixit_cards_all/dixit_card_4_02.png
-  artifactKey: Guid(72d21c9899eb1014ea0d9cc474938a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_cards_all/dixit_card_4_02.png using Guid(72d21c9899eb1014ea0d9cc474938a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15aec12dfa967de5bdaea52be1d2c39') in 0.010466 seconds
-  Import took 0.014849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.166453 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx
-  artifactKey: Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx using Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8350d78be0c5bfba33f7d9e38b14a6b6') in 0.098465 seconds
-  Import took 0.103402 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX
-  artifactKey: Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX using Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2bbf180d403aeba945773565488441') in 0.065718 seconds
-  Import took 0.070506 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/bush1.FBX
-  artifactKey: Guid(c8680fab33c72bb4ba3e31987e0b0182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/bush1.FBX using Guid(c8680fab33c72bb4ba3e31987e0b0182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d1effbbb4d1f5b25f54ff48460c4fe8') in 0.047443 seconds
-  Import took 0.051677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX
-  artifactKey: Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/tree_1.FBX using Guid(92afa2e4e0d0b8542bf48b0de3ac19bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2bbf180d403aeba945773565488441') in 0.033780 seconds
-  Import took 0.038553 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx
-  artifactKey: Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/billboardLower.fbx using Guid(271d69ba92e5ec94eaa3779f0ea4ce47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8350d78be0c5bfba33f7d9e38b14a6b6') in 0.014536 seconds
-  Import took 0.018619 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX
-  artifactKey: Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX using Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c650e8805012e7c28e951fd3e065fbc4') in 0.090737 seconds
-  Import took 0.095382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.107207 seconds.
-  path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX
-  artifactKey: Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Stylized city/Models/car_1.FBX using Guid(1ec55baed88ac07429a52bee4c519015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c650e8805012e7c28e951fd3e065fbc4') in 0.068793 seconds
-  Import took 0.073765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 157.300417 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0415957a9d4a0e2e0fa1b1889f105475') in 0.014123 seconds
-  Import took 0.018451 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Resources/dixit_card_2_05.png
-  artifactKey: Guid(7ae5bdc50f4833740a8dc1b35184670d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/dixit_card_2_05.png using Guid(7ae5bdc50f4833740a8dc1b35184670d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94eeffa05af88c7d39102a6bb8b935c1') in 0.009694 seconds
-  Import took 0.013765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.852939 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0648e5157b1f4592f2d25cacac6c43') in 0.010329 seconds
-  Import took 0.014918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.184146 seconds.
-  path: Assets/Resources
-  artifactKey: Guid(184a70ca114a9aa3f918f35126bd765d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources using Guid(184a70ca114a9aa3f918f35126bd765d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2878b04e43b3863760ee5dae5a916f9') in 0.008128 seconds
-  Import took 0.012295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.079051 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5bc9754a86379c5c65937d83c6d654') in 0.013689 seconds
-  Import took 0.017897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.257461 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a4945e3270b116ad2b88f89e1a40f32') in 0.012654 seconds
-  Import took 0.017090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.069963 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb52520dfb53b5d9baabc7231df68a1f') in 0.013262 seconds
-  Import took 0.017705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.787541 seconds.
-  path: Assets/Resources/Dixit Card.prefab
-  artifactKey: Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465ce27bc5d245aabdba01bf9cd1bf5e') in 0.012553 seconds
-  Import took 0.017008 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.506399 seconds.
-  path: Assets/Materials/M_Black.mat
-  artifactKey: Guid(e8607e2a9ebdda24a9b1526617c45ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_Black.mat using Guid(e8607e2a9ebdda24a9b1526617c45ea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '204a3cd3e850e8d14d7fbe8ff00fc62a') in 0.034523 seconds
-  Import took 0.039023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Materials/M_Ray.mat
-  artifactKey: Guid(af6882df4c84cfb9f967f047dbee6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_Ray.mat using Guid(af6882df4c84cfb9f967f047dbee6ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c99c1f5aade32836e75b05352bd4c78') in 0.016883 seconds
-  Import took 0.021067 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Materials/M_Ctrl.mat
-  artifactKey: Guid(2baf0fc78674105feb366fbea3a46c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_Ctrl.mat using Guid(2baf0fc78674105feb366fbea3a46c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bd333ffe40b25d9881b529cc54de21d') in 0.019130 seconds
-  Import took 0.023290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Materials/M_DarkGreen.mat
-  artifactKey: Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_DarkGreen.mat using Guid(63296f29f5b1fd6469f3c9290fe3aea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0acc107765cf5719a5b87511543883fc') in 0.014244 seconds
-  Import took 0.018388 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.379044 seconds.
-  path: Assets/Materials
-  artifactKey: Guid(1d563ef80edbca86e9559e1737448730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials using Guid(1d563ef80edbca86e9559e1737448730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b518858629ef6e7488f071207d8a67f0') in 0.008056 seconds
-  Import took 0.012520 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.780944 seconds.
-  path: Assets/Materials/New Material.mat
-  artifactKey: Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/New Material.mat using Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f35b960fb6d7a5061fd0733dd48af3e0') in 0.012978 seconds
-  Import took 0.017445 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.886194 seconds.
-  path: Assets/Materials/M_FadeBlue.mat
-  artifactKey: Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_FadeBlue.mat using Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1780a42676c350ae280340ed2c996f6b') in 0.014200 seconds
-  Import took 0.018545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.137276 seconds.
-  path: Assets/Materials/M_Transparent.mat
-  artifactKey: Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/M_Transparent.mat using Guid(f6ecc4523d63efa4aa402556a959ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541490f2718286feaf40e92f4f2839ed') in 0.016035 seconds
-  Import took 0.020299 seconds .
+Start importing Assets/Resources/Dixit Card.prefab using Guid(45a88a407ea9e084c821ace0d462bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd18a4a8f1af603a666e355df9bbbcf8') in 0,179423 seconds
+  Import took 0,187653 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006134 seconds.
+Registered in 0,007843 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 1,52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.874 seconds
+- Completed reload, in  1,905 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.77 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2503 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.4 MB.
-System memory in use after: 115.6 MB.
+Refreshing native plugins compatible for Editor in 1,43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106,9 MB.
+System memory in use after: 107,0 MB.
 
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 3005.
-Total: 2.782700 ms (FindLiveObjects: 0.397000 ms CreateObjectMapping: 0.135400 ms MarkObjects: 2.183200 ms  DeleteObjects: 0.066100 ms)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2970.
+Total: 7,017031 ms (FindLiveObjects: 0,827022 ms CreateObjectMapping: 0,138283 ms MarkObjects: 5,842389 ms  DeleteObjects: 0,205819 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,008047 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,866 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106,9 MB.
+System memory in use after: 107,0 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2975.
+Total: 7,358391 ms (FindLiveObjects: 0,855324 ms CreateObjectMapping: 0,144014 ms MarkObjects: 6,007178 ms  DeleteObjects: 0,347852 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,007976 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,892 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2980.
+Total: 8,294984 ms (FindLiveObjects: 0,821645 ms CreateObjectMapping: 0,192599 ms MarkObjects: 6,899103 ms  DeleteObjects: 0,378824 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,007710 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2,066 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2985.
+Total: 7,518178 ms (FindLiveObjects: 0,763480 ms CreateObjectMapping: 0,161605 ms MarkObjects: 6,222835 ms  DeleteObjects: 0,367497 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,008055 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,871 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106,9 MB.
+System memory in use after: 107,0 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2990.
+Total: 7,860104 ms (FindLiveObjects: 0,815962 ms CreateObjectMapping: 0,167170 ms MarkObjects: 6,509885 ms  DeleteObjects: 0,364534 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,007816 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,844 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2995.
+Total: 8,235471 ms (FindLiveObjects: 0,817681 ms CreateObjectMapping: 0,169757 ms MarkObjects: 6,856500 ms  DeleteObjects: 0,388662 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,008130 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,894 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 3000.
+Total: 11,094583 ms (FindLiveObjects: 0,824625 ms CreateObjectMapping: 0,136401 ms MarkObjects: 9,714456 ms  DeleteObjects: 0,415709 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,007800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,875 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 3005.
+Total: 8,065318 ms (FindLiveObjects: 0,781555 ms CreateObjectMapping: 0,144116 ms MarkObjects: 6,709300 ms  DeleteObjects: 0,427943 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,007916 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,866 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 3010.
+Total: 8,231968 ms (FindLiveObjects: 0,846096 ms CreateObjectMapping: 0,135289 ms MarkObjects: 6,822241 ms  DeleteObjects: 0,424751 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,008366 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1,51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107,0 MB.
+System memory in use after: 107,1 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 3015.
+Total: 7,818315 ms (FindLiveObjects: 0,866379 ms CreateObjectMapping: 0,124425 ms MarkObjects: 6,410809 ms  DeleteObjects: 0,413536 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

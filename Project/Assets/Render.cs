@@ -11,17 +11,26 @@ public class Render : MonoBehaviourPun {
 
     //internal class : Dixit (representing one of all the dixit cards)
     public class DixitCard : MonoBehaviour {
-        private GameObject card_go; //CardGO in scene
-        private PhotonView pv;
-        private Transform parent; //WallGO
-        private int wall_id;
+        public GameObject card_go { get; set; } //CardGO in scene
+        public PhotonView pv { get; set; }
+        private int id;
 
-        public DixitCard(Texture2D tex, Transform wall, int id){
-            card_go = PhotonNetwork.InstantiateRoomObject("Dixit Card", wall.position, wall.rotation);
+        public DixitCard(Texture2D tex, int id_, Transform wall){
+            Vector3 card_pos;
+            Quaternion card_rota;
+            if(wall==null){
+                //in that case we are in 2D
+                card_pos = new Vector3(0f,0f,1.5f); //putting card on 1.5f depth to allow bringing em forward
+                card_rota = Quaternion.identity;
+            } else {
+                //in that case we are in VR
+                card_pos = wall.position;
+                card_rota = wall.rotation;
+            }
+            card_go = PhotonNetwork.InstantiateRoomObject("Dixit Card", card_pos, card_rota);
             card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-            parent = wall;
             pv = card_go.GetPhotonView();
-            wall_id = id;
+            id = id_;
         }
     }
 
@@ -43,6 +52,7 @@ public class Render : MonoBehaviourPun {
 
     //dixits attributes
     private object[] dixits_tex;
+    private Dictionary<string, GameObject> dixits;
 
     //shapes attributes
     private Dictionary<string, GameObject> shapes;
@@ -50,7 +60,11 @@ public class Render : MonoBehaviourPun {
     public void Start(){
         setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
         network_handler = GameObject.Find("ScriptManager").GetComponent<NetworkHandler>();
-        shapes = new Dictionary<string, GameObject>();
+        if(setup.dixits){
+            dixits = new Dictionary<string, GameObject>();
+        } else {
+            shapes = new Dictionary<string, GameObject>();
+        }
     }
 
     public void Input(string name, float m_x, float m_y, int id){
@@ -67,32 +81,42 @@ public class Render : MonoBehaviourPun {
         }
 
         //and now does input on these coords
-        foreach(GameObject obj in shapes.Values){
-            Shape obj_ctrl = obj.GetComponent<Shape>();
-            switch (name){
-                case "Down":
-                    setup.logger.Msg("Input Down is received by Render from "+id+" on "+new Vector2(m_x, m_y), "C");
-                    if(obj_ctrl.CoordsInside(new Vector2(px,py))){
-                        setup.logger.Msg("The Down Input is inside the shape", "V");
-                        obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
-                    }
-                    break;
-                case "Move":
-                    if(obj_ctrl.IsDragged()){
-                        obj_ctrl.Move(px, py, setup.zoom_ratio);
-                    }
-                    break;
-                case "Up":
-                    obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
-                    break;
+        if(setup.dixits){
+            setup.logger.Msg("received an input for the dixits manipulation", "S");
+            //must implement
+        } else {
+            foreach(GameObject obj in shapes.Values){
+                Shape obj_ctrl = obj.GetComponent<Shape>();
+                switch (name){
+                    case "Down":
+                        setup.logger.Msg("Input Down is received by Render from "+id+" on "+new Vector2(m_x, m_y), "C");
+                        if(obj_ctrl.CoordsInside(new Vector2(px,py))){
+                            setup.logger.Msg("The Down Input is inside the shape", "V");
+                            obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
+                        }
+                        break;
+                    case "Move":
+                        if(obj_ctrl.IsDragged()){
+                            obj_ctrl.Move(px, py, setup.zoom_ratio);
+                        }
+                        break;
+                    case "Up":
+                        obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
+                        break;
+                }
             }
         }
     }
 
     public void InitializeFromIH(Operator O_){
         ope = O_;
-        if(!shapes.ContainsKey("Circle0")){
-            shapes.Add(GameObject.Find("Circle0").name,GameObject.Find("Circle0"));
+
+        if(setup.dixits){
+            //must implement
+        } else {
+            if(!shapes.ContainsKey("Circle0")){
+                shapes.Add(GameObject.Find("Circle0").name,GameObject.Find("Circle0"));
+            }
         }
 
         if(PhotonNetwork.IsMasterClient){
@@ -106,8 +130,12 @@ public class Render : MonoBehaviourPun {
         } else {
             if(setup.is_vr){
                 //simply replacing the shape on the wall ?
-                shapes["Circle0"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                shapes["Circle0"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+                if(setup.dixits){
+                    //must implement
+                } else {
+                    shapes["Circle0"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    shapes["Circle0"].transform.position = new Vector3(0f, 2.5f, 4.99f);
+                }
 
                 GameObject wall_go = GameObject.Find("WallGO");
                 sw = wall_go.transform.localScale.x;
@@ -126,9 +154,14 @@ public class Render : MonoBehaviourPun {
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
                 setup.logger.Msg("Render (Wall) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
-                foreach(GameObject shape in shapes.Values){
-                    //zoom value = amount of division ?
-                    shape.transform.localScale *= setup.zoom_ratio;
+
+                if(setup.dixits){
+
+                } else {
+                    foreach(GameObject shape in shapes.Values){
+                        //zoom value = amount of division ?
+                        shape.transform.localScale *= setup.zoom_ratio;
+                    }
                 }
             }
         }
@@ -149,8 +182,9 @@ public class Render : MonoBehaviourPun {
         if(dixits_tex.Length>0){
             //setting up cards variables & containers
             Texture2D tex;
-            GameObject wall;
-            for(int i=0; i<dixits_tex; i++){
+            GameObject wall = GameObject.Find("WallGO"); //will return null if in 2D
+            for(int i=0; i<dixits_tex.Length; i++){
+                tex = (Texture2D)dixits_tex[i];
                 //dixits repartition on the wall (20 dixits)
                 /*
                    0 0 0 0 0 0 0
@@ -165,18 +199,40 @@ public class Render : MonoBehaviourPun {
                 } else {
                     //third line
                 }
-            }
 
-            DixitCard dc = new DixitCard(tex, wall, i);
+                //Card initialization
+                DixitCard dc = new DixitCard(tex, i, wall.transform);
+            }
         } else {
             setup.logger.Msg("Dixits aren't loaded ...", "E");
         }
     }
 
-    public void CreateSingleDixit(int n){
-        Transform wall = GameObject.Find("WallGO").transform;
-        Texture2D tex = dixits_tex[n];
-        DixitCard card = new DixitCard(tex, wall, n);
-        card.pv.RPC("LoadCard", Photon.Pun.RpcTarget.AllBuffered,card.pv.ViewID, wall.GetComponent<PhotonView>().ViewID, n);
+    public void InitializeSingleDixits(int index){
+        setup.logger.Msg("Initializing One Dixit (test)", "S");
+        if(dixits_tex==null){
+            setup.logger.Msg("Loading textures", "C");
+            dixits_tex = Resources.LoadAll("dixit_cards_all/", typeof(Texture2D));
+        }
+        setup.logger.Msg("Textures have successfully been loaded : "+(dixits_tex!=null), "C");
+
+        Transform wall_transform;
+        if(setup.is_vr){
+            wall_transform = GameObject.Find("WallGO").transform;
+        } else {
+            wall_transform = null;
+        }
+
+        DixitCard card = new DixitCard((Texture2D)dixits_tex[index], index, wall_transform);
+
+        setup.logger.Msg("objects are null : card_pv_id-> "+(card.pv.ViewID==null)+" index-> "+index+" setup.is_master-> "+(setup.is_master==null)+" setup.is_vr-> "+(setup.is_vr==null), "C");
+        card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, index, setup.is_master, setup.is_vr); //same as card.gameobject.GetComponent<PhotonView>().RPC("LoadCard");
+        //photonView.RPC("AddDixitToList", RpcTarget.AllBuffered, card.pv.ViewID);
+    }
+
+    [PunRPC]
+    public void AddDixitToList(int card_pv_id){
+        //must implement
+        return;
     }
 }

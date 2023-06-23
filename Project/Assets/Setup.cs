@@ -16,7 +16,10 @@ public class Setup : MonoBehaviourPun {
     public bool is_master { get; private set; } = false;
     public bool is_vr { get; private set; } = false;
     public string role_str { get; private set; }
+
+    //overall program's condition
     public bool smarties { get; private set; } = false;
+    public bool dixits { get; private set; } = true;
 
     //master specific attributes
     public int part_cnt { get; private set; } = 1;

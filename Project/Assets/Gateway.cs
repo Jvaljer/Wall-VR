@@ -71,7 +71,7 @@ public class Gateway : MonoBehaviour {
         arguments[8] = "-wall";
         arguments[9] = "DESKTOP";
         arguments[10] = "-mo";
-        arguments[11] = "0";
+        arguments[11] = "1";
         arguments[12] = "-pa";
         arguments[13] = "1";
         Debug.Log("arguments are : "+arguments);

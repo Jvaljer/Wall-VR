@@ -34,8 +34,11 @@ public class InputHandler : MonoBehaviourPun {
     //Devices's dictionnary
     public Dictionary<object, MDevice> m_devices { get; set; }
 
-    //must delete list
+    //must delete list (cursors)
     private List<int> to_delete_ids;
+
+    //dixit list
+    private List<GameObject> dixits_go;
 
     public bool initialized { get; set; } = false;
     public bool dixits_created { get; private set; } = false;
@@ -70,13 +73,6 @@ public class InputHandler : MonoBehaviourPun {
 
                 if(GetMCursor(this,0).drag){
                     photonView.RPC("InputRPC", RpcTarget.AllBuffered, "Move", mouse_x, mouse_y, 0);
-                }
-            }
-
-            if(Mouse.current.rightButton.wasPressedThisFrame){
-                if(!dixits_created){
-                    //photonView.RPC("LoadALLDixitsRPC", RpcTarget.AllBuffered);
-                    LoadAllDixits();
                 }
             }
 
@@ -165,14 +161,23 @@ public class InputHandler : MonoBehaviourPun {
             RegisterDevice("VR",vr_ref); //associating operator as an object
         } else {
             if(setup.is_vr){
-                GameObject.Find("Circle0").GetComponent<Shape>().SetAsVR();
+                if(setup.dixits){
+                    //must implement
+                } else {
+                    GameObject.Find("Circle0").GetComponent<Shape>().SetAsVR();
+                }
             } else {
                 //set the cursors invisible & scale em
                 Cursor.visible = false;
                 cursor_HW = 16*4;
             }
         }
-        GameObject.Find("Circle0").GetComponent<Shape>().AddOwner(0);
+
+        if(setup.dixits){
+            //must implement
+        } else {
+            GameObject.Find("Circle0").GetComponent<Shape>().AddOwner(0);
+        }
         setup.logger.Msg("Initialized from Ope", "V");
     }
 
@@ -551,14 +556,5 @@ public class InputHandler : MonoBehaviourPun {
     /*                          DIXITS CREATION & HANDLING                        */
     /******************************************************************************/
 
-    public void LoadAllDixits(){
-        //must implement
-        return;
-    }
-
-    [PunRPC]
-    public void LoadALLDixitsRPC(){
-        //must implement
-        return;
-    }
+    //must implement asap
 }

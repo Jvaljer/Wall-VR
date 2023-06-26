@@ -195,7 +195,7 @@ public class Render : MonoBehaviourPun {
                 }
                 //giving x_ & y_ in real coordinates -> translation has already been done
                 card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, i, setup.is_vr, sw_unity, sh_unity);
-                setup.logger.Msg(card.go.name+" is placed on : "+card.go.transform.position, "C");
+                //setup.logger.Msg(card.go.name+" is placed on : "+card.go.transform.position, "C");
                 dixits.Add("Dixit"+i, card.go);
             }
         } else {

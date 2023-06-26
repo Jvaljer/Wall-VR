@@ -220,7 +220,6 @@ public class Render : MonoBehaviourPun {
 
         DixitCard card = new DixitCard((Texture2D)dixits_tex[index], index, wall_transform);
 
-        setup.logger.Msg("objects are null : card_pv_id-> "+(card.pv.ViewID==null)+" index-> "+index+" setup.is_master-> "+(setup.is_master==null)+" setup.is_vr-> "+(setup.is_vr==null), "C");
         card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, index, setup.is_master, setup.is_vr); //same as card.gameobject.GetComponent<PhotonView>().RPC("LoadCard");
         dixits.Add("Dixit"+index, card.go);
     }

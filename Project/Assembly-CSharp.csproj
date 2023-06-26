@@ -71,6 +71,7 @@
      <Compile Include="Assets\Smarties\SmartiesWidget.cs" />
      <Compile Include="Assets\Walls\Wall.cs" />
      <Compile Include="Assets\Smarties\SmartiesPuck.cs" />
+     <Compile Include="Assets\Card.cs" />
      <Compile Include="Assets\Smarties\SmartiesEvent.cs" />
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\Smarties\SmartiesColors.cs" />

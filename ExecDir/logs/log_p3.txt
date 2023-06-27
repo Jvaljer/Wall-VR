@@ -1,13 +1,15 @@
 Mono path[0] = '/home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data/Managed'
 Mono config path = '/home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data/MonoBleedingEdge/etc'
 PlayerConnection initialized from /home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55021
-Multi-casting "[IP] 172.18.88.247 [Port] 55021 [Flags] 2 [Guid] 2578137523 [EditorId] 3065646593 [Version] 1048832 [Id] LinuxPlayer(129.175.4.241) [Debug] 0 [PackageName] LinuxPlayer [ProjectName] Project" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55021]
-PlayerConnection already initialized - listening to [0.0.0.0:55021]
+PlayerConnection initialized network socket : 0.0.0.0 55422
+Multi-casting "[IP] 129.175.4.241 [Port] 55422 [Flags] 2 [Guid] 1229923505 [EditorId] 655786037 [Version] 1048832 [Id] LinuxPlayer(129.175.4.241) [Debug] 0 [PackageName] LinuxPlayer [ProjectName] Project" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55422]
+PlayerConnection already initialized - listening to [0.0.0.0:55422]
 Display 0 'XWAYLAND0 14"': 1360x768 (primary device).
 Desktop is 1360 x 768 @ 60 Hz
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
+Plugins: Couldn't open UnityOpenXR, error: UnityOpenXR: cannot open shared object file: No such file or directory
+
 [Subsystems] Discovering subsystems at path /home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data/UnitySubsystems
 [Subsystems] No descriptors matched for  examples in UnitySubsystems/UnityOpenXR/UnitySubsystemsManifest.json.
 [Subsystems] 1 'inputs' descriptors matched in UnitySubsystems/UnityOpenXR/UnitySubsystemsManifest.json
@@ -16,7 +18,7 @@ Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 GfxDevice: creating device client; threaded=1
 Renderer: Mesa Intel(R) UHD Graphics 605 (GLK 3)
 Vendor:   Intel
-Version:  4.6 (Core Profile) Mesa 22.2.5
+Version:  4.6 (Core Profile) Mesa 22.2.5-0ubuntu0.1~22.04.3
 GLES:     0
  GL_3DFX_texture_compression_FXT1 GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_d
 erivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_pol
@@ -24,15 +26,15 @@ ygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_A
 object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_
 equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_t
 exture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 31806976
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 13440512
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.507 seconds
+- Completed reload, in  0.462 seconds
 Default vsync count 1
 requesting resize 512 x 256
 resizing window to 512 x 256
 Desktop is 1360 x 768 @ 60 Hz
 Disable old input system
-UnloadTime: 3.171263 ms
+UnloadTime: 6.623765 ms
 Linux Standalone -> must parse argument, VR prohibited
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
@@ -61,14 +63,14 @@ Linux Standalone -> must parse argument, VR prohibited
  #24 _start
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.431124 ms
+UnloadTime: 0.774044 ms
 System memory in use before: 34.7 MB.
 System memory in use after: 34.8 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1552.
-Total: 1.866576 ms (FindLiveObjects: 0.290925 ms CreateObjectMapping: 0.056131 ms MarkObjects: 1.463929 ms  DeleteObjects: 0.053770 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1569.
+Total: 3.044066 ms (FindLiveObjects: 0.358756 ms CreateObjectMapping: 0.093996 ms MarkObjects: 2.500647 ms  DeleteObjects: 0.087664 ms)
 
-Setup Starting on scene : Wall
+|----- Starting program on scene : Wall -----|
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
@@ -91,232 +93,7 @@ Setup Starting on scene : Wall
  #19 __libc_start_main
  #20 _start
 
-got args : System.String[]
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:41)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-./linux_start.x86_64
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--popupwindow
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--screen-fullscreen
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-0
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--screen-width
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-512
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--screen-height
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-256
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--wall
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-DESKTOP
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--sw
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-512
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--sh
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-256
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--r
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-Is Master : False
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:60)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-p
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--x
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-0
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--y
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-256
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
--logfile
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-logs/log_p3.txt
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:43)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-ended parsing
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:90)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-wall width : 1024  wall height : 512
+Program is set as participant
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
@@ -339,25 +116,51 @@ wall width : 1024  wall height : 512
  #19 __libc_start_main
  #20 _start
 
-Setup Connects to the Server
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:104)
+Running Wall : DESKTOP ( w=1024, h=512)-( row=2, col=2)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_invoke
+ #7 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #8 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #9 MonoBehaviour::InvokeMethodOrCoroutineChecked(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingExceptionPtr*)
+ #10 MonoBehaviour::InvokeMethodOrCoroutineChecked(ScriptingMethodPtr, ScriptingObjectPtr)
+ #11 MonoBehaviour::DelayedStartCall(Object*, void*)
+ #12 DelayedCallManager::Update(int)
+ #13 InitPlayerLoopCallbacks()::EarlyUpdateScriptRunDelayedStartupFrameRegistrator::Forward()
+ #14 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #15 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #16 PlayerLoop()
+ #17 PlayerMain(int, char**)
+ #18 __libc_init_first
+ #19 __libc_start_main
+ #20 _start
 
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-NetworkHandler -> Connect -1
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NetworkHandler:Connect () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:109)
-Setup:ConnectToServer () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:110)
-Setup:Start () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Setup.cs:106)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+|----- Connecting to server -----|
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_invoke
+ #7 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #8 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #9 MonoBehaviour::InvokeMethodOrCoroutineChecked(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingExceptionPtr*)
+ #10 MonoBehaviour::InvokeMethodOrCoroutineChecked(ScriptingMethodPtr, ScriptingObjectPtr)
+ #11 MonoBehaviour::DelayedStartCall(Object*, void*)
+ #12 DelayedCallManager::Update(int)
+ #13 InitPlayerLoopCallbacks()::EarlyUpdateScriptRunDelayedStartupFrameRegistrator::Forward()
+ #14 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #15 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #16 PlayerLoop()
+ #17 PlayerMain(int, char**)
+ #18 __libc_init_first
+ #19 __libc_start_main
+ #20 _start
 
 PUN is in development mode (development build). As the 'dev region' is not empty (eu) it overrides the found best region. See PhotonServerSettings.
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
@@ -369,40 +172,42 @@ Photon.Realtime.MonoBehaviourEmpty:Update () (at /home/abel/JvaljerGit/Wall-VR/P
 
 (Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
 
-OnConnectedToMaster : -1
+|----- Joining the Photon Room as Wall Part (3) -----|
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
  #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
- #4  (Mono JIT Code) [LoadBalancingClient.cs:2738] Photon.Realtime.LoadBalancingClient:OnOperationResponse (ExitGames.Client.Photon.OperationResponse)
- #5  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PeerBase.cs:879] ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer)
- #6  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\EnetPeer.cs:577] ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands ()
- #7  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PhotonPeer.cs:1771] ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands ()
- #8  (Mono JIT Code) [PhotonHandler.cs:232] Photon.Pun.PhotonHandler:Dispatch ()
- #9  (Mono JIT Code) [PhotonHandler.cs:155] Photon.Pun.PhotonHandler:FixedUpdate ()
- #10 mono_print_method_from_ip
- #11 mono_perfcounter_foreach
- #12 mono_runtime_invoke
- #13 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #14 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #15 MonoBehaviour::CallUpdateMethod(int)
- #16 void BaseBehaviourManager::CommonUpdate<FixedBehaviourManager>()
- #17 FixedBehaviourManager::Update()
- #18 InitPlayerLoopCallbacks()::FixedUpdateScriptRunBehaviourFixedUpdateRegistrator::Forward()
- #19 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #4  (Mono JIT Code) [LoadBalancingClient.cs:4198] Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom ()
+ #5  (Mono JIT Code) [LoadBalancingClient.cs:3237] Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData)
+ #6  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PeerBase.cs:906] ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer)
+ #7  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\EnetPeer.cs:577] ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands ()
+ #8  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PhotonPeer.cs:1771] ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands ()
+ #9  (Mono JIT Code) [PhotonHandler.cs:232] Photon.Pun.PhotonHandler:Dispatch ()
+ #10  (Mono JIT Code) [PhotonHandler.cs:155] Photon.Pun.PhotonHandler:FixedUpdate ()
+ #11 mono_print_method_from_ip
+ #12 mono_perfcounter_foreach
+ #13 mono_runtime_invoke
+ #14 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #15 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #16 MonoBehaviour::CallUpdateMethod(int)
+ #17 void BaseBehaviourManager::CommonUpdate<FixedBehaviourManager>()
+ #18 FixedBehaviourManager::Update()
+ #19 InitPlayerLoopCallbacks()::FixedUpdateScriptRunBehaviourFixedUpdateRegistrator::Forward()
  #20 ExecutePlayerLoop(NativePlayerLoopSystem*)
- #21 PlayerLoop()
- #22 PlayerMain(int, char**)
- #23 __libc_init_first
- #24 __libc_start_main
- #25 _start
+ #21 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #22 PlayerLoop()
+ #23 PlayerMain(int, char**)
+ #24 __libc_init_first
+ #25 __libc_start_main
+ #26 _start
 
-OnJoinedRoom2
+InitializeFromNetwork with Setup : False with potential id : 3
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:40)
+Participant:InitializeFromNetwork (Setup) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:78)
+NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:68)
 Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
 Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
 ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
@@ -413,155 +218,102 @@ Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Projec
 
 (Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
 
-OnJoinedRoom as Wall Participant : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:67)
-Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-InitializeFromNetwork with Setup : False with potential id : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Participant:InitializeFromNetwork (Setup) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:49)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:72)
-Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-assigned id : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Participant:InitializeMyself () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:58)
-Participant:InitializeFromNetwork (Setup) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:52)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:72)
-Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-InitializeMyself :: Wall
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Participant:InitializeMyself () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:67)
-Participant:InitializeFromNetwork (Setup) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:52)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:72)
-Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-OnPlayerEnteredRoom as participant : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NetworkHandler:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:90)
-Photon.Realtime.InRoomCallbacksContainer:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4278)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3240)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-requesting resize 512 x 256
-resizing window to 512 x 256
-Desktop is 1360 x 768 @ 60 Hz
-OnPlayerEnteredRoom as participant : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NetworkHandler:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:90)
-Photon.Realtime.InRoomCallbacksContainer:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4278)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3240)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-OnPlayerEnteredRoom as participant : 2
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NetworkHandler:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:90)
-Photon.Realtime.InRoomCallbacksContainer:OnPlayerEnteredRoom (Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4278)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3240)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-Circle0 is null : False & Circle(Clone) : True
+(VAL)-> Just got the setup, with id n°3
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
  #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
- #4 mono_print_method_from_ip
- #5 mono_perfcounter_foreach
- #6 mono_runtime_run_main
- #7 mono_install_unhandled_exception_hook
- #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
- #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+ #4  (Mono JIT Code) [LoadBalancingClient.cs:4198] Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom ()
+ #5  (Mono JIT Code) [LoadBalancingClient.cs:3237] Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData)
+ #6  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PeerBase.cs:906] ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer)
+ #7  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\EnetPeer.cs:577] ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands ()
+ #8  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PhotonPeer.cs:1771] ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands ()
+ #9  (Mono JIT Code) [PhotonHandler.cs:232] Photon.Pun.PhotonHandler:Dispatch ()
+ #10  (Mono JIT Code) [PhotonHandler.cs:155] Photon.Pun.PhotonHandler:FixedUpdate ()
+ #11 mono_print_method_from_ip
+ #12 mono_perfcounter_foreach
+ #13 mono_runtime_invoke
+ #14 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #15 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #16 MonoBehaviour::CallUpdateMethod(int)
+ #17 void BaseBehaviourManager::CommonUpdate<FixedBehaviourManager>()
+ #18 FixedBehaviourManager::Update()
+ #19 InitPlayerLoopCallbacks()::FixedUpdateScriptRunBehaviourFixedUpdateRegistrator::Forward()
+ #20 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #21 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #22 PlayerLoop()
+ #23 PlayerMain(int, char**)
+ #24 __libc_init_first
+ #25 __libc_start_main
+ #26 _start
 
-FetchForOperatorRPC -> ParticipantIsReady
+Starting initialization as Wall
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) [LoadBalancingClient.cs:4198] Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom ()
+ #5  (Mono JIT Code) [LoadBalancingClient.cs:3237] Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData)
+ #6  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PeerBase.cs:906] ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer)
+ #7  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\EnetPeer.cs:577] ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands ()
+ #8  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PhotonPeer.cs:1771] ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands ()
+ #9  (Mono JIT Code) [PhotonHandler.cs:232] Photon.Pun.PhotonHandler:Dispatch ()
+ #10  (Mono JIT Code) [PhotonHandler.cs:155] Photon.Pun.PhotonHandler:FixedUpdate ()
+ #11 mono_print_method_from_ip
+ #12 mono_perfcounter_foreach
+ #13 mono_runtime_invoke
+ #14 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #15 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #16 MonoBehaviour::CallUpdateMethod(int)
+ #17 void BaseBehaviourManager::CommonUpdate<FixedBehaviourManager>()
+ #18 FixedBehaviourManager::Update()
+ #19 InitPlayerLoopCallbacks()::FixedUpdateScriptRunBehaviourFixedUpdateRegistrator::Forward()
+ #20 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #21 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #22 PlayerLoop()
+ #23 PlayerMain(int, char**)
+ #24 __libc_init_first
+ #25 __libc_start_main
+ #26 _start
+
+(VAL)-> Finished Initializing
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) [LoadBalancingClient.cs:4198] Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom ()
+ #5  (Mono JIT Code) [LoadBalancingClient.cs:3237] Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData)
+ #6  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PeerBase.cs:906] ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer)
+ #7  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\EnetPeer.cs:577] ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands ()
+ #8  (Mono JIT Code) [D:\Dev\Work\photon-dotnet-sdk\PhotonDotNet\PhotonPeer.cs:1771] ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands ()
+ #9  (Mono JIT Code) [PhotonHandler.cs:232] Photon.Pun.PhotonHandler:Dispatch ()
+ #10  (Mono JIT Code) [PhotonHandler.cs:155] Photon.Pun.PhotonHandler:FixedUpdate ()
+ #11 mono_print_method_from_ip
+ #12 mono_perfcounter_foreach
+ #13 mono_runtime_invoke
+ #14 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
+ #15 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
+ #16 MonoBehaviour::CallUpdateMethod(int)
+ #17 void BaseBehaviourManager::CommonUpdate<FixedBehaviourManager>()
+ #18 FixedBehaviourManager::Update()
+ #19 InitPlayerLoopCallbacks()::FixedUpdateScriptRunBehaviourFixedUpdateRegistrator::Forward()
+ #20 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #21 ExecutePlayerLoop(NativePlayerLoopSystem*)
+ #22 PlayerLoop()
+ #23 PlayerMain(int, char**)
+ #24 __libc_init_first
+ #25 __libc_start_main
+ #26 _start
+
+Initializing dixit 0
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
-Participant:FetchForOperatorRPC () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:102)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
 System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
 System.Reflection.MethodBase:Invoke (object,object[])
-Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:518)
-Photon.Pun.PhotonNetwork:RPC (Photon.Pun.PhotonView,string,Photon.Pun.RpcTarget,Photon.Realtime.Player,bool,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:1281)
-Photon.Pun.PhotonNetwork:RPC (Photon.Pun.PhotonView,string,Photon.Pun.RpcTarget,bool,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs:2940)
-Photon.Pun.PhotonView:RPC (string,Photon.Pun.RpcTarget,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs:604)
-NetworkHandler:SendOpeToParticipants () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:104)
-Operator:InitializeRPC () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Operator.cs:36)
-System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:518)
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
 Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
 Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
 ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
@@ -572,52 +324,12 @@ Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Projec
 
 (Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
 
-ParticipantIsReady from other
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-InputHandler:ParticipantIsReady (int) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/InputHandler.cs:178)
-Participant:FetchForOperatorRPC () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:103)
-System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:518)
-Photon.Pun.PhotonNetwork:RPC (Photon.Pun.PhotonView,string,Photon.Pun.RpcTarget,Photon.Realtime.Player,bool,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:1281)
-Photon.Pun.PhotonNetwork:RPC (Photon.Pun.PhotonView,string,Photon.Pun.RpcTarget,bool,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs:2940)
-Photon.Pun.PhotonView:RPC (string,Photon.Pun.RpcTarget,object[]) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs:604)
-NetworkHandler:SendOpeToParticipants () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:104)
-Operator:InitializeRPC () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Operator.cs:36)
-System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:518)
-Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
-Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
-Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
-Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
-
-(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
-
-IH now initialized
+Mouse coordinates for the dixit n°0 are (0.0, 0.3) and screen coordinates are (-9.2, 2.5)
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
  #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
- #4 mono_print_method_from_ip
- #5 mono_perfcounter_foreach
- #6 mono_runtime_run_main
- #7 mono_install_unhandled_exception_hook
- #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
- #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
-
-Participant's render has -> cam_orthoSize=5 sw=1024 sh=512 PtU=0.0390625 swu=40 shu=20
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
- #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
- #4  (Mono JIT Code) [InputHandler.cs:188] InputHandler:ParticipantIsReady (int)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
  #5 mono_print_method_from_ip
  #6 mono_perfcounter_foreach
  #7 mono_runtime_run_main
@@ -625,8 +337,1480 @@ Participant's render has -> cam_orthoSize=5 sw=1024 sh=512 PtU=0.0390625 swu=40 
  #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
  #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
 
+Initializing dixit 1
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°1 are (0.1, 0.3) and screen coordinates are (-7.8, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 2
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°2 are (0.2, 0.3) and screen coordinates are (-6.5, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 3
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°3 are (0.2, 0.3) and screen coordinates are (-5.2, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 4
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°4 are (0.3, 0.3) and screen coordinates are (-3.9, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 5
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°5 are (0.4, 0.3) and screen coordinates are (-2.6, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 6
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°6 are (0.4, 0.3) and screen coordinates are (-1.3, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 7
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°7 are (0.5, 0.3) and screen coordinates are (0.1, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 8
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°8 are (0.6, 0.3) and screen coordinates are (1.4, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 9
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°9 are (0.6, 0.3) and screen coordinates are (2.7, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 10
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°10 are (0.7, 0.3) and screen coordinates are (4.0, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 11
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°11 are (0.8, 0.3) and screen coordinates are (5.3, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 12
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°12 are (0.8, 0.3) and screen coordinates are (6.6, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 13
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°13 are (0.9, 0.3) and screen coordinates are (8.0, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 14
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°14 are (1.0, 0.3) and screen coordinates are (9.3, 2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 15
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°15 are (0.0, 0.5) and screen coordinates are (-9.2, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 16
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°16 are (0.1, 0.5) and screen coordinates are (-7.8, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 17
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°17 are (0.2, 0.5) and screen coordinates are (-6.5, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 18
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°18 are (0.2, 0.5) and screen coordinates are (-5.2, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 19
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°19 are (0.3, 0.5) and screen coordinates are (-3.9, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 20
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°20 are (0.4, 0.5) and screen coordinates are (-2.6, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 21
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°21 are (0.4, 0.5) and screen coordinates are (-1.3, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 22
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°22 are (0.5, 0.5) and screen coordinates are (0.1, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 23
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°23 are (0.6, 0.5) and screen coordinates are (1.4, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 24
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°24 are (0.6, 0.5) and screen coordinates are (2.7, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 25
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°25 are (0.7, 0.5) and screen coordinates are (4.0, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 26
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°26 are (0.8, 0.5) and screen coordinates are (5.3, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 27
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°27 are (0.8, 0.5) and screen coordinates are (6.6, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 28
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°28 are (0.9, 0.5) and screen coordinates are (8.0, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 29
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°29 are (1.0, 0.5) and screen coordinates are (9.3, 0.0)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 30
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°30 are (0.0, 0.8) and screen coordinates are (-9.2, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 31
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°31 are (0.1, 0.8) and screen coordinates are (-7.8, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 32
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°32 are (0.2, 0.8) and screen coordinates are (-6.5, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 33
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°33 are (0.2, 0.8) and screen coordinates are (-5.2, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 34
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°34 are (0.3, 0.8) and screen coordinates are (-3.9, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 35
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°35 are (0.4, 0.8) and screen coordinates are (-2.6, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 36
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°36 are (0.4, 0.8) and screen coordinates are (-1.3, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 37
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°37 are (0.5, 0.8) and screen coordinates are (0.1, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 38
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°38 are (0.6, 0.8) and screen coordinates are (1.4, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 39
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°39 are (0.6, 0.8) and screen coordinates are (2.7, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 40
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°40 are (0.7, 0.8) and screen coordinates are (4.0, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 41
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°41 are (0.8, 0.8) and screen coordinates are (5.3, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 42
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°42 are (0.8, 0.8) and screen coordinates are (6.6, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 43
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°43 are (0.9, 0.8) and screen coordinates are (8.0, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Initializing dixit 44
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CardsLoader:InitializeDixit (int,int,bool,single,single) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/CardsLoader.cs:23)
+System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+Photon.Pun.PhotonNetwork:ExecuteRpc (ExitGames.Client.Photon.Hashtable,Photon.Realtime.Player) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:554)
+Photon.Pun.PhotonNetwork:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs:2202)
+Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3362)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/EnetPeer.cs:577)
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands () (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PhotonPeer.cs:1771)
+Photon.Pun.PhotonHandler:Dispatch () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:232)
+Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonUnityNetworking/Code/PhotonHandler.cs:152)
+
+(Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
+
+Mouse coordinates for the dixit n°44 are (1.0, 0.8) and screen coordinates are (9.3, -2.5)
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___int_int_byte_single_single (object,intptr,intptr,intptr)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+(VAL)-> Initialized from Ope
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_run_main
+ #7 mono_install_unhandled_exception_hook
+ #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+(VAL)-> Participant fetched operator -> PartIsReady
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_run_main
+ #7 mono_install_unhandled_exception_hook
+ #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Received PartIsReady 3
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_run_main
+ #7 mono_install_unhandled_exception_hook
+ #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+(VAL)-> InputHandler has initialized
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4 mono_print_method_from_ip
+ #5 mono_perfcounter_foreach
+ #6 mono_runtime_run_main
+ #7 mono_install_unhandled_exception_hook
+ #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+Render (Wall) is : cam_orthoSize=5 sw=1024 sh=512 PtU=0.0390625 swu=40 shu=20
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) [InputHandler.cs:199] InputHandler:ParticipantIsReady (int)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
+requesting resize 512 x 256
+resizing window to 512 x 256
+Desktop is 1360 x 768 @ 60 Hz
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 7f223e9f8640 -> priority: 1 
-  Thread -> id: 7f223e1f7640 -> priority: 1 
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1686929102241,"processId":13517,"allocatedMemory":157039,"memoryLabels":[{"Permanent":40},{"NewDelete":150417},{"Thread":128},{"Manager":1200},{"Geometry":-112},{"Serialization":568},{"String":622},{"DynamicArray":4},{"HashMap":1536},{"GI":296},{"CloudService":336},{"VR":1704},{"NativeArray":372},{"Subsystems":-72}]}
+  Thread -> id: 7fe6bdbf7640 -> priority: 1 
+  Thread -> id: 7fe6bd3f6640 -> priority: 1 
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1687872236169,"processId":59354,"allocatedMemory":157231,"memoryLabels":[{"Permanent":40},{"NewDelete":150609},{"Thread":128},{"Manager":1200},{"Geometry":-112},{"Serialization":568},{"String":622},{"DynamicArray":4},{"HashMap":1536},{"GI":296},{"CloudService":336},{"VR":1704},{"NativeArray":372},{"Subsystems":-72}]}
 

@@ -46,11 +46,8 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
                 setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
             }
-
-            if(setup.dixits){
-                //first trying to create only one dixit
-                NetworkCreateSingleDixit();
-            } else {
+            NetworkCreateDixit();
+            if(!setup.dixits){
                 shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", new Vector3(0f,0f,1f), Quaternion.identity);
                 Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();
                 sh1_ctrl.SetName("Circle0");
@@ -81,7 +78,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             //if i'm master then test some stuff
             if(PhotonNetwork.CurrentRoom.PlayerCount==(setup.part_cnt +1)){ //all parts + master
                 setup.logger.Msg("Everyone joined -> now initializing", "V");
-                shape1_prefab.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Circle0");
+                //shape1_prefab.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Circle0");
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
             }
         }
@@ -106,7 +103,7 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    public void NetworkCreateSingleDixit(){
+    public void NetworkCreateDixit(){
         Render render = GameObject.Find("ScriptManager").GetComponent<Render>();
         //render.CreateSingleDixits(0);
         render.CreateAllDixits();

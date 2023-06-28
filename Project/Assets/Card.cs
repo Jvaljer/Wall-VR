@@ -25,7 +25,8 @@ public class Card : MonoBehaviourPun {
         go_height = h_;
     }
 
-    public void SetName(string str){
+    [PunRPC]
+    public void SetNameRPC(string str){
         gameObject.name = str;
         go_name = str;
     }

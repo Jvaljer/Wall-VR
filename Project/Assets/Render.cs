@@ -113,6 +113,7 @@ public class Render : MonoBehaviourPun {
 
         if(setup.dixits){
             if(dixits_tex==null || dixits_tex.Length==0){
+                setup.logger.Msg("must fetch the dixits textures", "S");
                 LoadDixits();
             }
             if(dixits.Count==0 || dixits==null){
@@ -208,7 +209,7 @@ public class Render : MonoBehaviourPun {
                 float shu = Screen.height*(Camera.main.orthographicSize /(Screen.height/2.0f));
                 card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, i, setup.is_vr, swu, shu);
                 //setup.logger.Msg(card.go.name+" is placed on : "+card.go.transform.position, "C");
-                card.go.GetComponent<Card>().SetName("Dixit "+i);
+                card.go.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Dixit "+i);
                 card.go.GetComponent<Card>().SetDixitClass(card);
                 dixits.Add("Dixit "+i, card);
                 setup.logger.Msg("created and added dixit n°"+i, "V");
@@ -219,8 +220,20 @@ public class Render : MonoBehaviourPun {
     }
 
     public void FetchDixits(){
-        //must implement
-        return;
+
+        string dix_name;
+        GameObject card_go;
+        DixitCard card;
+
+        for(int i=0; i<45; i++){
+            dix_name = "Dixit "+i;
+            if(!dixits.ContainsKey(dix_name)){
+                card_go = GameObject.Find(dix_name);
+                card = card_go.GetComponent<Card>().dixit_class;
+                card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", (Texture2D)dixits_tex[i]);
+                dixits.Add(dix_name,card);
+            }
+        }
     }
 
     public void PlaceDixits(){

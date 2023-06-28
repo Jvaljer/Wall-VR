@@ -112,7 +112,16 @@ public class Render : MonoBehaviourPun {
         ope = O_;
 
         if(setup.dixits){
-            //must implement
+            if(dixits_tex==null || dixits_tex.Length==0){
+                LoadDixits();
+            }
+            if(dixits.Count==0 || dixits==null){
+                if(setup.is_master){
+                    CreateAllDixits();
+                } else {
+                    FetchDixits();
+                }
+            }
         } else {
             if(!shapes.ContainsKey("Circle0")){
                 shapes.Add(GameObject.Find("Circle0").name,GameObject.Find("Circle0"));
@@ -164,6 +173,7 @@ public class Render : MonoBehaviourPun {
                     }
                 }
             }
+            PlaceDixits();
         }
     }
 
@@ -199,33 +209,22 @@ public class Render : MonoBehaviourPun {
                 card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, i, setup.is_vr, swu, shu);
                 //setup.logger.Msg(card.go.name+" is placed on : "+card.go.transform.position, "C");
                 card.go.GetComponent<Card>().SetName("Dixit "+i);
+                card.go.GetComponent<Card>().SetDixitClass(card);
                 dixits.Add("Dixit "+i, card);
+                setup.logger.Msg("created and added dixit n°"+i, "V");
             }
         } else {
             setup.logger.Msg("Dixits aren't loaded ...", "E");
         }
     }
 
-    public void CreateSingleDixits(int index){
-        if(PhotonNetwork.IsMasterClient){
-            setup.logger.Msg("Initializing All Dixits (operator)", "S");
-            if(dixits_tex==null){
-                setup.logger.Msg("Loading textures", "C");
-                dixits_tex = Resources.LoadAll("dixit_cards_all/", typeof(Texture2D));
-            }
-            setup.logger.Msg("Textures have successfully been loaded : "+(dixits_tex!=null), "C");
+    public void FetchDixits(){
+        //must implement
+        return;
+    }
 
-            Transform wall_transform;
-            if(setup.is_vr){
-                wall_transform = GameObject.Find("WallGO").transform;
-            } else {
-                wall_transform = null;
-            }
-
-            DixitCard card = new DixitCard((Texture2D)dixits_tex[index], index, wall_transform);
-
-            card.pv.RPC("InitializeDixit", RpcTarget.AllBuffered, card.pv.ViewID, index, setup.is_master, setup.is_vr); //same as card.gameobject.GetComponent<PhotonView>().RPC("LoadCard");
-            dixits.Add("Dixit"+index, card);
-        }
+    public void PlaceDixits(){
+        //must implement
+        return;
     }
 }

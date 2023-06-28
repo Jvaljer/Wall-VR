@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 
 public class Card : MonoBehaviourPun {
+    public Render.DixitCard dixit_class { get; set; }
     public string go_name { get; private set; }
     public bool dragged { get; private set; } = false;
     private bool vr = false;
@@ -15,6 +16,10 @@ public class Card : MonoBehaviourPun {
     private float go_height;
 
     //setters
+    public void SetDixitClass(Render.DixitCard dix_class){
+        dixit_class = dix_class;
+    }
+
     public void SetAttributes(float w_, float h_){
         go_width = w_;
         go_height = h_;

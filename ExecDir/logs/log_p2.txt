@@ -1,10 +1,10 @@
 Mono path[0] = '/home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data/Managed'
 Mono config path = '/home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data/MonoBleedingEdge/etc'
 PlayerConnection initialized from /home/abel/JvaljerGit/Wall-VR/ExecDir/linux_start_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55190
-Multi-casting "[IP] 129.175.4.241 [Port] 55190 [Flags] 2 [Guid] 3546547828 [EditorId] 655786037 [Version] 1048832 [Id] LinuxPlayer(129.175.4.241) [Debug] 0 [PackageName] LinuxPlayer [ProjectName] Project" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55190]
-PlayerConnection already initialized - listening to [0.0.0.0:55190]
+PlayerConnection initialized network socket : 0.0.0.0 55490
+Multi-casting "[IP] 129.175.4.241 [Port] 55490 [Flags] 2 [Guid] 3309526676 [EditorId] 1515839209 [Version] 1048832 [Id] LinuxPlayer(129.175.4.241) [Debug] 0 [PackageName] LinuxPlayer [ProjectName] Project" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55490]
+PlayerConnection already initialized - listening to [0.0.0.0:55490]
 Display 0 'XWAYLAND0 14"': 1360x768 (primary device).
 Desktop is 1360 x 768 @ 60 Hz
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
@@ -26,15 +26,15 @@ ygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_A
 object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_
 equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_t
 exture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 6434816
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 10551792
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.461 seconds
+- Completed reload, in  0.191 seconds
 Default vsync count 1
 requesting resize 512 x 256
 resizing window to 512 x 256
 Desktop is 1360 x 768 @ 60 Hz
 Disable old input system
-UnloadTime: 22.674973 ms
+UnloadTime: 3.140374 ms
 Linux Standalone -> must parse argument, VR prohibited
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
@@ -62,13 +62,13 @@ Linux Standalone -> must parse argument, VR prohibited
  #23 __libc_start_main
  #24 _start
 
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.271923 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.409566 ms
 System memory in use before: 34.7 MB.
 System memory in use after: 34.9 MB.
 
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1569.
-Total: 15.001723 ms (FindLiveObjects: 0.525734 ms CreateObjectMapping: 0.111762 ms MarkObjects: 13.557997 ms  DeleteObjects: 0.801981 ms)
+Total: 2.075397 ms (FindLiveObjects: 0.333742 ms CreateObjectMapping: 0.065637 ms MarkObjects: 1.627631 ms  DeleteObjects: 0.046697 ms)
 
 |----- Starting program on scene : Wall -----|
  #0 GetStacktrace(int)
@@ -172,7 +172,7 @@ Photon.Realtime.MonoBehaviourEmpty:Update () (at /home/abel/JvaljerGit/Wall-VR/P
 
 (Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
 
-|----- Joining the Photon Room as Wall Part (4) -----|
+|----- Joining the Photon Room as Wall Part (5) -----|
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
@@ -201,13 +201,13 @@ Photon.Realtime.MonoBehaviourEmpty:Update () (at /home/abel/JvaljerGit/Wall-VR/P
  #25 __libc_start_main
  #26 _start
 
-InitializeFromNetwork with Setup : False with potential id : 4
+InitializeFromNetwork with Setup : False with potential id : 5
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
 Participant:InitializeFromNetwork (Setup) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Participant.cs:78)
-NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:68)
+NetworkHandler:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/NetworkHandler.cs:69)
 Photon.Realtime.MatchMakingCallbacksContainer:OnJoinedRoom () (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:4200)
 Photon.Realtime.LoadBalancingClient:OnEvent (ExitGames.Client.Photon.EventData) (at /home/abel/JvaljerGit/Wall-VR/Project/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs:3236)
 ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback (ExitGames.Client.Photon.StreamBuffer) (at D:/Dev/Work/photon-dotnet-sdk/PhotonDotNet/PeerBase.cs:904)
@@ -218,7 +218,7 @@ Photon.Pun.PhotonHandler:FixedUpdate () (at /home/abel/JvaljerGit/Wall-VR/Projec
 
 (Filename: /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs Line: 37)
 
-(VAL)-> Just got the setup, with id n°4
+(VAL)-> Just got the setup, with id n°5
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
@@ -1769,7 +1769,7 @@ Mouse coordinates for the dixit n°44 are (1.0, 0.8) and screen coordinates are 
  #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
  #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
 
-Received PartIsReady 4
+Received PartIsReady 5
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
  #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
@@ -1793,6 +1793,19 @@ Received PartIsReady 4
  #8  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
  #9  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
 
+(VAL)-> Loaded all dixits from dixit_cards_all/ : 108
+ #0 GetStacktrace(int)
+ #1 DebugStringToFile(DebugStringToFileData const&)
+ #2 DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*)
+ #3  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+ #4  (Mono JIT Code) [InputHandler.cs:199] InputHandler:ParticipantIsReady (int)
+ #5 mono_print_method_from_ip
+ #6 mono_perfcounter_foreach
+ #7 mono_runtime_run_main
+ #8 mono_install_unhandled_exception_hook
+ #9  (Mono JIT Code) (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+ #10  (Mono JIT Code) System.Reflection.MethodBase:Invoke (object,object[])
+
 Render (Wall) is : cam_orthoSize=5 sw=1024 sh=512 PtU=0.0390625 swu=40 shu=20
  #0 GetStacktrace(int)
  #1 DebugStringToFile(DebugStringToFileData const&)
@@ -1810,7 +1823,7 @@ requesting resize 512 x 256
 resizing window to 512 x 256
 Desktop is 1360 x 768 @ 60 Hz
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 7fb2b4c71640 -> priority: 1 
-  Thread -> id: 7fb2a3fff640 -> priority: 1 
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1687872236433,"processId":59353,"allocatedMemory":157231,"memoryLabels":[{"Permanent":40},{"NewDelete":150609},{"Thread":128},{"Manager":1200},{"Geometry":-112},{"Serialization":568},{"String":622},{"DynamicArray":4},{"HashMap":1536},{"GI":296},{"CloudService":336},{"VR":1704},{"NativeArray":372},{"Subsystems":-72}]}
+  Thread -> id: 7f13f27fd640 -> priority: 1 
+  Thread -> id: 7f13f1ffc640 -> priority: 1 
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1687944334384,"processId":71171,"allocatedMemory":157231,"memoryLabels":[{"Permanent":40},{"NewDelete":150609},{"Thread":128},{"Manager":1200},{"Geometry":-112},{"Serialization":568},{"String":622},{"DynamicArray":4},{"HashMap":1536},{"GI":296},{"CloudService":336},{"VR":1704},{"NativeArray":372},{"Subsystems":-72}]}
 

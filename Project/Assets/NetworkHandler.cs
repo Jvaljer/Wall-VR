@@ -45,8 +45,9 @@ public class NetworkHandler : MonoBehaviourPunCallbacks {
             if(setup.master_only){
                 ope_prefab.GetComponent<PhotonView>().RPC("InitializeRPC", RpcTarget.AllBuffered);
                 setup.logger.Msg("Program is on Master Only -> ParticipantIsReady from Ope", "S");
+            } else {
+                NetworkCreateDixit();
             }
-            NetworkCreateDixit();
             if(!setup.dixits){
                 shape1_prefab = PhotonNetwork.InstantiateRoomObject("Circle", new Vector3(0f,0f,1f), Quaternion.identity);
                 Shape sh1_ctrl = shape1_prefab.GetComponent<Shape>();

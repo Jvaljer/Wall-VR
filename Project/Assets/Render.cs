@@ -61,16 +61,11 @@ public class Render : MonoBehaviourPun {
     private object[] dixits_tex;
     private Dictionary<string, DixitCard> dixits;
 
-    //shapes attributes
-    private Dictionary<string, GameObject> shapes;
-
     public void Start(){
         setup = GameObject.Find("ScriptManager").GetComponent<Setup>();
         network_handler = GameObject.Find("ScriptManager").GetComponent<NetworkHandler>();
         if(setup.dixits){
             dixits = new Dictionary<string, DixitCard>();
-        } else {
-            shapes = new Dictionary<string, GameObject>();
         }
     }
 
@@ -94,9 +89,9 @@ public class Render : MonoBehaviourPun {
                 Card obj_ctrl = dix.go.GetComponent<Card>();
                 switch (name){
                     case "Down":
-                        setup.logger.Msg("Input Down on "+new Vector2(px,py), "C");
+                        //setup.logger.Msg("Input Down on "+new Vector2(px,py), "C");
                         if(obj_ctrl.ClickIsInside(new Vector2(px, py))){
-                            setup.logger.Msg("Picking a dixit");
+                            //setup.logger.Msg("Picking a dixit");
                             dix.pv.RPC("PickRPC", RpcTarget.AllBuffered);
                         }
                         break;
@@ -107,27 +102,6 @@ public class Render : MonoBehaviourPun {
                         break;
                     case "Up":
                         dix.pv.RPC("DropRPC", RpcTarget.AllBuffered);
-                        break;
-                }
-            }
-        } else {
-            foreach(GameObject obj in shapes.Values){
-                Shape obj_ctrl = obj.GetComponent<Shape>();
-                switch (name){
-                    case "Down":
-                        setup.logger.Msg("Input Down is received by Render from "+id+" on "+new Vector2(m_x, m_y), "C");
-                        if(obj_ctrl.CoordsInside(new Vector2(px,py))){
-                            setup.logger.Msg("The Down Input is inside the shape", "V");
-                            obj.GetComponent<PhotonView>().RPC("PickRPC", RpcTarget.AllBuffered);
-                        }
-                        break;
-                    case "Move":
-                        if(obj_ctrl.IsDragged()){
-                            obj_ctrl.Move(px, py, setup.zoom_ratio);
-                        }
-                        break;
-                    case "Up":
-                        obj.GetComponent<PhotonView>().RPC("DropRPC", RpcTarget.AllBuffered);
                         break;
                 }
             }
@@ -149,10 +123,6 @@ public class Render : MonoBehaviourPun {
                     FetchDixits();
                 }
             }
-        } else {
-            if(!shapes.ContainsKey("Circle0")){
-                shapes.Add(GameObject.Find("Circle0").name,GameObject.Find("Circle0"));
-            }
         }
 
         if(PhotonNetwork.IsMasterClient){
@@ -166,12 +136,6 @@ public class Render : MonoBehaviourPun {
         } else {
             if(setup.is_vr){
                 //simply replacing the shape on the wall ?
-                if(setup.dixits){
-                    //must implement
-                } else {
-                    shapes["Circle0"].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                    shapes["Circle0"].transform.position = new Vector3(0f, 2.5f, 4.99f);
-                }
 
                 GameObject wall_go = GameObject.Find("WallGO");
                 sw = wall_go.transform.localScale.x;
@@ -190,15 +154,6 @@ public class Render : MonoBehaviourPun {
                 sw_unity = sw*pix_to_unit;
                 sh_unity = sh*pix_to_unit;
                 setup.logger.Msg("Render (Wall) is : cam_orthoSize="+Camera.main.orthographicSize+" sw="+sw+" sh="+sh+" PtU="+pix_to_unit+" swu="+sw_unity+" shu="+sh_unity, "C");
-
-                if(setup.dixits){
-                    //must implement
-                } else {
-                    foreach(GameObject shape in shapes.Values){
-                        //zoom value = amount of division ?
-                        shape.transform.localScale *= setup.zoom_ratio;
-                    }
-                }
             }
             PlaceDixitsAtInit();
         }
@@ -238,7 +193,7 @@ public class Render : MonoBehaviourPun {
                 card.go.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Dixit "+i);
                 card.go.GetComponent<Card>().SetDixitClass(card);
                 dixits.Add("Dixit "+i, card);
-                setup.logger.Msg("created and added dixit n°"+i+" null->"+(dixits["Dixit "+i]==null), "V");
+               //setup.logger.Msg("created and added dixit n°"+i, "V");
             }
         } else {
             setup.logger.Msg("Dixits aren't loaded ...", "E");
@@ -254,7 +209,7 @@ public class Render : MonoBehaviourPun {
         for(int i=0; i<45; i++){
             dix_name = "Dixit "+i;
             if(!dixits.ContainsKey(dix_name)){
-                setup.logger.Msg("Fetching '"+dix_name+"'", "C");
+                //setup.logger.Msg("Fetching '"+dix_name+"'", "C");
                 card_go = GameObject.Find(dix_name);
                 card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", (Texture2D)dixits_tex[i]);
 
@@ -267,8 +222,6 @@ public class Render : MonoBehaviourPun {
     }
 
     public void PlaceDixitsAtInit(){
-        setup.logger.Msg("Placing em dixits", "S");
-        Vector2 m_pos;
         float x, y;
         float tx, ty, tz;
 
@@ -297,16 +250,19 @@ public class Render : MonoBehaviourPun {
                 float tmp = ty+2.5f;
                 ty = tmp;
                 tz = 4.99f;
+
+                card_go.transform.localScale = new Vector3(0.75f, 0.75f, 0.1f);
+                card_go.GetComponent<Card>().SetAttributes(0.75f, 0.75f);
+            } else {
+                card_go.transform.localScale = new Vector3(setup.zoom_ratio, setup.zoom_ratio, 0.1f);
+                card_go.GetComponent<Card>().SetAttributes(setup.zoom_ratio, setup.zoom_ratio);
             }
 
             Vector3 pos = new Vector3((float)tx, (float)ty, (float)tz);
 
-            card_go.transform.localScale = new Vector3(setup.zoom_ratio, setup.zoom_ratio, 0.1f);
             card_go.transform.position = pos;
-
-            card_go.GetComponent<Card>().SetAttributes(setup.zoom_ratio, setup.zoom_ratio);
             card_go.GetComponent<Card>().PositionOn(pos);
-            
+
             i++;
         }
     }

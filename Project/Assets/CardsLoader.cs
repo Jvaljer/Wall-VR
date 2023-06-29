@@ -10,7 +10,7 @@ public class CardsLoader : MonoBehaviour {
 
     //size of cards in a (0->1) side scaled wall
     private static float card_width = 0.04495f;
-    private static float card_height = 0.23109f;
+    private static float card_height = 0.23109f; //never used yet
 
     //disposition values
     public static float gap_x = 0.03112f;

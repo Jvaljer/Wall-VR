@@ -202,8 +202,7 @@ public class InputHandler : MonoBehaviourPun {
     public void InputRPC(string str, float x_, float y_, int id_){
         //(x,y) are in (0,0)-(1,1)
         //we wanna send em to each render
-        //Logs.Msg("InputRPC-->render Input("+str+" on "+x_+","+y_+" from "+id_")", "EDO");
-        setup.logger.Msg("FROM InputRPC -> CALLING render.Input", "S");
+        //setup.logger.Msg("FROM InputRPC -> CALLING render.Input", "S");
         render.Input(str, x_, y_, id_);
     }
 

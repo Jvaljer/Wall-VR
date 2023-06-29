@@ -18,9 +18,10 @@ public class Render : MonoBehaviourPun {
         public DixitCard(Texture2D tex, int id_, Transform wall){
             Vector3 card_pos;
             Quaternion card_rota;
+
             if(wall==null){
                 //in that case we are in 2D
-                card_pos = new Vector3(0f,0f,1.5f); //putting card on 1.5f depth to allow bringing em forward
+                card_pos = new Vector3(0f,0f,2f); //putting card on 1.5f depth to allow bringing em forward
                 card_rota = Quaternion.identity;
             } else {
                 //in that case we are in VR
@@ -82,8 +83,27 @@ public class Render : MonoBehaviourPun {
 
         //and now does input on these coords
         if(setup.dixits){
-            setup.logger.Msg("received an input for the dixits manipulation", "S");
-            //must implement
+            //setup.logger.Msg("received an input for the dixits manipulation", "S");
+            foreach(DixitCard dix in dixits.Values){
+                Card obj_ctrl = dix.go.GetComponent<Card>();
+                switch (name){
+                    case "Down":
+                        setup.logger.Msg("Input Down on "+new Vector2(px,py), "C");
+                        if(obj_ctrl.ClickIsInside(new Vector2(px, py))){
+                            setup.logger.Msg("Picking a dixit");
+                            dix.pv.RPC("PickRPC", RpcTarget.AllBuffered);
+                        }
+                        break;
+                    case "Move":
+                        if(obj_ctrl.dragged){
+                            obj_ctrl.Move(px, py, setup.zoom_ratio);
+                        }
+                        break;
+                    case "Up":
+                        dix.pv.RPC("DropRPC", RpcTarget.AllBuffered);
+                        break;
+                }
+            }
         } else {
             foreach(GameObject obj in shapes.Values){
                 Shape obj_ctrl = obj.GetComponent<Shape>();
@@ -174,7 +194,7 @@ public class Render : MonoBehaviourPun {
                     }
                 }
             }
-            PlaceDixits();
+            PlaceDixitsAtInit();
         }
     }
 
@@ -228,16 +248,53 @@ public class Render : MonoBehaviourPun {
         for(int i=0; i<45; i++){
             dix_name = "Dixit "+i;
             if(!dixits.ContainsKey(dix_name)){
+                setup.logger.Msg("Fetching '"+dix_name+"'", "C");
                 card_go = GameObject.Find(dix_name);
                 card = card_go.GetComponent<Card>().dixit_class;
                 card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", (Texture2D)dixits_tex[i]);
                 dixits.Add(dix_name,card);
+            } else {
+                setup.logger.Msg(dix_name+" is already contained in Dictionary", "E");
             }
         }
     }
 
-    public void PlaceDixits(){
-        //must implement
-        return;
+    public void PlaceDixitsAtInit(){
+        Vector2 m_pos;
+        float x, y;
+        float tx, ty, tz;
+        DixitCard card;
+        for(int i=0; i<45; i++){
+            card = dixits["Dixit "+i];
+            setup.logger.Msg("Placing 'Dixit "+i, "C");
+            //placing the card on (0,0)
+            card.go.GetComponent<Card>().Move(0f, 0f, setup.zoom_ratio);
+
+            //and then placing it as it was done in the first way
+            float x_, y_;
+            if(i<15){
+                y_ = 0.25f;
+            } else if(i<30){
+                y_ = 0.5f;
+            } else {
+                y_ = 0.75f;
+            }
+
+            float fst_x = card.go.GetComponent<CardsLoader>().fst_x;
+            float x_dist = card.go.GetComponent<CardsLoader>().x_dist;
+
+            x_ = fst_x + (i%15)*x_dist; //shall be accurate ... (must test)
+
+            tx = x_*sw_unity- (sw_unity/2f);
+            ty = (sh_unity/2f) - y_*sh_unity;
+            tz = 1.5f;
+
+            if(setup.is_vr){
+                float tmp = ty+2.5f;
+                ty = tmp;
+                tz = 4.99f;
+            }
+            card.go.transform.position = new Vector3(tx, ty, tz);
+        }
     }
 }

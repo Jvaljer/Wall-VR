@@ -61,7 +61,7 @@ public class Card : MonoBehaviourPun {
         float down = go_pos.y - half_h;
         float left = go_pos.x - half_w;
         float right = go_pos.x + half_w;
-
+        Debug.Log("bounds are : up->"+up+" down->"+down+" left->"+left+" right->"+right+"  with hw & hh -> "+half_w+" & "+half_h);
         cond = (click.x<=right) && (click.x>=left) && (click.y<=up) && (click.y>=down);
 
         return cond;

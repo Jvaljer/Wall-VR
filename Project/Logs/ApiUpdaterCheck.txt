@@ -727,3 +727,43 @@ C# parse time         : 414ms
 candidates check time : 66ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 6/28/2023 7:30:31 PM : Starting /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 90.529ms
+moved types parse time: 75ms
+candidates parse time : 1ms
+C# parse time         : 492ms
+candidates check time : 58ms
+console write time    : 57ms
+
+[api-updater (non-obsolete-error-filter)] 6/28/2023 7:40:58 PM : Starting /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 77.159ms
+moved types parse time: 75ms
+candidates parse time : 1ms
+C# parse time         : 353ms
+candidates check time : 60ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 6/28/2023 7:41:54 PM : Starting /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 71.586ms
+moved types parse time: 75ms
+candidates parse time : 1ms
+C# parse time         : 346ms
+candidates check time : 58ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 6/28/2023 7:42:37 PM : Starting /home/abel/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 70.777ms
+moved types parse time: 83ms
+candidates parse time : 1ms
+C# parse time         : 397ms
+candidates check time : 65ms
+console write time    : 0ms
+

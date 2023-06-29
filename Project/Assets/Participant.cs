@@ -44,7 +44,7 @@ public class Participant : MonoBehaviourPun {
 
                     Ray ray = new Ray(right_hand.transform.position, right_hand.transform.forward);
                     if(Physics.Raycast(ray, out hit)){
-                        if(hit.transform.tag == "Wall" || hit.transform.tag == "Shape"){
+                        if(hit.transform.tag == "Wall" || hit.transform.tag == "Dixit"){
                             //we wanna move the cursor to the hit position
                             float input_x = hit.point.x;
                             float input_y = hit.point.y;

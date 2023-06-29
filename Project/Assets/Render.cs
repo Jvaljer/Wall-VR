@@ -251,8 +251,9 @@ public class Render : MonoBehaviourPun {
                 ty = tmp;
                 tz = 4.99f;
 
-                card_go.transform.localScale = new Vector3(0.75f, 0.75f, 0.1f);
-                card_go.GetComponent<Card>().SetAttributes(0.75f, 0.75f);
+                card_go.transform.localScale = new Vector3(0.5f, 0.5f, 0.1f);
+                card_go.GetComponent<Card>().SetAttributes(0.5f, 0.5f);
+                card_go.GetComponent<Card>().SetAsVR();
             } else {
                 card_go.transform.localScale = new Vector3(setup.zoom_ratio, setup.zoom_ratio, 0.1f);
                 card_go.GetComponent<Card>().SetAttributes(setup.zoom_ratio, setup.zoom_ratio);

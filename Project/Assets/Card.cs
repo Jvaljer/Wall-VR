@@ -35,12 +35,9 @@ public class Card : MonoBehaviourPun {
         gameObject.transform.position = pos;
         go_pos = pos;
     }
+
     public void SetAsVR(){
         vr = true;
-    }
-
-    public void SetOwner(int id = -1){
-        current_owner = id;
     }
 
     //manipulation method & RPC
@@ -70,7 +67,7 @@ public class Card : MonoBehaviourPun {
         dragged = false;
     }
 
-    public void Move(float x_, float y_, float zoom){
+    public void Move(float x_, float y_){
         //coords are already translated -> simply have to move the card
         float z_;
 

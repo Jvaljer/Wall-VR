@@ -97,7 +97,7 @@ public class Render : MonoBehaviourPun {
                         break;
                     case "Move":
                         if(obj_ctrl.dragged){
-                            obj_ctrl.Move(px, py, setup.zoom_ratio);
+                            obj_ctrl.Move(px, py);
                         }
                         break;
                     case "Up":

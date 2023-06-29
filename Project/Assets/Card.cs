@@ -84,7 +84,7 @@ public class Card : MonoBehaviourPun {
         if(vr){
             z_ = 4.99f;
         } else {
-            z_ = 1f;
+            z_ = 2f;
         }
 
         Vector3 new_pos = new Vector3(x_, y_, z_);

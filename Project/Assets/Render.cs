@@ -33,6 +33,12 @@ public class Render : MonoBehaviourPun {
             pv = go.GetPhotonView();
             id = id_;
         }
+
+        public DixitCard(int id_, GameObject obj){
+            go = obj;
+            pv = go.GetPhotonView();
+            id = id_;
+        }
     }
 
     //unity attributes
@@ -232,7 +238,7 @@ public class Render : MonoBehaviourPun {
                 card.go.GetComponent<PhotonView>().RPC("SetNameRPC", RpcTarget.AllBuffered, "Dixit "+i);
                 card.go.GetComponent<Card>().SetDixitClass(card);
                 dixits.Add("Dixit "+i, card);
-                setup.logger.Msg("created and added dixit n°"+i, "V");
+                setup.logger.Msg("created and added dixit n°"+i+" null->"+(dixits["Dixit "+i]==null), "V");
             }
         } else {
             setup.logger.Msg("Dixits aren't loaded ...", "E");
@@ -250,8 +256,9 @@ public class Render : MonoBehaviourPun {
             if(!dixits.ContainsKey(dix_name)){
                 setup.logger.Msg("Fetching '"+dix_name+"'", "C");
                 card_go = GameObject.Find(dix_name);
-                card = card_go.GetComponent<Card>().dixit_class;
                 card_go.GetComponent<Renderer>().material.SetTexture("_MainTex", (Texture2D)dixits_tex[i]);
+
+                card = new DixitCard(i, card_go);
                 dixits.Add(dix_name,card);
             } else {
                 setup.logger.Msg(dix_name+" is already contained in Dictionary", "E");
@@ -260,33 +267,30 @@ public class Render : MonoBehaviourPun {
     }
 
     public void PlaceDixitsAtInit(){
+        setup.logger.Msg("Placing em dixits", "S");
         Vector2 m_pos;
         float x, y;
         float tx, ty, tz;
-        DixitCard card;
-        for(int i=0; i<45; i++){
-            card = dixits["Dixit "+i];
-            setup.logger.Msg("Placing 'Dixit "+i, "C");
-            //placing the card on (0,0)
-            card.go.GetComponent<Card>().Move(0f, 0f, setup.zoom_ratio);
 
-            //and then placing it as it was done in the first way
-            float x_, y_;
+        int i = 0;
+        GameObject card_go;
+        CardsLoader cl;
+        foreach(DixitCard card in dixits.Values){
+            //card.pv.RPC("SetPositionRPC", RpcTarget.AllBuffered, card.pv.ViewID, i, setup.is_vr, sw_unity, sh_unity);
+            card_go = card.go;
+            cl = card_go.GetComponent<CardsLoader>();
             if(i<15){
-                y_ = 0.25f;
+                y = 0.25f;
             } else if(i<30){
-                y_ = 0.5f;
+                y = 0.5f;
             } else {
-                y_ = 0.75f;
+                y = 0.75f;
             }
 
-            float fst_x = card.go.GetComponent<CardsLoader>().fst_x;
-            float x_dist = card.go.GetComponent<CardsLoader>().x_dist;
+            x = cl.fst_x + (i%15)*cl.x_dist; //shall be accurate ... (must test)
 
-            x_ = fst_x + (i%15)*x_dist; //shall be accurate ... (must test)
-
-            tx = x_*sw_unity- (sw_unity/2f);
-            ty = (sh_unity/2f) - y_*sh_unity;
+            tx = x*sw_unity- (sw_unity/2f);
+            ty = (sh_unity/2f) - y*sh_unity;
             tz = 1.5f;
 
             if(setup.is_vr){
@@ -294,7 +298,16 @@ public class Render : MonoBehaviourPun {
                 ty = tmp;
                 tz = 4.99f;
             }
-            card.go.transform.position = new Vector3(tx, ty, tz);
+
+            Vector3 pos = new Vector3((float)tx, (float)ty, (float)tz);
+
+            card_go.transform.localScale = new Vector3(setup.zoom_ratio, setup.zoom_ratio, 0.1f);
+            card_go.transform.position = pos;
+
+            card_go.GetComponent<Card>().SetAttributes(setup.zoom_ratio, setup.zoom_ratio);
+            card_go.GetComponent<Card>().PositionOn(pos);
+            
+            i++;
         }
     }
 }

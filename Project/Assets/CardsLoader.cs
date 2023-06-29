@@ -59,7 +59,6 @@ public class CardsLoader : MonoBehaviour {
 
         }
 
-        Render r = GameObject.Find("ScriptManager").GetComponent<Render>();
         float x_, y_;
         if(index<15){
             y_ = 0.25f;
@@ -90,7 +89,7 @@ public class CardsLoader : MonoBehaviour {
 
         card_go.GetComponent<Card>().SetAttributes(1f, 1f);
         card_go.GetComponent<Card>().PositionOn(pos);
-        
+
         card_go.transform.position = pos;
         card_go.transform.localScale = scale;
     }

@@ -106,9 +106,11 @@ public class Setup : MonoBehaviourPun {
         switch (wall_str){
             case "WILDER":
                 wall = new Wilder();
+                zoom_ratio = 5f;
                 break;
             case "DESKTOP":
                 wall = new Desktop(2,2);
+                zoom_ratio = 2f;
                 break;
             default:
                 break;

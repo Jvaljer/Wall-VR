@@ -42,6 +42,7 @@ public class InputHandler : MonoBehaviourPun {
 
     public bool initialized { get; set; } = false;
     public bool dixits_created { get; private set; } = false;
+    public bool part_pc_init { get; private set; } = true;
 
     /******************************************************************************/
     /*                           MAIN BEHAVIOR METHODS                            */
@@ -134,7 +135,15 @@ public class InputHandler : MonoBehaviourPun {
                     dst.z = vr_cursors[pc].transform.position.z;
                     vr_cursors[pc].transform.position = dst;
                 } else {
-                    GUI.DrawTexture(new Rect(dst.x - cursor_HW, dst.y - cursor_HW, 2*cursor_HW, 2*cursor_HW), pc.tex);
+                    if(setup.is_master){
+                        GUI.DrawTexture(new Rect(dst.x - cursor_HW, dst.y - cursor_HW, setup.zoom_ratio*cursor_HW, setup.zoom_ratio*cursor_HW), pc.tex);
+                    } else {
+                        if(part_pc_init){
+                            pc.tex = CursorsTex.SimpleCursor(pc.c, Color.black, cursor_HW, (int)setup.zoom_ratio, (int)setup.zoom_ratio);
+                            part_pc_init = false;
+                        }
+                        GUI.DrawTexture(new Rect(dst.x - cursor_HW, dst.y - cursor_HW, setup.zoom_ratio*cursor_HW, setup.zoom_ratio*cursor_HW), pc.tex);
+                    }
                 }
             }
         }
@@ -389,6 +398,7 @@ public class InputHandler : MonoBehaviourPun {
         if(!p_cursors.ContainsKey(uid)){
             Color color;
             ColorUtility.TryParseHtmlString(str, out color);
+            setup.logger.Msg("cursor's color is "+color+" from "+str, "C");
             p_cursors.Add(uid, new PCursor(x_, y_, color));
         } else {
             p_cursors[uid].Move(x_, y_);

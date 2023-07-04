@@ -115,7 +115,7 @@ do
         echo "ssh $LOGIN@192.168.2.$startIp cd $PROGHOME ; DISPLAY=:0 ./$EXEC -x $X -y $Y -screen-width $WIDTH -screen-height 960 -cw 14400 -ch 4800 -wall $WALL -logfile log.txt -s \"192.168.2.$LIP\" " $REST
         ssh $LOGIN@192.168.2.$startIp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no "cd $PROGHOME ; DISPLAY=:0 ./$EXEC -x $X -y $Y -popupwindow -screen-fullscreen 0 -screen-width $WIDTH -screen-height 960 -sw $WIDTH -sh 960 -r $PART_ID -wall $WALL -logfile log.txt" -s \"192.168.2.$LIP\" $REST &
         #exit
-		#sleep 1
+	sleep 0.5
         
       done
 done   

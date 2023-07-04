@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Logger : MonoBehaviour {
-
+    private bool logs_on = false;
     private bool on_console = false;
 
     /*
@@ -23,36 +23,38 @@ public class Logger : MonoBehaviour {
     }
     
     public void Msg(string message, string category = ""){
-        switch (category){
-            case "E":
-                //display an error
-                DisplayErr(message);
-                break;
-            case "C":
-                //display a casual message
-                DisplayCasu(message);
-                break;
-            case "EDO":
-                //display a message on editor only
-                DisplayOnEdit(message, category);
-                break;
-            case "SAO":
-                //display the message on standalone only
-                DisplayOnStand(message, category);
-                break;
-            case "V":
-                //display a validation
-                DisplayValid(message);
-                break;
-            case "S":
-                //display a special message (such as a statement)
-                DisplaySpe(message);
-                break;
+        if(logs_on){
+            switch (category){
+                case "E":
+                    //display an error
+                    DisplayErr(message);
+                    break;
+                case "C":
+                    //display a casual message
+                    DisplayCasu(message);
+                    break;
+                case "EDO":
+                    //display a message on editor only
+                    DisplayOnEdit(message, category);
+                    break;
+                case "SAO":
+                    //display the message on standalone only
+                    DisplayOnStand(message, category);
+                    break;
+                case "V":
+                    //display a validation
+                    DisplayValid(message);
+                    break;
+                case "S":
+                    //display a special message (such as a statement)
+                    DisplaySpe(message);
+                    break;
 
-            default:
-                //display a casual message
-                DisplayCasu(message);
-                break;
+                default:
+                    //display a casual message
+                    DisplayCasu(message);
+                    break;
+            }
         }
     }
 

@@ -58,13 +58,15 @@ public class Card : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void PickRPC(){
+    public void PickRPC(int id_){
         dragged = true;
+        current_owner = id_;
     }
 
     [PunRPC]
     public void DropRPC(){
         dragged = false;
+        current_owner = -1; //resetting the current owner
     }
 
     public void Move(float x_, float y_){

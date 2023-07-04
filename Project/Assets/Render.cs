@@ -92,11 +92,11 @@ public class Render : MonoBehaviourPun {
                         //setup.logger.Msg("Input Down on "+new Vector2(px,py), "C");
                         if(obj_ctrl.ClickIsInside(new Vector2(px, py))){
                             //setup.logger.Msg("Picking a dixit");
-                            dix.pv.RPC("PickRPC", RpcTarget.AllBuffered);
+                            dix.pv.RPC("PickRPC", RpcTarget.AllBuffered, id);
                         }
                         break;
                     case "Move":
-                        if(obj_ctrl.dragged){
+                        if(obj_ctrl.dragged && (obj_ctrl.current_owner==id)){
                             obj_ctrl.Move(px, py);
                         }
                         break;

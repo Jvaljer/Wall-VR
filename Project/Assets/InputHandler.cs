@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
@@ -84,7 +85,10 @@ public class InputHandler : MonoBehaviourPun {
                     //if not related PCursor then create it
                     if(mc.p_cursor==null){
                         mc.AddPCursor(new PCursor(mc.x, mc.y, mc.c));
-                        photonView.RPC("CreatePCursorRPC", RpcTarget.AllBuffered, uid_creator, mc.x, mc.y, mc.c.ToString());
+                        setup.logger.Msg("creating a PCursor", "S");
+                        byte[] c_data = ColorUtility.SerializeColor(mc.c);  // Serialize the Color object
+                        string c_str = Convert.ToBase64String(c_data);
+                        photonView.RPC("CreatePCursorRPC", RpcTarget.AllBuffered, uid_creator, mc.x, mc.y, c_str);
                         mc.uid = uid_creator;
                         uid_creator++;
                     }
@@ -273,7 +277,7 @@ public class InputHandler : MonoBehaviourPun {
     }
 
     public void CreateMCursor(object obj, int id_, float x_, float y_, Color c_, bool hid_=false){
-        setup.logger.Msg("New MCursor "+id_+" attached to "+obj, "V");
+        setup.logger.Msg("New MCursor "+id_+" attached to "+obj+" of color "+c_, "V");
         MDevice device = GetDevice(obj);
         if(device==null){
             return;
@@ -366,9 +370,10 @@ public class InputHandler : MonoBehaviourPun {
 
     //RPC to create a PCursor
     [PunRPC]
-    public void CreatePCursorRPC(int uid, float x_, float y_, string str){
-        Color color;
-        ColorUtility.TryParseHtmlString(str, out color);
+    public void CreatePCursorRPC(int uid, float x_, float y_, string c_str){
+        byte[] c_data = Convert.FromBase64String(c_str);
+        Color color = ColorUtility.DeserializeColor(c_data);
+        setup.logger.Msg("color of the PCursor is "+color+" from "+c_str, "S");
         p_cursors.Add(uid, new PCursor(x_, y_, color));
         //now we wanna add a GO to the VR scene in order to keep a visual trace of the pcursor
         if(setup.is_vr){
@@ -394,11 +399,10 @@ public class InputHandler : MonoBehaviourPun {
 
     //RPC to move a PCursor
     [PunRPC]
-    public void MoveOrCreatePCursorRPC(int uid, float x_, float y_, string str){
+    public void MoveOrCreatePCursorRPC(int uid, float x_, float y_, string c_str){
         if(!p_cursors.ContainsKey(uid)){
-            Color color;
-            ColorUtility.TryParseHtmlString(str, out color);
-            setup.logger.Msg("cursor's color is "+color+" from "+str, "C");
+            byte[] c_data = Convert.FromBase64String(c_str);
+            Color color = ColorUtility.DeserializeColor(c_data);
             p_cursors.Add(uid, new PCursor(x_, y_, color));
         } else {
             p_cursors[uid].Move(x_, y_);
@@ -561,9 +565,28 @@ public class InputHandler : MonoBehaviourPun {
         return ope_c;
     }
 
-    /******************************************************************************/
-    /*                          DIXITS CREATION & HANDLING                        */
-    /******************************************************************************/
+    // COLOR HANDLING CLASS & METHODS
+    public static class ColorUtility {
+        public static byte[] SerializeColor(Color color){
+            using (MemoryStream ms = new MemoryStream())
+            using (BinaryWriter writer = new BinaryWriter(ms)){
+                writer.Write(color.r);
+                writer.Write(color.g);
+                writer.Write(color.b);
+                writer.Write(color.a);
+                return ms.ToArray();
+            }
+        }
 
-    //must implement asap
+        public static Color DeserializeColor(byte[] colorData){
+            using (MemoryStream ms = new MemoryStream(colorData))
+            using (BinaryReader reader = new BinaryReader(ms)){
+                float r = reader.ReadSingle();
+                float g = reader.ReadSingle();
+                float b = reader.ReadSingle();
+                float a = reader.ReadSingle();
+                return (new Color(r, g, b, a));
+            }
+        }
+    }
 }

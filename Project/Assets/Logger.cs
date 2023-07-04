@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Logger : MonoBehaviour {
-    private bool logs_on = false;
+    private bool logs_on = true;
     private bool on_console = false;
 
     /*
